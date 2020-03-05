@@ -1,0 +1,300 @@
+{
+    "type": "FeatureCollection",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "features": [{ 
+            "type": "Feature",
+            "properties": {
+                "id": "开发区",
+                "mag": 78,
+                "time": 1507425650893,
+                "felt": null,
+                "tsunami": 0,
+                "test": [
+                    {"index":"1","comName":"句容骏升显示技术有限公司","country":"开发区","contact":"孙昌玲","telphone":"13505297926","money":"554万美元","time":"1997.09.08","address":"句容市经济技术开发区西环路首","industry":"电子信息技术","products":"液晶显示器及电子系列产品","income":"16000万元","taxes":"1000万元","host":"储备干部，理工科，本科以上学历10人","remarks":"高企、规上","type":"4","demostrate":"1-新材料、芯片"},
+                    {"index":"2","comName":"江苏苏南药业实业有限公司","country":"开发区","contact":"徐明","telphone":"13505293257","money":"10413.297","time":"2001.3.27","address":"江苏省句容市开发区中兴路88号","industry":"生物医药","products":"板蓝根颗粒，肾石通颗粒，白蚁巢胶囊，小儿感冒颗粒","income":"2171.65万","taxes":"148.72万","host":"中药、药学技术人才。研发中心人员6名，生产技术部2名","remarks":"高企、规上","type":"3","demostrate":"2-电子电气技术"},
+                    {"index":"3","comName":"江苏赛达电子有限公司","country":"开发区","contact":"曹祥春","telphone":"13182832191","money":"10010万元","time":"2011.05.24","address":"句容市经济开发区致远路37号","industry":"物联网","products":"智能水表","income":"10000万元","taxes":"600万元","host":"窄带物联网通信技术/硬件开发工程师、软件开发工程师","remarks":"高企、规上","type":"4","demostrate":"3-生物医药"},
+                    {"index":"4","comName":"江苏威尔迪威阀业有限公司","country":"开发区","contact":"王鹏","telphone":"18652871483","money":"10100万","time":"2012.12","address":"句容经济开发区致远路21号","industry":"机械类","products":"阀门","income":"4200万","taxes":"380万","host":"高压阀门设计专业人才及焊接方面专家","remarks":"高企、规上","type":"5","demostrate":"4-新技术应用"},
+                    {"index":"5","comName":"三斯达（江苏）环保科技有限公司","country":"开发区","contact":"王荣革","telphone":"18652877775","money":"5000万美元","time":"2011年","address":"句容市经济开发区工业园（华阳西路）","industry":"新材料","products":"环保塑胶材料","income":"12000万元","taxes":"200万元","host":"会计人员2名，加工中心操作工30名，质量检验员3名","remarks":"高企、规上","type":"1","demostrate":"5-机械制造"},
+                    {"index":"6","comName":"江苏兆鋆新材料科技有限公司","country":"开发区","contact":"徐达宝","telphone":"13905299020","money":"5814万元","time":"2009.3.10","address":"句容市华阳西路99号","industry":"新材料","products":"SMC/BMC材料及制品，改性工程塑料，碳纤维材料，环保设备","income":"19425.83万元","taxes":"527.53万元","host":"进站博士1名，技术服务工程师5人，销售工程师5人","remarks":"高企、规上","type":"1","demostrate":"6-其它加工制造"},
+                    {"index":"7","comName":"江苏海田技术有限公司","country":"开发区","contact":"常红言","telphone":"13913995811","money":"1000万元","time":"38519","address":"句容市黄梅镇冯岗村19号","industry":"新材料","products":"光固化材料产品的研发、生产、销售和技术服务；","income":"15900万元","taxes":"1043万元","host":"进站博士1名，uv家具涂料研发主管，研发主任，设备主管。化学、材料学、高分子材料学专业人才","remarks":"高企、规上","type":"1","demostrate":"7-其它"},
+                    {"index":"8","comName":"句容骏成电子有限公司","country":"开发区","contact":"孙昌玲","telphone":"13505297926","money":"5444万元","time":"20019-07-16","address":"句容经济开发区西环路西侧01幢1-3层","industry":"电子信息","products":"液晶显示屏    液晶显示模组","income":"34000万元","taxes":"2500万元","host":"开发工程师3名，设备工程师4名，质量体系工程师1名，品质工程师2名","remarks":"高企、规上","type":"4","demostrate":""},
+                    {"index":"9","comName":"江苏华途数控科技有限公司","country":"开发区","contact":"朱明月","telphone":"13912105734","money":"5000万","time":"2014.10.27","address":"句容市开发区科技新城科技大道一号楼3号楼1，2，3层","industry":"信息技术","products":"示教器，电子手轮","income":"920万","taxes":"80万","host":"无","remarks":"高企","type":"4","demostrate":""},
+                    {"index":"10","comName":"江苏兴文包装有限公司","country":"开发区","contact":"杨林森","telphone":"13812368958","money":"14800万元","time":"2010年4月","address":"句容经济开发区福地西路88号","industry":"纸制品制造","products":"瓦楞纸包装箱","income":"15800万元","taxes":"860万元","host":"无","remarks":"高企、规上","type":"6","demostrate":""},
+                    {"index":"11","comName":"江苏金曼科技有限责任公司","country":"开发区","contact":"戚媚娟","telphone":"13912102524","money":"5000万","time":"2011年","address":"句容市黄梅街道宝华山路168号","industry":"新材料","products":"造币助剂","income":"1000万","taxes":"80万","host":"电镀添加剂研发人员","remarks":"高企","type":"1","demostrate":""},
+                    {"index":"12","comName":"江苏智达高压电气有限公司","country":"开发区","contact":"周健","telphone":"15805157099","money":"15000万元","time":"40505","address":"句容经济开发区隆昌路18号","industry":"先进制造与自动化","products":"套管、互感器","income":"29500万元","taxes":"1300万元","host":"电气工程师5名，质量工程师2名，模具工程师2名","remarks":"高企","type":"5","demostrate":""},
+                    {"index":"13","comName":"镇江天力变压器有限公司","country":"开发区","contact":"陶守林","telphone":"13921554326","money":"10000万元","time":"35866","address":"江苏省句容经济开发区福地西路60号","industry":"制造业","products":"变压器","income":"34652.58万元","taxes":"380万元","host":"无","remarks":"高企","type":"5","demostrate":""},
+                    {"index":"14","comName":"天宁香料（江苏）有限公司","country":"开发区","contact":"樊爱林","telphone":"13505299108","money":"2160万元","time":"38511","address":"句容市华阳镇杜家山","industry":"生物医药","products":"香精","income":"16070万元","taxes":"1150万元","host":"应用工程师1名，在线品控1名","remarks":"高企、规上","type":"3","demostrate":""},
+                    {"index":"15","comName":"江苏华昌织物有限公司","country":"开发区","contact":"陈小娟","telphone":"13852977304","money":"1000","time":"2010.7","address":"句容市开发区福地路9号","industry":"制造业","products":"遮阳网，防虫网","income":"4900","taxes":"70","host":"需要化学高分子专业的人才","remarks":"高企、规上","type":"5","demostrate":""},
+                    {"index":"16","comName":"江苏久正光电有限公司","country":"开发区","contact":"潘玉蓉","telphone":"\"87285858"},
+                    {"index":"18051281772\"","comName":"2300万美元","country":"37741","contact":"句容市经济开发区华阳北路88号","telphone":"电子信息","money":"液晶显示器模组","time":"35929万元","address":"760万元","industry":"技术：液晶显示器研究开发人才：电子信息专业人才","products":"高企","income":"2","taxes":""},
+                    {"index":"17","comName":"江苏三超金刚石工具有限公司","country":"开发区","contact":"许军","telphone":"13852976849","money":"24000","time":"2014.3","address":"句容市开发区致远路66号","industry":"超硬材料","products":"金刚石线","income":"15223.56","taxes":"112.34","host":"超硬材料专业技术员","remarks":"高企","type":"1","demostrate":""},
+                    {"index":"18","comName":"江苏中容科技有限公司","country":"开发区","contact":"陈娟","telphone":"13505290031","money":"8000万","time":"2009.2.4","address":"句容经济开发区杨塘路北侧01 02幢","industry":"制造业","products":"新型输配电产品","income":"7200万元","taxes":"320万元","host":"新型输配电产品 ","remarks":"高企、规上","type":"5","demostrate":""},
+                    {"index":"19","comName":"江苏大华激光科技开发有限公司","country":"开发区","contact":"祁飞","telphone":"18952993658","money":"2000万","time":"39171","address":"杜家山工业园8号","industry":"制造业","products":"激光切割机","income":"4800万","taxes":"195万","host":"激光切割相关行业技术人才","remarks":"高企、规上","type":"5","demostrate":""},
+                    {"index":"20","comName":"江苏德厚机电有限公司","country":"开发区","contact":"吴小云","telphone":"18252955535","money":"518万元","time":"38540","address":"句容经济开发区西三环东南侧02幢","industry":"机械电子","products":"电气机械、电子产品制造、销售","income":"2000万元","taxes":"600万元","host":"机械、电子工程师，采购人员1名，电子工程师2名，机械工程师2名","remarks":"高企、规上","type":"2","demostrate":""},
+                    {"index":"21","comName":"江苏华阳管业股份有限公司","country":"开发区","contact":"杨小琴","telphone":"0511-87287888-8020","money":"6000万元","time":"2009.08","address":"江苏省句容经济开发区富源路","industry":"制造业","products":"金属管道、管道配件","income":"11648万元","taxes":"383.49万元","host":"钛材焊接人员","remarks":"高企、规上","type":"5","demostrate":""},
+                    {"index":"22","comName":"江苏思派包装设备有限公司","country":"开发区","contact":"张林海","telphone":"18915952196","money":"1000万","time":"2015.1.15","address":"句容市经济开发区科技新城科技大道1号2幢 ","industry":"包装设备","products":"包装机械","income":"2103241.48","taxes":"233827.87","host":"自动化工程师","remarks":"高企","type":"6","demostrate":""},
+                    {"index":"23","comName":"江苏伟建工具科技有限公司","country":"开发区","contact":"吴伟中","telphone":"13905290952","money":"5695.3","time":"41423","address":"句容市开发区华阳西路88-8号","industry":"","products":"高速钢","income":"6325.82","taxes":"55.27万","host":"技术研发人员","remarks":"高企","type":"6","demostrate":""},
+                    {"index":"24","comName":"江苏海祥消防科技有限公司","country":"开发区","contact":"唐枚娟","telphone":"18952995528","money":"1000万","time":"2015年","address":"崇明西路容宁创业园1#厂房","industry":"消防设备","products":"消防设备、船用设备、机械设备","income":"1050万","taxes":"49万","host":"机械工程师、电气工程师","remarks":"高企","type":"6","demostrate":""},
+                    {"index":"25","comName":"江苏盈科汽车空调有限公司","country":"开发区","contact":"胡少云","telphone":"13914591122","money":"500万","time":"2016年","address":"句容市经济开发区方赤路108号","industry":"新型汽车空调压缩机的制造","products":"汽车空调系统制造、销售，汽车配件等","income":"1831万","taxes":"26万","host":"技术研发人员，数控车工","remarks":"高企、规上","type":"5","demostrate":""},
+                    {"index":"26","comName":"鄂尔特特（江苏）包装技术有限公司","country":"开发区","contact":"江  翠","telphone":"13952962137","money":"640万美元","time":"2012.8.9","address":"句容经济开发区杨塘路8号","industry":"纸质包装","products":"护角板","income":"4205","taxes":"188","host":"加工中心操作工5名，销售人员3名","remarks":"规上","type":"6","demostrate":""},
+                    {"index":"27","comName":"江苏昊科汽车空调有限公司","country":"开发区","contact":"胡少云","telphone":"13914591122","money":"6000","time":"2013","address":"句容市经济开发区崇明西路299号","industry":"新材料","products":"汽车空调压缩机","income":"4894","taxes":"84","host":"销售员若干","remarks":"规上","type":"1","demostrate":""},
+                    {"index":"28","comName":"江苏佰加汽车零部件有限公司","country":"开发区","contact":"陈有霞","telphone":"15189199367 13567609676","money":"500","time":"2014年","address":"句容市经济开发区崇明西路298号","industry":"制造企业","products":"离合器","income":"4800","taxes":"151","host":"无","remarks":"规上","type":"5","demostrate":""},
+                    {"index":"29","comName":"句容市科达技术开发有限公司","country":"开发区","contact":"徐  蓉","telphone":"13775392368","money":"5000","time":"1996年","address":"句容市经济技术开发区西环路西侧","industry":"","products":"检查井盖、水箅盖、表箱","income":"3402","taxes":"356","host":"无","remarks":"规上","type":"6","demostrate":""},
+                    {"index":"30","comName":"句容亚美制衣有限公司","country":"开发区","contact":"徐世燕","telphone":"13913405351","money":"60","time":"2002.2.4","address":"句容经济开发区三台阁","industry":"服装","products":"服装","income":"2679","taxes":"79","host":"机工","remarks":"规上","type":"6","demostrate":""},
+                    {"index":"31","comName":"句容市茂华女装有限公司","country":"开发区","contact":"张  捷","telphone":"13852979600","money":"559","time":"1996.12","address":"开发区杨塘岗句卓路9号","industry":"服装生产","products":"服装","income":"2500","taxes":"32","host":"无","remarks":"规上","type":"6","demostrate":""},
+                    {"index":"32","comName":"句容羽逸服装有限公司","country":"开发区","contact":"毛  菲","telphone":"18082108800","money":"50","time":"2013年","address":"句容市开发区洪武路174号","industry":"制造业","products":"服装","income":"4188.24","taxes":"31.02","host":"无","remarks":"规上","type":"6","demostrate":""},
+                    {"index":"33","comName":"江苏科创电器有限公司","country":"开发区","contact":"张  涛","telphone":"13775393434","money":"85005.47","time":"2011.09.30","address":"句容经济开发区华阳西路南侧（西环路交叉口）","industry":"自来水生产","products":"自来水、接水工程、二次供水","income":"8869.95","taxes":"611.68","host":"冲压车间主任，质量工程师，电工，助理工程师若干","remarks":"规上","type":"6","demostrate":""},
+                    {"index":"34","comName":"江苏新德变压器有限公司","country":"开发区","contact":"贡燕妮","telphone":"15951203911","money":"12000","time":"2015年","address":"句容市经济开发区崇明西路容宁创业园08幢","industry":"制造","products":"输配电设备的设计研发制造及销售","income":"867","taxes":"11.18","host":"变压器质量经理1人，质量工程师2人，质量部经理1人，技术员2人","remarks":"规上","type":"5","demostrate":""},
+                    {"index":"35","comName":"镇江东丰制衣有限公司","country":"开发区","contact":"陈素琴","telphone":"13852979657","money":"2369","time":"2010.2.26","address":"句容经济开发区狮山路富达创业园10幢","industry":"","products":"制造服装","income":"15613","taxes":"1066","host":"人事助理1名","remarks":"规上","type":"6","demostrate":""},
+                    {"index":"36","comName":"江苏海田电子材料有限公司","country":"开发区","contact":"吴清国","telphone":"13775392110","money":"1024","time":"2010.03","address":"黄梅城上工业园18号","industry":"新材料","products":"阻焊油墨","income":"4010","taxes":"209","host":"电子精细辅助材料","remarks":"规上","type":"1","demostrate":""},
+                    {"index":"37","comName":"江苏国能电力设备有限公司","country":"开发区","contact":"\"李美娇"},
+                    {"index":"（刘丽）\"","comName":"17715986678","country":"1000","contact":"40310","telphone":"开发区杨塘路218号","money":"制造业","time":"电磁线、片式散热器、变压器配件制造","address":"","industry":"","products":"无","income":"规上","taxes":"5","host":""},
+                    {"index":"38","comName":"江苏井上巨腾高分子材料有限公司","country":"开发区","contact":"翟羽佳","telphone":"13952932029","money":"600万美元","time":"2010.06","address":"经济开发区巨宝路18号","industry":"电子专用材料开发与生产","products":"碳纤板、胶带","income":"267","taxes":"1","host":"生产经理，车间主任1名","remarks":"规上","type":"1","demostrate":""},
+                    {"index":"39","comName":"江苏金陵奥普特高分子材料有限公司","country":"开发区","contact":"郑培蕾","telphone":"13914592158","money":"2000","time":"2010.12","address":"句容市经济开发区隆昌路18号","industry":"新材料","products":"热塑性弹性体","income":"6231","taxes":"682.69","host":"研发工程师5名，销售工程师5名","remarks":"规上","type":"1","demostrate":""},
+                    {"index":"40","comName":"东旭巨腾电子材料（句容）有限公司","country":"开发区","contact":"周  艳","telphone":"18082108390","money":"100万美元","time":"2011.03","address":"经济开发区巨宝路18号","industry":"电子专用材料开发与生产","products":"麦拉、泡棉、保护膜","income":"6320","taxes":"450","host":"无","remarks":"规上","type":"2","demostrate":""},
+                    {"index":"41","comName":"江苏宏景电气有限公司","country":"开发区","contact":"张永忠","telphone":"15720751021","money":"800","time":"2011.4","address":"开发区世贸路55号","industry":"电气","products":"绝缘树脂","income":"8076","taxes":"60","host":"无","remarks":"规上","type":"2","demostrate":""},
+                    {"index":"42","comName":"江苏华桑食品科技有限公司","country":"开发区","contact":"余  红","telphone":"13625267510","money":"5000","time":"40717","address":"句容华阳北路33号","industry":"生物","products":"果酱 食品生产","income":"10263","taxes":"392","host":"标书文员1名，生产管理2名，成本会计1名","remarks":"规上","type":"3","demostrate":""},
+                    {"index":"43","comName":"句容市水务集团有限公司","country":"开发区","contact":"俞  婷","telphone":"15996824731","money":"6000","time":"2014","address":"华阳西路88号","industry":"","products":"电风扇取暖器","income":"1520","taxes":"538","host":"质检员5名，市场营销10名，研发工程师6名，设备工程师10名","remarks":"规上","type":"5","demostrate":""},
+                    {"index":"44","comName":"镇江天力变压器有限公司","country":"开发区","contact":"孙海燕","telphone":"13952995522","money":"10000","time":"1998.3.12","address":"句容经济开发区福地西路60号","industry":"","products":"变压器.电工产","income":"24516","taxes":"310","host":"法务1名，财务助理1名，日语翻译1名","remarks":"规上","type":"5","demostrate":""},
+                    {"index":"45","comName":"江苏五洲电磁线有限公司","country":"开发区","contact":"王克芳","telphone":"13815168799","money":"2000","time":"1998.3.16","address":"句容市经济技术开发区西三环东侧3号","industry":"工业","products":"电磁线","income":"2301","taxes":"230","host":"无","remarks":"规上","type":"5","demostrate":""},
+                    {"index":"46","comName":"江苏太平洋联合焊接材料有限公司","country":"开发区","contact":"郎丽平","telphone":"13057697558","money":"1000","time":"1999.12","address":"句容经济开发区文昌西路36号","industry":"金属制造","products":"生产电焊条","income":"5452","taxes":"120","host":"无","remarks":"规上","type":"5","demostrate":""},
+                    {"index":"47","comName":"江苏圣通电力新能源科技有限公司","country":"开发区","contact":"戴雯雯","telphone":"18168588887","money":"11000","time":"2007.8.27","address":"句容经济开发区西二环乡镇工业园区","industry":"新能源","products":"高低压成套设备、智慧路灯","income":"11696","taxes":"117","host":"配电网设计师4名，输电电气设计师2名，输电结构设计师2名","remarks":"规上","type":"2","demostrate":""},
+                    {"index":"48","comName":"江苏新顺福食品有限公司","country":"开发区","contact":"张  燕","telphone":"13645292779","money":"700","time":"39430","address":"句容开发区世茂路9号","industry":"","products":"保鲜面","income":"7533","taxes":"252","host":"产品检面工10名，产品打包工10名，设备包装工10名","remarks":"规上","type":"7","demostrate":""},
+                    {"index":"49","comName":"江苏百利机械有限公司","country":"开发区","contact":"葛春芳","telphone":"13814100646","money":"USD4000","time":"39451","address":"开发区和爱路111号","industry":"制造业","products":"自行车及零件","income":"3049","taxes":"170","host":"研发工程师2名，普工10名","remarks":"规上","type":"5","demostrate":""},
+                    {"index":"50","comName":"江苏盛泰成工程材料有限公司","country":"开发区","contact":"陈小娟","telphone":"13852977304","money":"5000","time":"2008年","address":"句容市经济开发区福地路9号","industry":"贸易公司","products":"钢管、管件、仓储服务","income":"3450","taxes":"202","host":"能驻外地的高级项目经理","remarks":"规上","type":"7","demostrate":""},
+                    {"index":"51","comName":"句容绿色动力再生能源有限公司","country":"开发区","contact":"陈红林","telphone":"15195978516","money":"10000","time":"41176","address":"句容市经济开发区姚徐村","industry":"垃圾焚烧发电、炉渣销售环保设备及配件进出口、固体废物处理","products":"电力","income":"5441","taxes":"311","host":"机电维修人员1名","remarks":"规上","type":"2","demostrate":""},
+                    {"index":"52","comName":"江苏格瑞塑料有限公司","country":"开发区","contact":"徐  乐","telphone":"18652809887","money":"2200万元","time":"38252","address":"句容市华阳镇皮业城方赤路北西片工业园区","industry":"","products":"电线电缆护套管、各种给排水管材、管件、电气产品、电力管道","income":"4540","taxes":"162","host":"无","remarks":"规上","type":"2","demostrate":""},
+                    {"index":"53","comName":"镇江市玖润光通信技术有限公司","country":"开发区","contact":"张  井","telphone":"13376195840","money":" 1422万元人民币","time":"41774","address":"句容经济开发区宁杭北路110号A栋（句容益柯赛橡胶制品有限公司院内）","industry":"","products":"通信技术、网络信息产品的研发；光纤、光缆、有源器件、无源器件以及通信设备（不含卫星地面接收设施）的制造；","income":"2303.83","taxes":"110.21","host":"无","remarks":"规上","type":"2","demostrate":""},
+                    {"index":"54","comName":"句容华润燃气有限公司","country":"开发区","contact":"尹纪维","telphone":"15162999270","money":"2000","time":"39661","address":"开发区宁杭北路60号","industry":"天然气销售","products":"生产燃气、燃气工程施工","income":"22538","taxes":"2410.38","host":"需要","remarks":"规上","type":"7","demostrate":""},
+                    {"index":"55","comName":"江苏鸿丰服饰有限公司","country":"开发区","contact":"张时英","telphone":"15052998898","money":"500","time":"2008.8.23","address":"句容经济开发区昌源路12号","industry":"","products":"服装","income":"3321.19","taxes":"70.30","host":"无","remarks":"规上","type":"6","demostrate":""},
+                    {"index":"56","comName":"柏霆（江苏）光电科技有限公司","country":"开发区","contact":"胥文慧","telphone":"13815161930","money":"1222万美元","time":"2009.05.25","address":"句容市开发区巨宝路西侧","industry":"","products":"电子专用材料开发及制造","income":"6278.87","taxes":"1320.82","host":"储备干部2名，来料检验员2名，设备工程技术人员1名","remarks":"规上","type":"2","demostrate":""},
+                    {"index":"57","comName":"江苏瀚晨电气科技有限公司","country":"开发区","contact":"聂在伟","telphone":"13952968882","money":"1000","time":"2009.5.26","address":"经济开发区石狮路富达创业园07幢","industry":"","products":"配电设备","income":"1563","taxes":"115","host":"无","remarks":"规上","type":"2","demostrate":""},
+                    {"index":"58","comName":"都茂（江苏）机电科技有限公司","country":"开发区","contact":"尤旭霞","telphone":"13913385860","money":"1600万美元","time":"36782","address":"句容市大卓镇句卓路","industry":"制造","products":"自行车、电动玩具车及其零配件","income":"11670","taxes":"82","host":"无","remarks":"规上","type":"6","demostrate":""},
+                    {"index":"59","comName":"句容盛业管件制品有限公司","country":"开发区","contact":"陈  凤","telphone":"13775527152","money":"1801.505855万美元","time":"2000.12.28","address":"开发区杜家山66号","industry":"家具","products":"金属桌椅、遮阳帐篷","income":"4975.46","taxes":"","host":"无","remarks":"规上","type":"6","demostrate":""},
+                    {"index":"60","comName":"句容市兴开纸制品有限公司","country":"开发区","contact":"经伟国","telphone":"13776379629","money":"202","time":"2002.3.8","address":"句容经济开发区台湾小镇对面","industry":"","products":"1.纸箱 2.纸板","income":"4685.37","taxes":"275.64","host":"货车驾驶员1名","remarks":"规上","type":"6","demostrate":""},
+                    {"index":"61","comName":"镇江一马先制衣有限公司","country":"开发区","contact":"许桂琴","telphone":"13775382510","money":"5000","time":"2002.7.30","address":"句容市华阳镇宁杭南路78号靠近银河之都","industry":"","products":"服装","income":"18995.39","taxes":"166.98","host":"包装工若干","remarks":"规上","type":"6","demostrate":""},
+                    {"index":"62","comName":"巨宝精密加工（江苏）有限公司","country":"开发区","contact":"王瑞荣","telphone":"13505296524","money":"41000美元","time":"2003","address":"巨宝路18号","industry":"电子","products":"笔记本电脑组配件","income":"168610","taxes":"7754","host":"设备维护员4名，模具制及设计工程师10名","remarks":"规上","type":"2","demostrate":""},
+                    {"index":"63","comName":"江苏久正光电有限公司","country":"开发区","contact":"孙如红","telphone":"13776378110","money":"2300万美元","time":"2003.4.30","address":"经济开发区","industry":"","products":"液晶显示模组","income":"33232.60","taxes":"228.90","host":"无","remarks":"规上","type":"2","demostrate":""},
+                    {"index":"64","comName":"江苏正大置业集团混凝土有限公司","country":"开发区","contact":"徐  萍","telphone":"13952994756","money":"2000万元","time":"2003.12.25","address":"句容经济开发区工业园","industry":"建材","products":"混凝土生产销售运输","income":"3408","taxes":"12","host":"无","remarks":"规上","type":"7","demostrate":""},
+                    {"index":"65","comName":"句容联一科技有限公司","country":"开发区","contact":"姚  玲","telphone":"13179395501","money":"410万美元","time":"2003.6.16","address":"江苏省镇江句容市华阳北路35号","industry":"","products":"1.光学机构产品 2.望远镜零配件","income":"768.09","taxes":"","host":"无","remarks":"规上","type":"2","demostrate":""},
+                    {"index":"66","comName":"镇江瑞德制衣有限公司","country":"开发区","contact":"张远根","telphone":"15305299096","money":"10万美元","time":"2003.8.21","address":"句容市开发区三台阁村","industry":"","products":"服装","income":"2195.52","taxes":"","host":"无","remarks":"规上","type":"6","demostrate":""},
+                    {"index":"67","comName":"江苏久禾光电有限公司","country":"开发区","contact":"高勇梅","telphone":"13861376543","money":"1200萬美元","time":"38092","address":"經濟開發區華陽北路88號","industry":"電子","products":"攝像頭","income":"6947","taxes":"","host":"自動化及光學研發人員","remarks":"规上","type":"2","demostrate":""},
+                    {"index":"68","comName":"句容市仙人桥矿业有限公司","country":"开发区","contact":"张佳佳","telphone":"18061297978","money":"5250","time":"2004.8.19","address":"句容市黄梅镇南巷村","industry":"","products":"铜及其它有色金属","income":"3156.61","taxes":"322.01","host":"无","remarks":"规上","type":"1","demostrate":""},
+                    {"index":"69","comName":"句容兴泰服饰衬布有限公司","country":"开发区","contact":"朱海婷","telphone":"13952996120","money":"680.8","time":"2005.7.19","address":"句容经济开发区富源路58号","industry":"服装，粘合衬","products":"生产服装，粘合衬","income":"4402","taxes":"146","host":"无","remarks":"规上","type":"6","demostrate":""},
+                    {"index":"70","comName":"句容玉明化工有限公司","country":"开发区","contact":"任  静","telphone":"13921558380","money":"1918","time":"2005.8.18","address":"句容石狮集镇内","industry":"化工","products":"1.盐酸 2.氯化石蜡","income":"10404.66","taxes":"273.82","host":"无","remarks":"规上","type":"1","demostrate":""},
+                    {"index":"71","comName":"江苏盛邦家俱制造有限公司","country":"开发区","contact":"陈  凤","telphone":"13775527152","money":"20000","time":"2005.10.11","address":"句容市杜家山66号","industry":"家具","products":"金属桌椅、遮阳帐篷","income":"26780.46","taxes":"375.26","host":"无","remarks":"规上","type":"7","demostrate":""},
+                    {"index":"72","comName":"句容益柯赛橡胶制品有限公司","country":"开发区","contact":"戴正萍","telphone":"13775529160","money":"3843.84","time":"2005.10.31","address":"句容经济开发区宁杭北路","industry":"","products":"自行车轮胎","income":"9015","taxes":"381","host":"成型工8名，橡胶硫化工6名","remarks":"规上","type":"7","demostrate":""},
+                    {"index":"73","comName":"句容立成强机械有限公司","country":"开发区","contact":"笪如云","telphone":"18651297377","money":"25636","time":"38929","address":"江苏省句容市文昌西路8号","industry":"交通运输","products":"自行车","income":"380","taxes":"180","host":"无","remarks":"规上","type":"6","demostrate":""},
+                    {"index":"74","comName":"句容佳泰金属制品有限公司","country":"开发区","contact":"戴正萍","telphone":"13775529160","money":"329","time":"39062","address":"句容市华阳镇杜家山工业区（靠近天宁香精盛邦","industry":"","products":"1.自行车配件 2.健身车配件","income":"2010.35","taxes":"58.18","host":"冲压工2名，机修工3名，普工5名","remarks":"规上","type":"6","demostrate":""},
+                    {"index":"75","comName":"江苏桃李面包有限公司","country":"开发区","contact":"朱  枫","telphone":"13951853026","money":"35000","time":"43484","address":"句容市开发区崇明西路容宁创业园综合楼","industry":"食品","products":"面包","income":"9102","taxes":"77.6","host":"生产储备干部、设备管理储备干部，营销储备干部，财务储备干部若干","remarks":"规上","type":"7","demostrate":""},
+                    {"index":"76","comName":"江苏苏蒂服饰实业有限公司","country":"开发区","contact":"周  会","telphone":"13913823520","money":"900万美元","time":"40738","address":"句容市华阳西路66号","industry":"纺织","products":"各类男、女、儿童服装生产","income":"3871","taxes":"210.5","host":"服装缝纫工20名，样衣工10名，质检人员1名","remarks":"规上","type":"6","demostrate":""},
+                    {"index":"77","comName":"句容市万方水泥制品有限公司","country":"开发区","contact":"刘智成","telphone":"15952966203","money":"2000","time":"39330","address":"句容市开发区富源路6号","industry":"建材","products":"混凝土预制构件","income":"2645.45","taxes":"241","host":"工程师","remarks":"规上","type":"7","demostrate":""},
+                    {"index":"78","comName":"江苏壹度科技股份有限公司","country":"开发区","contact":"童  会","telphone":"15312072182","money":"10000","time":"2018.01.25","address":"句容市经济开发区崇明西路102号","industry":"半导体","products":"半导体晶圆，集成电路的设计、开发、生产、封装、测试、销售与服务。","income":"5980","taxes":"16","host":"有关半导体行业的资深工程师，操作工等","remarks":"规上","type":"1","demostrate":""}
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [119.1582369000, 31.9480427100]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "郭庄镇",
+                "mag": 8,
+                "time": 1507425650893,
+                "felt": null,
+                "tsunami": 0,
+                "test": [
+                    {"index":"79","comName":"江苏耀兴安全玻璃有限公司","country":"郭庄镇","contact":"孙祯彬","telphone":"19962021898","money":"5000","time":"2012.11","address":"句容市空港新区恒达路8号","industry":"新材料","products":"幕墙玻璃","income":"11576.49","taxes":"376.52","host":"玻璃生产线操作员","remarks":"高企","type":"1","demostrate":""},
+                    {"index":"80","comName":"江苏和正特种装备有限公司","country":"郭庄镇","contact":"陈春英","telphone":"13057554566","money":"8000万","time":"2013年","address":"句容市空港新区16号","industry":"电子信息技术","products":"微波传输设备、信息处理机、转接装置等","income":"4264.25万元","taxes":"27.25万元","host":"通信、光电、机电等技术研发人才","remarks":"高企","type":"2","demostrate":""},
+                    {"index":"81","comName":"句容协鑫集成科技有限公司（原江苏东昇光伏科技有限公司）","country":"郭庄镇","contact":"张蓉","telphone":"18112808971","money":"90000万元","time":"2014年","address":"句容市郭庄镇空港新区空港大道999号","industry":"新能源光伏","products":"高效太阳能组件","income":"140000万（预估）","taxes":"136万","host":"智能制造技术人才","remarks":"高企","type":"2","demostrate":""},
+                    {"index":"82","comName":"镇江润祥园林科技发展有限公司","country":"郭庄镇","contact":"李祖祥","telphone":"13505292663","money":"200万元","time":"2011年","address":"句容市郭庄镇刘巷村18号","industry":"农业种植业","products":"草种、草坪","income":"510万元","taxes":"2万元","host":"育种技术与草坪技术。需草坪育种方面的硕士研究生","remarks":"高企","type":"7","demostrate":""},
+                    {"index":"83","comName":"江苏金门能源装备有限公司","country":"郭庄镇","contact":"蒋长胜","telphone":"18082108686","money":"12000万","time":"2011年","address":"句容市空港新区18号","industry":"石油化工装备","products":"电脱盐脱水装备；锅炉；压力容器","income":"3000万","taxes":"100万","host":"无","remarks":"高企","type":"5","demostrate":""},
+                    {"index":"84","comName":"江苏通瑞环保科技发展股份有限公司","country":"郭庄镇","contact":"梁晨","telphone":"15952933348","money":"32610.916万元","time":"2016年","address":"句容市郭庄镇东方红村688号","industry":"环保材料","products":"活性炭生产及销售","income":"1607.86万元","taxes":"15.21万元","host":"需要活性炭相关质检人员","remarks":"高企","type":"1","demostrate":""},
+                    {"index":"85","comName":"江苏电科电气设备有限公司","country":"郭庄镇","contact":"姜亚波","telphone":"87578803","money":"11888万元","time":"2009.10.19","address":"句容市郭庄镇空港新区188号","industry":"电气设备","products":"电气设备、机电设备、仪器仪表、五金交电、电子产品、通讯器材的研发、制造、销售和技术咨询服务","income":"42350万元","taxes":"1143万元","host":"电气相关专业的人才","remarks":"高企","type":"2","demostrate":""},
+                    {"index":"86","comName":"江苏格瑞德交通科技有限公司","country":"郭庄镇","contact":"卞玲丽","telphone":"13913310076","money":"2000万元","time":"2012年","address":"句容市空港新区666号","industry":"改装车辆","products":"房车生产及销售","income":"2576万元","taxes":"85万元","host":"需要房车设计相关技术人员","remarks":"高企","type":"6","demostrate":""}
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [119.0358965700, 31.8057117600]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "边城镇",
+                "mag": 7,
+                "time": 1507425650893,
+                "felt": null,
+                "tsunami": 0,
+                "test": [
+                    {"index":"87","comName":"江苏海川新材料科技有限公司","country":"边城镇","contact":"潘鑫","telphone":"18320881533","money":"1180万元","time":"2016年","address":"句容市边城镇光明科创园6号","industry":"新材料","products":"玻璃纤维增强筋","income":"2769.49万元","taxes":"85.22万元","host":"需要新材料相关质检人员","remarks":"高企","type":"1","demostrate":""},
+                    {"index":"88","comName":"镇江华源晋昌电器有限公司","country":"边城镇","contact":"魏媚娥","telphone":"13861359525","money":"1200万元","time":"2014.4.2","address":"句容市边城镇东昌集镇","industry":"制造业","products":"输配电设备、电工电子","income":"280万元","taxes":"25万元","host":"研发技术人才","remarks":"高企","type":"5","demostrate":""},
+                    {"index":"89","comName":"江苏南瓷绝缘子有限公司","country":"边城镇","contact":"徐秀娟","telphone":"13862433307","money":"5100万","time":"2001年","address":"句容市边城镇仑山湖南路1号","industry":"制造业","products":"电气化铁路接触网用绝缘子、城市轨道交通绝缘子","income":"8899.7万","taxes":"854.25万","host":"绝缘子制造方向专业技术人才","remarks":"高企","type":"5","demostrate":""},
+                    {"index":"90","comName":"镇江贝思特有机活性肥料有限公司","country":"边城镇","contact":"潘霞","telphone":"18914590210","money":"1000万元","time":"1999年11月12日","address":"句容市边城镇陈武集镇南300米","industry":"现代农业","products":"有机肥料、有机-无机复混肥料等","income":"3300万元","taxes":"16万元","host":"农学、植物营养学、农资销售等专业人才","remarks":"高企","type":"7","demostrate":""},
+                    {"index":"91","comName":"句容市天龙电气有限公司","country":"边城镇","contact":"戴龙艳","telphone":"18362028948","money":"1200","time":"20170710","address":"句容市边城镇光明村01幢","industry":"制造业","products":"太阳能灯","income":"6600","taxes":"630","host":"自动化工程师","remarks":"高企","type":"5","demostrate":""},
+                    {"index":"92","comName":"江苏新光环保工程有限公司","country":"边城镇","contact":"许晶晶","telphone":"18706103907","money":"10000万","time":"2002.4.15","address":"句容市边城镇光华路1号","industry":"新材料","products":"新型环保型声屏障","income":"21000万","taxes":"2800万","host":"需要结构工程师1名","remarks":"高企","type":"1","demostrate":""},
+                    {"index":"93","comName":"江苏新富瑞节能玻璃有限公司","country":"边城镇","contact":"李丽","telphone":"18912100688","money":"3000万元","time":"41852","address":"句容市边城镇光明科创园8－1号","industry":"新材料","products":"玻璃制品","income":"3371万","taxes":"62万","host":"管理、研发、技术人员","remarks":"高企","type":"1","demostrate":""}
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [119.3055653600, 32.0535264700]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "下蜀镇",
+                "mag": 7,
+                "time": 1507425650893,
+                "felt": null,
+                "tsunami": 0,
+                "test": [
+                    {"index":"94","comName":"镇江北新建材有限公司","country":"下蜀镇","contact":"沈磊","telphone":"15262999969","money":"1500万","time":"2009年","address":"下蜀镇临港工业集中区2号","industry":"工业固体废弃物综合利用技术","products":"纸面石膏板","income":"18375.51万","taxes":"2153.78万","host":"机械技术员、电气技术员、工艺技术员、电工个1人","remarks":"高企","type":"4","demostrate":""},
+                    {"index":"95","comName":"江苏建华新型墙材有限公司","country":"下蜀镇","contact":"阴冬梅","telphone":"13812369363","money":"18479.96954万元","time":"40568","address":"句容市下蜀镇临港工业集中区1-3号","industry":"制造业","products":"墙板、预制构件等","income":"16200万元","taxes":"580万元","host":"构件图纸深化工程师、机电工程师","remarks":"高企","type":"6","demostrate":""},
+                    {"index":"96","comName":"江苏天工钛业科技有限公司","country":"下蜀镇","contact":"吴建忠","telphone":"13626261237","money":"40500万元","time":"2010","address":"下蜀镇临港工业区9号","industry":"新材料","products":"钛及钛合金","income":"32000万元","taxes":"1300万元","host":"高端钛及钛合金制备技术及人才","remarks":"高企","type":"1","demostrate":""},
+                    {"index":"97","comName":"建华建材（江苏）有限公司","country":"下蜀镇","contact":"刘文颖","telphone":"18752944396","money":"5735万美元","time":"2002.10.8","address":"下蜀镇沿江开发区","industry":"建材","products":"预应力管桩、方桩、PC构件","income":"270000万","taxes":"13000万元","host":"工民建技术人才","remarks":"高企","type":"5","demostrate":""},
+                    {"index":"98","comName":"江苏汤辰机械装备制造股份有限公司","country":"下蜀镇","contact":"赵俊杰","telphone":"13852974748","money":"2500万元人民币","time":"40548","address":"句容市下蜀镇临港工业集中区1-2号","industry":"机械制造业","products":"电杆模具 离心机 自动夹具 管桩设备","income":"15377.55万元","taxes":"89.2万元","host":"建材、工程机械设计研发类人员","remarks":"高企","type":"5","demostrate":""},
+                    {"index":"99","comName":"句容毅马五金制品有限公司","country":"下蜀镇","contact":"徐建","telphone":"13952897770","money":"3620万美元","time":"2005年","address":"句容市下蜀镇沿江经济开发区","industry":"机械制造","products":"管桩用端头板","income":"123400万元","taxes":"6000万","host":"电气工程师、机械设备工程师","remarks":"高企","type":"5","demostrate":""},
+                    {"index":"100","comName":"江苏万邦新型建材有限公司","country":"下蜀镇","contact":"孔震","telphone":"18905296086","money":"3000万","time":"2017.12.7","address":"句容市下蜀镇临港工业园区08号","industry":"混凝土添加剂","products":"减水剂","income":"12000万","taxes":"218万","host":"新材料、新工艺研发人员","remarks":"高企","type":"7","demostrate":""}
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [119.1910762800, 32.1692463300]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "茅山镇",
+                "mag": 3,
+                "time": 1507425650893,
+                "felt": null,
+                "tsunami": 0,
+                "test": [
+                    {"index":"101","comName":"江苏农景生态建设有限公司","country":"茅山镇","contact":"尚楚","telphone":"15252988747","money":"1000万元","time":"2002.9.4","address":"句容市茅山句茅路14公里处（榉树科技园）","industry":"农林业","products":"榉树、薄壳山核桃","income":"2100万元","taxes":"5万元","host":"良种选育、培育技术及相关方面人才","remarks":"高企","type":"7","demostrate":""},
+                    {"index":"102","comName":"句容市百事特复合材料有限公司","country":"茅山镇","contact":"陆海英","telphone":"13776378673","money":"500万元","time":"2004.6.1","address":"句容市茅山春城镇90号","industry":"新材料","products":"连续纤维增强复合材料","income":"2555万","taxes":"68万","host":"无","remarks":"高企","type":"1","demostrate":""},
+                    {"index":"103","comName":"江苏桓通环境科技有限公司","country":"茅山镇","contact":"裔小利","telphone":"13921558663","money":"12000万","time":"40773","address":"句容市春城镇句茅路边东头山8号","industry":"制造业","products":"钢带增强聚乙烯螺旋波纹管、PE实壁管、HDPE中空壁缠绕管","income":"2792万","taxes":"65万","host":"无","remarks":"高企","type":"5","demostrate":""}
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [119.1702318300, 31.9973372700]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "华阳镇",
+                "mag": 1,
+                "time": 1507425650893,
+                "felt": null,
+                "tsunami": 0,
+                "test": [
+                    {"index":"104","comName":"江苏山水建设集团有限公司","country":"华阳镇","contact":"陈卫连","telphone":"18905296218","money":"200000万","time":"2001.10.25","address":"句容市长江路399号","industry":"生态环境建设与保护","products":"生态环境建设","income":"115789万元","taxes":"3131万元","host":"水环境治理相关领域","remarks":"高企","type":"7","demostrate":""}
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [119.1893962600, 31.9438932400]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "后白镇",
+                "mag": 3,
+                "time": 1507425650893,
+                "felt": null,
+                "tsunami": 0,
+                "test": [
+                    {"index":"105","comName":"江苏固格澜栅防护设施有限公司","country":"后白镇","contact":"朱发海","telphone":"13952990557","money":"3000万元","time":"2013年","address":"句容市后白镇三圆制桶公司新厂区南","industry":"新材料","products":"金属护栏生产和安装","income":"4000万元","taxes":"200万元","host":"金属防腐材料研发人员","remarks":"高企","type":"1","demostrate":""},
+                    {"index":"106","comName":"句容市博远电子有限公司","country":"后白镇","contact":"刘刚","telphone":"13912101859","money":"500万元","time":"2010年","address":"句容市张庙工业园","industry":"敏感元器件与传感器","products":"温度传感器","income":"2300万元","taxes":"110万元","host":"无","remarks":"高企","type":"1","demostrate":""},
+                    {"index":"107","comName":"江苏省绿盾植保农药实验有限公司","country":"后白镇","contact":"缪康","telphone":"13952991913","money":"1000万","time":"1998年","address":"后白镇工业园区31号","industry":"农药","products":"农药","income":"950万","taxes":"60万","host":"无","remarks":"高企","type":"7","demostrate":""}
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [119.1883574300, 31.8055354300]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "白兔镇",
+                "mag": 3,
+                "time": 1507425650893,
+                "felt": null,
+                "tsunami": 0,
+                "test": [
+                    {"index":"108","comName":"江苏华神特种橡胶制品股份有限公司","country":"白兔镇","contact":"张玲","telphone":"13615264882","money":"5600万元","time":"2016.12.28","address":"句容市白兔镇凤塘工业集中区18号","industry":"新材料","products":"疏浚胶管","income":"6000万元","taxes":"100万元","host":"企业自有核心技术，暂无人才需求","remarks":"高企","type":"1","demostrate":""},
+                    {"index":"109","comName":"江苏派欧汽车零部件有限公司","country":"白兔镇","contact":"袁泽庆","telphone":"13601587913","money":"5000万元","time":"41716","address":"句容市白兔镇谢甲路1号","industry":"制造业","products":"汽车零部件及配件、塑料制品、照明灯具等","income":"2300万元","taxes":"78万元","host":"无","remarks":"高企","type":"5","demostrate":""},
+                    {"index":"110","comName":"江苏久维压力容器制造有限公司","country":"白兔镇","contact":"钱明","telphone":"17368506686","money":"1250万元","time":"39295","address":"句容市白兔镇工业园区6号","industry":"金属压力容器制造业","products":"无缝气瓶等金属容器","income":"1920万元","taxes":"152万元","host":"机械设计研发类人员","remarks":"高企","type":"5","demostrate":""}
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [119.3653272300, 31.9802558500]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "宝华镇",
+                "mag": 5,
+                "time": 1507425650893,
+                "felt": null,
+                "tsunami": 0,
+                "test": [
+                    {"index":"111","comName":"江苏天晟药业有限公司","country":"宝华镇","contact":"王慧","telphone":"0511-87783888","money":"5480万","time":"2001.04.09","address":"句容市宝华镇开发区10号","industry":"生物与新医药","products":"甘草酸及其盐类、苦参碱、苦参素、EGCG等","income":"10020万","taxes":"580万","host":"中药、天然产物在肝病领域的新药研究；药学、植物化学等相关专业，硕士研究生及以上学历研发人员3人。","remarks":"高企","type":"3","demostrate":""},
+                    {"index":"125","comName":"江苏天毅冷镦股份有限公司","country":"宝华镇","contact":"方梅花","telphone":"13951786640","money":"3000万元","time":"40423","address":"句容市宝华镇兴业路3号","industry":"制造业","products":"金属件及汽车配件","income":"4000万元","taxes":"160万元","host":"需要模具设计和机械制造类相关人才","remarks":"高企","type":"5","demostrate":""},
+                    {"index":"126","comName":"江苏芯力特电子科技有限公司","country":"宝华镇","contact":"杨凤","telphone":"18021510899","money":"1000万","time":"2014.8.19","address":"句容市宝华镇仙林东路16号","industry":"集成电路、电子信息产品","products":"RS485、CAN、RS232","income":"450万","taxes":"40.79万","host":"销售、办公人员","remarks":"高企","type":"1","demostrate":""},
+                    {"index":"127","comName":"镇江镓芯光电科技有限公司","country":"宝华镇","contact":"唐起","telphone":"15862955047","money":"300万","time":"2014.9.1","address":"句容市宝华镇仙林东路16号","industry":"半导体","products":"紫外传感器","income":"91.36万","taxes":"10.76万","host":"无","remarks":"高企","type":"1","demostrate":""},
+                    {"index":"128","comName":"江苏港峰环境科技有限公司（原江苏天晟环境科技有限公司）","country":"宝华镇","contact":"王伟","telphone":"15952964255","money":"3923.08","time":"2016.02.03","address":"\"句容市宝华镇仙林东路16号双创大厦0411室（注册地址）"}
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [119.0432199800,32.1439013900]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "天王镇",
+                "mag": 13,
+                "time": 1507425650893,
+                "felt": null,
+                "tsunami": 0,
+                "test": [
+                    {"index":"112","comName":"江苏海川卓越密封材料有限公司","country":"天王镇","contact":"徐德志","telphone":"13912340270","money":"2000万","time":"40653","address":"句容市天王镇浦溪工业集中区浦一西路17号","industry":"加工制造业","products":"密封件、油封、O型圈、减震器等加工制造","income":"2000万","taxes":"87万","host":"产品研发和技术支持人才","remarks":"高企","type":"5","demostrate":""},
+                    {"index":"113","comName":"句容市万顺轻工机械有限公司","country":"天王镇","contact":"昌兆云","telphone":"13705290928","money":"500万元","time":"2003.9.24","address":"句容市天王镇常溧路99号","industry":"新能源","products":"电机机械配件、包装机械、风力发电配件","income":"12420万元","taxes":"630万元","host":"需要产品研发技术和机电一体化相关专业人才","remarks":"高企、规上","type":"4","demostrate":""},
+                    {"index":"114","comName":"句容市天王汽车配件制造有限公司","country":"天王镇","contact":"张静","telphone":"13913403029","money":"8008万元","time":"1998.7.3","address":"句容市天王镇宁杭路边","industry":"制造业","products":"汽车配件、五金工具、农机配件生产加工等","income":"3000万元","taxes":"80万元","host":"储备干部、产品研发技术人才","remarks":"高企","type":"5","demostrate":""},
+                    {"index":"115","comName":"江苏胜源纸品有限公司","country":"天王镇","contact":"赵丽娟","telphone":"18651290705","money":"5000","time":"2014.3.21","address":"句容市天王镇浦溪工业园区","industry":"纸品加工","products":"纸和纸板容器制造","income":"17001","taxes":"110","host":"综合性管理人才","remarks":"规上","type":"6","demostrate":""},
+                    {"index":"116","comName":"江苏亚峰合金材料有限公司","country":"天王镇","contact":"陈长珍","telphone":"13645299278","money":"3000","time":"2007.8.15","address":"句容市天王镇袁巷工业集中区16号","industry":"金属加工","products":"铁合金冶炼","income":"10413","taxes":"1963","host":"开模技工","remarks":"规上","type":"5","demostrate":""},
+                    {"index":"117","comName":"句容市茅山交通工程镀锌材料有限公司","country":"天王镇","contact":"王洪玲","telphone":"15189199380","money":"408","time":"2002.11.28","address":"句容市天王镇戴庄村01幢","industry":"金属加工","products":"有色金属压延加工","income":"3701","taxes":"41","host":"管理人才","remarks":"规上","type":"5","demostrate":""},
+                    {"index":"118","comName":"句容泰博尔机械制造有限公司","country":"天王镇","contact":"王运敏","telphone":"18914596593","money":"500","time":"2009.7.28","address":"句容市天王镇浦溪大道6号","industry":"机械","products":"建筑工程用机械制造","income":"848","taxes":"7","host":"机械工程师","remarks":"规上","type":"5","demostrate":""},
+                    {"index":"119","comName":"味特佳食品江苏有限公司","country":"天王镇","contact":"郭红娣","telphone":"13812350677","money":"500","time":"2008.12.3","address":"句容市天王镇袁巷工业集中区味特佳路1号","industry":"食品加工","products":"肉制品及副产品加工","income":"3147","taxes":"39","host":"食品工程师","remarks":"规上","type":"6","demostrate":""},
+                    {"index":"120","comName":"句容志新精密五金零件有限公司","country":"天王镇","contact":"尤忠英","telphone":"13776378192","money":"5000","time":"2004.7.14","address":"句容市天王镇西大街","industry":"自行车","products":"自行车制造","income":"10048","taxes":"213","host":"管理人才","remarks":"规上","type":"5","demostrate":""},
+                    {"index":"121","comName":"句容协和服饰有限公司","country":"天王镇","contact":"周顺安","telphone":"13705291879","money":"3000","time":"2006.12.5","address":"句容市天王镇工业集中区常溧路27号","industry":"服饰","products":"机织服装制造","income":"4685","taxes":"126","host":"设计师","remarks":"规上","type":"6","demostrate":""},
+                    {"index":"122","comName":"句容市双利金属制品有限公司","country":"天王镇","contact":"曾照珊","telphone":"18082108954","money":"200","time":"2007.6.1","address":"句容市袁巷镇宁杭路8米处","industry":"汽车","products":"冲压件金属结构制造","income":"3923","taxes":"41","host":"锻压技工","remarks":"规上","type":"6","demostrate":""},
+                    {"index":"123","comName":"句容博越电缆材料有限公司","country":"天王镇","contact":"王华","telphone":"15905293469","money":"100","time":"2012.12.4","address":"句容市天王镇浦西工业园009号2号地块","industry":"电缆","products":"电线、电缆制造","income":"3376","taxes":"48","host":"电气专业人才","remarks":"规上","type":"2","demostrate":""},
+                    {"index":"124","comName":"句容康泰膨润土有限公司","country":"天王镇","contact":"王为奎","telphone":"13951685334","money":"1000","time":"2006.11.15","address":"句容市天王镇西溧村109号","industry":"膨润土","products":"膨润土开采","income":"3617","taxes":"121","host":"有色金属专业人才","remarks":"规上","type":"7","demostrate":""}
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [119.2129580600, 31.7456217600]
+            }
+        }
+    ]
+}

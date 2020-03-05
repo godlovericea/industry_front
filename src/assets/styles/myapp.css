@@ -1,0 +1,220 @@
+.leftBox{
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    z-index: 2;
+    width: 20%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    background-color: #101B26;
+}
+.leftItemsBox{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.leftheaderBox{
+    height: 60px;
+    width: 100%;
+    background:linear-gradient(90deg,rgba(22,121,213,0.2) 0%,rgba(22,121,213,0.63) 54%,rgba(22,121,213,1) 100%);
+}
+.headerTitle{
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0;
+    line-height: 60px;
+    text-align: center;
+}
+#enterprise{
+    height: 300px;
+    width: 100%;
+    background-color: #101B26;
+}
+.leftBox #modelll{
+    height: 300px;
+    width: 300px;
+    background-color: #101B26;
+}
+.modelll{
+    height: 300px;
+    width: 300px;
+    background-color: #101B26;
+}
+.rightBox{
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    z-index: 2;
+    width: 20%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    /* background-color: #101B26; */
+}
+.rightBox .el-input__inner{
+    background-color: #101B26;
+    border:1px solid rgba(27,143,251,1);
+    color: #ffffff;
+}
+.rightBox .el-input-group__append, .el-input-group__prepend{
+    background-color: #1679D5;
+    color: #ffffff;
+    border: 1px solid #1679D5;
+}
+.rightBox .el-input-group__append, .el-input-group__prepend i{
+    font-size: 20px;
+}
+.el-select-dropdown__item.selected{
+    color: #ffffff;
+}
+.el-scrollbar__wrap{
+    background-color: #101B26;
+    color: #ffffff;
+}
+.el-select-dropdown__item.hover, .el-select-dropdown__item:hover{
+    background-color: #1679D5;
+    color: #ffffff;
+}
+.el-select-dropdown{
+    border: none;
+}
+.content{
+    background-color: #101B26;
+    padding: 10px;
+}
+.cardBox{
+    margin-top: 20px;
+}
+.cardContent{
+    background-color: #ffffff;
+    padding: 10px;
+}
+.carImg{
+    height: 100px;
+    width: 100%;
+}
+.cardTitle{
+    font-size: 16px;
+    color: #13212E;
+}
+.cardDetail{
+    color: #999999;
+    max-height: 40px;
+    overflow: hidden;
+}
+.btnBox{
+    cursor: pointer;
+}
+
+.sceanDetailDialog{
+    position: absolute;
+    top: 100px;
+    left: 25%;
+    width: 50%;
+    height: 60%;
+    bottom: 100px;
+    margin: 0 auto;
+    background-color: #114474;
+    z-index: 4;
+}
+.sceanDialogHeader{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    font-size: 24px;
+    padding: 0 10px;
+}
+.divider{
+    height: 1px;
+    background-color: #6392BE;
+}
+.el-icon-close{
+    cursor: pointer;
+}
+.shortcut{
+    /* height: 150px; */
+    width: 200px;
+    margin-right: 10px;
+    padding: 10px 0;
+}
+.myVideo{
+    width: 200px;
+    margin-bottom: 10px;
+}
+.realImg{
+    max-width: 500px;
+    max-height: 500px;
+}
+.sceanInfo{
+    padding: 10px;
+    color: #ffffff;
+    font-size: 16px;;
+}
+.modeBox{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.modeBox .van-circle__text{
+    color: #ffffff;
+}
+.enterpriseBox{
+    height: calc(100% - 60px);
+}
+.el-tabs--left, .el-tabs--right{
+    height: 100% !important;
+}
+.el-tabs__item.is-active{
+    color: #ffffff;
+}
+
+.el-tabs__active-bar{
+    background-color: #ffffff;
+}
+.el-tabs__item{
+    color:#91ABCB ;
+}
+.el-tabs--left .el-tabs__header.is-left{
+    width: 200px;
+    text-align: right;
+}
+.el-tabs--left .el-tabs__item.is-left{
+    text-align: left;
+}
+#radar{
+    height: 400px;
+    width: 400px;
+}
+.enterpriseDetail{
+    margin-top: 20px;
+    display: flex;
+    color: #ffffff;
+}
+.detailBox{
+    margin-left: 20px;
+    font-size: 16px;
+}
+.tagBox .el-tag{
+    margin-right: 10px;
+}
+.modeItems{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modeTitle{
+    margin:5px 0;
+    color: #ffffff;
+}
+.stepsTitle{
+    font-size:20px;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+}

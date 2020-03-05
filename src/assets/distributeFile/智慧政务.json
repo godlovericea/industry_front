@@ -1,0 +1,103 @@
+{
+    "type": "FeatureCollection",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "兴智科技园",
+                "mag": 1,
+                "time": 1507425650893,
+                "felt": null,
+                "tsunami": 0,
+                "test": [
+                    {
+                        "enterpriseId": "XZKJY045",
+                        "enterpriseName": "南京艾弗曼人工智能有限公司",
+                        "legalPerson": "李钢",
+                        "registeredCapital": "1000",
+                        "establishedTime": "2018/1/9",
+                        "AIbusiness": "80%",
+                        "technologyStratification": "3-硬件终端",
+                        "levelOneAI": "智能机器人",
+                        "leveltwoAI": "",
+                        "enterpriseProfile": "一家智能服务机器人研发商，将AI技术应用于运营商、金融、政务、电商、航空、汽车、物流等行业的服务场景，其研发的机器人具有精准人脸识别、自主定位导航、语音识别对话、数据采集分析、导航避障及定时回充功能",
+                        "qualification": "",
+                        "AIBusinessDirection": "智能税务服务",
+                        "content": "南京艾德曼税务机器人",
+                        "Itsarea": "经开区",
+                        "area": "南京经济技术开发区兴智路6号兴智科技园A栋2106室",
+                        "elements": "终端 网络 平台 模块 系统",
+                        "IndustryClassification": "服务机器人"
+                    }
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [118.872749,32.140334]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "紫东创意园",
+                "mag": 3,
+                "time": 1507425650893,
+                "felt": null,
+                "tsunami": 0,
+                "test": [
+                    {
+                        "enterpriseId": "ZDCYY012",
+                        "enterpriseName": "捕视者人脸识别技术（江苏）有限公司",
+                        "legalPerson": "窦一鸣 ",
+                        "registeredCapital": "1000",
+                        "establishedTime": "2018/1/29",
+                        "AIbusiness": "100%",
+                        "technologyStratification": "2-技术层",
+                        "levelOneAI": "图像识别",
+                        "leveltwoAI": "智慧政务",
+                        "enterpriseProfile": "基于人脸识别技术开发智慧政务审批系统、认证识别终端、视频数字化多组态人脸识别系统",
+                        "qualification": "",
+                        "AIBusinessDirection": "\"人脸识别"
+                    },
+                    {
+                        "enterpriseId": "烟雾识别\"",
+                        "enterpriseName": "捕视者不见面事项审批政务平台软件",
+                        "legalPerson": "栖霞高新区",
+                        "registeredCapital": "南京市栖霞区马群街道紫东路2号B4栋402室",
+                        "establishedTime": "网络 平台 模块 系统",
+                        "AIbusiness": "计算机视觉"
+                    },
+                    {
+                        "enterpriseId": "ZDCYY030",
+                        "enterpriseName": "南京子谷大数据科技有限公司",
+                        "legalPerson": "朱晶",
+                        "registeredCapital": "1000",
+                        "establishedTime": "2019/4/19",
+                        "AIbusiness": "90%",
+                        "technologyStratification": "4-应用层",
+                        "levelOneAI": "智慧政务",
+                        "leveltwoAI": "",
+                        "enterpriseProfile": "搭建网民用户行为模型，为政府提供重点舆情数据追踪，海量视频流数据监测，实时即时阻断等服务",
+                        "qualification": "",
+                        "AIBusinessDirection": "人工智能+大数据",
+                        "content": "搭建网民用户行为模型，为政府提供重点舆情数据追踪，海量视频流数据监测，实时即时阻断等服务",
+                        "Itsarea": "栖霞高新区",
+                        "area": "南京市栖霞区马群街道紫东路2号紫东国际创意园A7栋102室",
+                        "elements": "网络 平台",
+                        "IndustryClassification": "大数据服务，法律"
+                    }
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [118.9116075953, 32.0790420514]
+            }
+        }
+    ]
+}

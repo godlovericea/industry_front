@@ -41,7 +41,7 @@
             <div class="content">
                 <div class="btnGroups">
                     <md-tabs @md-changed="getScenList" md-alignment="fixed">
-                        <!-- <md-tab class="movies" id="0" md-label="疫情防控">
+                        <md-tab class="movies" id="0" md-label="疫情防控">
                             <div class="cardBox" v-for="(item,index) in virusList" :key="index" @click="clusterMapDis">
                                 <div>
                                     <div class="cardContent">
@@ -51,7 +51,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </md-tab> -->
+                        </md-tab>
                         <md-tab class="movies" id="1" md-label="智慧政务">
                             <div class="cardBox" v-for="(item,index) in sceanList" :key="index" @click="clusterMapDis">
                                 <div v-if="item.sceneClassification == '1'">
@@ -402,7 +402,33 @@ export default {
             url:'',
             srcList:[],
             virusList:[{
-
+                companyId: 1,
+                companySceneImgDTOList: [],
+                scenarioDefined: "在公路、社区、综合体各卡口位置与当地运营商联合部署基站电子围栏，流动人口进入围栏区域就会收到短信，通过短信链接地址进入联防联控信息录入界面，用户自行填报姓名、身份证、始发地、目的地、具体地址、来访事由、联系电话、车牌号、身体状况和体温信息进行记录；填写完后，用户会收到验证码短信，通过验证码提交电子登记表后，手机会收到包含填写内容的短信，并生成临时健康卡，检查点工作人员核对后即可放行，临时健康卡可用于其他检查点的查验。",
+                scenarioKeyword: "",
+                scene: "疫情联防信息电子登记系统",
+                sceneClassification: "0",
+                sceneId: 41,
+                video: "q3vbt7rr5.bkt.clouddn.com/images/tId=15826143001020c00a90493352be9660a0b577b9ccdd5.mp4"
+            },{
+                companyId: 1,
+                companySceneImgDTOList: [],
+                scenarioDefined: "以社区、乡镇为核心，依托网格化管理平台，向政府、企业、公众提供智能化的技术服务。对政府提供疫情感知、远程指挥、人工智能监控、自动监管、疫情趋势分析等功能，方便政府机构随时掌握疫情总体态势和重点地区疫情和事件信息全貌，并提供针对重点问题和疫情的快速指挥和应急处理。对企业提供企业复工申报、企业员工健康自查等功能，有序推动企业复工复产，为企业疫情防控提供有力支撑。对公众提供便民信息发布、人员自动登记、健康自查上报、疫情线索上报等功能，帮助百姓足不出户掌握疫情动态、官方通报、健康知识等信息，强化百姓的自我防护意识，落实综合防控措施，控制疾病传播。",
+                scenarioKeyword: "疫情",
+                scene: "疫情地理智能政务综合服务平台",
+                sceneClassification: "1",
+                sceneId: 40,
+                video: ""
+            },
+            {
+                companyId: 1,
+                companySceneImgDTOList: [],
+                scenarioDefined: "“健康打卡”：为企业内部员工提供每日打卡上报功能，需要员工每天填写：健康状态、是否就诊住院、是否接触病患、是否已经返回所在城市、出差计划等信息。“闭关打卡”：为企业内部需要隔离的员工提供，闭关任务创建，闭关全过程实时上报，并提供通过积分勋章奖励机制鼓励人员按时执行。“社区助手”：为社区居民和管理人员提供，疫情上报下达，走访、申报等能力。",
+                scenarioKeyword: "",
+                scene: "鲸智守卫——关注企业员工健康",
+                sceneClassification: "2",
+                sceneId: 45,
+                video: "q3vbt7rr5.bkt.clouddn.com/images/tId=15826180570202020xgfyfk2.mp4"
             }]
         }
     },

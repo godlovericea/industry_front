@@ -312,9 +312,9 @@
 .el-tabs__nav{
     width: 100%;
 }
-/* .md-tabs{
+.md-tabs{
     width: 100%;
-} */
+}
 .md-tabs.md-alignment-left .md-tabs-navigation{
     justify-content: space-between !important;
     border-bottom: 4px solid #182634 !important;
@@ -325,7 +325,7 @@
 .md-tabs-navigation .md-button{
     color: #ffffff !important;
     margin-bottom: -4px !important;
-    min-width: 79px !important;
+    min-width: 60px !important;
 }
 .md-tabs-navigation .md-active{
     /* color: #ffffff !important; */
@@ -377,6 +377,7 @@
     overflow-y: auto;
 }
 .el-image-viewer__close{
-    /* color: rgb(19, 206, 102); */
-    color: #ffffff;
+    color: rgb(19, 206, 102);
+    /* color: #ffffff; */
+    /* color: #DC143C; */
 }

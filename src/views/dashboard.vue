@@ -40,7 +40,18 @@
             </div>
             <div class="content">
                 <div class="btnGroups">
-                    <md-tabs @md-changed="getScenList">
+                    <md-tabs @md-changed="getScenList" md-alignment="fixed">
+                        <!-- <md-tab class="movies" id="0" md-label="疫情防控">
+                            <div class="cardBox" v-for="(item,index) in virusList" :key="index" @click="clusterMapDis">
+                                <div>
+                                    <div class="cardContent">
+                                        <p class="cardTitle">{{item.scene}}</p>
+                                        <p class="cardDetail">{{item.scenarioDefined}}</p>
+                                        <el-button type="text" style="color:'#ffffff'" @click="showDetail(item.sceneId)">查看更多>></el-button>
+                                    </div>
+                                </div>
+                            </div>
+                        </md-tab> -->
                         <md-tab class="movies" id="1" md-label="智慧政务">
                             <div class="cardBox" v-for="(item,index) in sceanList" :key="index" @click="clusterMapDis">
                                 <div v-if="item.sceneClassification == '1'">
@@ -389,7 +400,10 @@ export default {
             imgTitle:'',
             imgDialogVisible:false,
             url:'',
-            srcList:[]
+            srcList:[],
+            virusList:[{
+
+            }]
         }
     },
     components:{

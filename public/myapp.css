@@ -304,7 +304,7 @@
 .el-tabs--border-card>.el-tabs__header .el-tabs__item{
     background:linear-gradient(135deg,rgba(22,121,213,1) 0%,rgba(0,192,216,1) 100%) !important;
     color: #ffffff !important;
-    width: 34% !important;
+    width: 25% !important;
     text-align: center !important;
     -webkit-transition:none !important;
     transition:none !important;
@@ -312,6 +312,9 @@
 .el-tabs__nav{
     width: 100%;
 }
+/* .md-tabs{
+    width: 100%;
+} */
 .md-tabs.md-alignment-left .md-tabs-navigation{
     justify-content: space-between !important;
     border-bottom: 4px solid #182634 !important;
@@ -322,6 +325,7 @@
 .md-tabs-navigation .md-button{
     color: #ffffff !important;
     margin-bottom: -4px !important;
+    min-width: 79px !important;
 }
 .md-tabs-navigation .md-active{
     /* color: #ffffff !important; */
@@ -371,4 +375,8 @@
 .movies{
     height: 572px;
     overflow-y: auto;
+}
+.el-image-viewer__close{
+    /* color: rgb(19, 206, 102); */
+    color: #ffffff;
 }

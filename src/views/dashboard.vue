@@ -1035,9 +1035,9 @@ export default {
             }
             
             this.map.on('data', (e)=> {
-                if (e.sourceId !== 'earthquakes' || !e.isSourceLoaded) {
-                    return;
-                }
+                // if (e.sourceId !== 'earthquakes' || !e.isSourceLoaded) {
+                //     return;
+                // }
                 this.map.on('move', this.updateMarkers);
                 this.map.on('moveend',this.updateMarkers);
                 this.map.on('click','earthquake_label',this.handleMarkerClick);

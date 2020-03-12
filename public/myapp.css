@@ -158,7 +158,8 @@
 
 .myVideo{
     width: 200px;
-    margin-bottom: 10px;
+    height: 130px;
+    margin-left: 20px;
 }
 .realImg{
     /* max-width: 500px; */
@@ -343,6 +344,8 @@
 }
 .stepsContent{
     padding: 0 40px;
+    display: flex;
+    align-items: center;
 }
 .stepsDetail{
     color: #98A6B9;

@@ -98,15 +98,15 @@
             </div>
             <div class="divider"></div>
             <div class="sceanBox">
-                <p class="stepsTitle">① 定义如下:</p>
+                <p class="stepsTitle">① 场景描述:</p>
                 <div class="stepsContent">
                     <p class="stepsDetail">{{sceanData.scenarioDefined}}</p>
                 </div>
-                <p class="stepsTitle">② 图片介绍:</p>
+                <p class="stepsTitle">② 图片和视频介绍:</p>
                 <div class="stepsContent">
                     <!-- <img class="shortcut" v-for="(item,index) in companySceneImgDTOList" :key="index" :src="item.scenarioImg" alt=""> -->
                     <el-image 
-                        style="width: 100px; height: 100px"
+                        style="width: 200px; height: 120px"
                         :src="url" 
                         :preview-src-list="srcList">
                     </el-image>
@@ -118,12 +118,13 @@
                             </el-popover>
                         </el-carousel-item>
                     </el-carousel> -->
-                </div>
-                <p class="stepsTitle">③ 视频介绍:</p>
-                <div class="stepsContent">
                     <video class="myVideo" :src="videoUrl" controls></video>
                 </div>
-                <p class="stepsTitle">④ 关联企业:</p>
+                <!-- <p class="stepsTitle">③ 视频介绍:</p>
+                <div class="stepsContent">
+                    <video class="myVideo" :src="videoUrl" controls></video>
+                </div> -->
+                <p class="stepsTitle">③ 关联企业:</p>
                 <div class="stepsContent">
                     <div class="sceanEnterBox">
                         <div class="sceanEnterItems" v-for="item in officeList" :key="item.enterpriseId" @click="showInMapbox(item.enterpriseId)">
@@ -278,6 +279,12 @@ import smartGov from '../assets/distributeFile/智慧政务.json'
 import echarts from 'echarts'
 import singleEcharts from '../components/singleEcharts'
 import axios from 'axios'
+import pos1 from '../svg/icon-01.png'
+import pos2 from '../svg/icon-02.png'
+import pos3 from '../svg/icon-03.png'
+import pos4 from '../svg/icon-04.png'
+import pos5 from '../svg/icon-05.png'
+import pos6 from '../svg/icon-06.png'
 export default {
     data(){
         return{
@@ -349,6 +356,7 @@ export default {
             markers:{},
             markersOnScreen:{},
             colors:['#fed976', '#feb24c', '#fd8d3c', '#fc4e2a', '#e31a1c'],
+            imgList:[pos1, pos2, pos3,pos4,pos5,pos6],
             marker:'',
             enterpriseList:[],
             parkName:'',
@@ -1002,41 +1010,112 @@ export default {
                 });
             }
 
-            if (!this.map.getLayer('earthquake_circle')){
+            // if (!this.map.getLayer('earthquake_circle')){
+            //     this.map.addLayer({
+            //         "id": "earthquake_circle",
+            //         "type": "circle",
+            //         "source": "earthquakes",
+            //         "filter": ["!=", "cluster", true],
+            //         "paint": {
+            //             "circle-color": ["case",
+            //             mag1, this.colors[0],
+            //             mag2, this.colors[1],
+            //             mag3, this.colors[2],
+            //             mag4, this.colors[3], this.colors[4]],
+            //             "circle-opacity": 0.6,
+            //             "circle-radius": 20
+            //         }
+            //     });
+            // }
+             if (!this.map.getLayer('earthquake_circle')){
                 this.map.addLayer({
                     "id": "earthquake_circle",
                     "type": "circle",
                     "source": "earthquakes",
                     "filter": ["!=", "cluster", true],
-                    "paint": {
-                        "circle-color": ["case",
-                        mag1, this.colors[0],
-                        mag2, this.colors[1],
-                        mag3, this.colors[2],
-                        mag4, this.colors[3], this.colors[4]],
-                        "circle-opacity": 0.6,
-                        "circle-radius": 20
-                    }
+                    // "paint": {
+                    //     "circle-color": ["case",
+                    //     mag1, this.colors[0],
+                    //     mag2, this.colors[1],
+                    //     mag3, this.colors[2],
+                    //     mag4, this.colors[3], this.colors[4]],
+                    //     "circle-opacity": 0.6,
+                    //     "circle-radius": 0
+                    // }
                 });
             }
-
+            // var width = 64; // The image will be 64 pixels square
+            // var bytesPerPixel = 4; // Each pixel is represented by 4 bytes: red, green, blue, and alpha.
+            // var data = new Uint8Array(width * width * bytesPerPixel);
+            
+            // for (var x = 0; x < width; x++) {
+            // for (var y = 0; y < width; y++) {
+            //     var offset = (y * width + x) * bytesPerPixel;
+            //     data[offset + 0] = (y / width) * 255; // red
+            //     data[offset + 1] = (x / width) * 255; // green
+            //     data[offset + 2] = 128; // blue
+            //     data[offset + 3] = 255; // alpha
+            // }}
+            // this.map.addImage('gradient', { width: 400, height: 400, data:pos1});
+            this.map.loadImage(pos1, (error, image)=> {
+                if (error) throw error;
+                if (!this.map.hasImage('pos1')) this.map.addImage('pos1', image);
+            });
+            this.map.loadImage(pos2, (error, image)=> {
+                if (error) throw error;
+                if (!this.map.hasImage('pos2')) this.map.addImage('pos2', image);
+            });
+            this.map.loadImage(pos3, (error, image)=> {
+                if (error) throw error;
+                if (!this.map.hasImage('pos3')) this.map.addImage('pos3', image);
+            });
+            this.map.loadImage(pos4, (error, image)=> {
+                if (error) throw error;
+                if (!this.map.hasImage('pos4')) this.map.addImage('pos4', image);
+            });
+            this.map.loadImage(pos5, (error, image)=> {
+                if (error) throw error;
+                if (!this.map.hasImage('pos5')) this.map.addImage('pos5', image);
+            });
+            this.map.loadImage(pos6, (error, image)=> {
+                if (error) throw error;
+                if (!this.map.hasImage('pos6')) this.map.addImage('pos6', image);
+            });
             if (!this.map.getLayer('earthquake_label')){
                 this.map.addLayer({
                     "id": "earthquake_label",
                     "type": "symbol",
                     "source": "earthquakes",
                     "cluster": false,
-                    // "filter": ["!=", "cluster", true],
+                    "filter": ["!=", "cluster", true],
                     
                     "layout": {
                         "text-field": ["number-format", ["get", "mag"], {"min-fraction-digits": 0, "max-fraction-digits": 1}],
                         "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
                         "text-size": 18,
-                        "text-allow-overlap":true
+                        // "text-allow-overlap":true,
+                        
+                        // "icon-image": "cat"
+                        "icon-image": ["case", 
+                            mag1, "pos1",
+                            mag2, "pos2",
+                            mag3, "pos3",
+                            mag4, "pos4",
+                            mag5, "pos5",
+                            "pos6"
+                        ],
+                        "icon-allow-overlap":true
                     },
                     "paint": {
                         // "text-color": ["case", ["<", ["get", "mag"], 3], "black", "white"]
-                        "text-color": "white"
+                         "text-color": ["case", 
+                            mag1, "#333333",
+                            mag2, "#333333",
+                            mag3, "#dddddd",
+                            mag4, "#dddddd",
+                            mag5, "#000000",
+                            "#000000",
+                        ]
                     }
                 });
             }
@@ -1129,12 +1208,13 @@ export default {
             '" fill="' + color + '" />'].join(' ');
         },
         handleMarkerClick(e){
+            // this.map.on('click','earthquake_label',this.handleMarkerClick);
             this.enterpriseFlag = true
             const map = e.target;
             // console.log(map);
             const features = map.queryRenderedFeatures(e.point,  { layers: ['earthquake_label'] });
             
-            // console.log(features);
+            console.log(features);
             
             this.parkName = features[0].properties.id
             if (features.length > 0){
@@ -1142,7 +1222,9 @@ export default {
                 // console.log(enterList)
                 this.enterpriseList = enterList
                 this.getQichachaData(this.enterpriseList[0].enterpriseName)
+                // this.map.off('click','earthquake_label',this.handleMarkerClick);
             }
+            e.preventDefault()
             setTimeout(()=>{
                 if(document.getElementById(this.radar)){
                     this.getSomeOneRadarEnterprise()
@@ -1237,8 +1319,9 @@ export default {
                     'type': 'line',
                     'source':'dottedlines_label',
                     'paint': {
-                        'line-dasharray':[4,3],
-                        'line-width': 4,
+                        'line-dasharray':[3,2],
+                        'line-width': 1,
+                        "line-opacity":0.8,
                         'line-color': ['get', 'color']
                     }
                 });
@@ -1815,11 +1898,14 @@ export default {
                     l.scenarioImg = 'http://qiniu.iwooke'+ l.scenarioImg.substring(21)
                 })
                 this.companySceneImgDTOList = res.data.result.companySceneImgDTOList
-                this.srcList = []
+                let srcArrList = []
                 this.companySceneImgDTOList.forEach(l=>{
-                    this.srcList.push(l.scenarioImg)
+                    srcArrList.push(l.scenarioImg)
                 })
+                
+                this.srcList = srcArrList
                 this.url = this.srcList[0]
+                
                 // this.videoUrl =  'http://'+ res.data.result.video
                 this.videoUrl =  'http://qiniu.iwooke'+ res.data.result.video.substring(21)
             })

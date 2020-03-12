@@ -1041,7 +1041,7 @@ export default {
                 });
             }
             
-            this.map.on('data', (e)=> {
+            this.map.on('styledata', (e)=> {
                 // if (e.sourceId !== 'earthquakes' || !e.isSourceLoaded) {
                 //     return;
                 // }
@@ -1135,7 +1135,7 @@ export default {
             const features = map.queryRenderedFeatures(e.point,  { layers: ['earthquake_label'] });
             
             // console.log(features);
-
+            
             this.parkName = features[0].properties.id
             if (features.length > 0){
                 const enterList = JSON.parse(features[0].properties.test)

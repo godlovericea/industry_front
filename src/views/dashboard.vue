@@ -1087,7 +1087,7 @@ export default {
                     "type": "symbol",
                     "source": "earthquakes",
                     "cluster": false,
-                    "filter": ["!=", "cluster", true],
+                    // "filter": ["!=", "cluster", true],
                     
                     "layout": {
                         "text-field": ["number-format", ["get", "mag"], {"min-fraction-digits": 0, "max-fraction-digits": 1}],
@@ -1108,14 +1108,15 @@ export default {
                     },
                     "paint": {
                         // "text-color": ["case", ["<", ["get", "mag"], 3], "black", "white"]
-                         "text-color": ["case", 
-                            mag1, "#333333",
-                            mag2, "#333333",
-                            mag3, "#dddddd",
-                            mag4, "#dddddd",
-                            mag5, "#000000",
-                            "#000000",
-                        ]
+                        "text-color": '#13212E'
+                        //  "text-color": ["case", 
+                        //     mag1, "#333333",
+                        //     mag2, "#333333",
+                        //     mag3, "#dddddd",
+                        //     mag4, "#dddddd",
+                        //     mag5, "#000000",
+                        //     "#000000",
+                        // ]
                     }
                 });
             }
@@ -1208,7 +1209,7 @@ export default {
             '" fill="' + color + '" />'].join(' ');
         },
         handleMarkerClick(e){
-            // this.map.on('click','earthquake_label',this.handleMarkerClick);
+            this.map.on('click','earthquake_label',this.handleMarkerClick);
             this.enterpriseFlag = true
             const map = e.target;
             // console.log(map);
@@ -1222,9 +1223,9 @@ export default {
                 // console.log(enterList)
                 this.enterpriseList = enterList
                 this.getQichachaData(this.enterpriseList[0].enterpriseName)
-                // this.map.off('click','earthquake_label',this.handleMarkerClick);
+                this.map.off('click','earthquake_label',this.handleMarkerClick);
             }
-            e.preventDefault()
+            // e.preventDefault()
             setTimeout(()=>{
                 if(document.getElementById(this.radar)){
                     this.getSomeOneRadarEnterprise()
@@ -1318,11 +1319,16 @@ export default {
                     'id': 'qixiaDis',
                     'type': 'line',
                     'source':'dottedlines_label',
+                    'fill':{
+                        "fill-color":'#1679d5',
+                        "fill-opacity":0.6,
+                    },
                     'paint': {
                         'line-dasharray':[3,2],
                         'line-width': 1,
-                        "line-opacity":0.8,
-                        'line-color': ['get', 'color']
+                        "line-opacity":1,
+                        // 'line-color': ['get', 'color']
+                        'line-color': '#1679d5'
                     }
                 });
             // }

@@ -1208,8 +1208,8 @@ export default {
             r0, r0, 0, largeArc, 0, r + r0 * x0, r + r0 * y0,
             '" fill="' + color + '" />'].join(' ');
         },
-        handleMarkerClick(e){
-            this.map.on('click','earthquake_label',this.handleMarkerClick);
+         handleMarkerClick(e){
+            // this.map.on('click','earthquake_label',this.handleMarkerClick);
             this.enterpriseFlag = true
             const map = e.target;
             // console.log(map);
@@ -1223,9 +1223,9 @@ export default {
                 // console.log(enterList)
                 this.enterpriseList = enterList
                 this.getQichachaData(this.enterpriseList[0].enterpriseName)
-                this.map.off('click','earthquake_label',this.handleMarkerClick);
+                // this.map.off('click','earthquake_label',this.handleMarkerClick);
             }
-            // e.preventDefault()
+            e.preventDefault()
             setTimeout(()=>{
                 if(document.getElementById(this.radar)){
                     this.getSomeOneRadarEnterprise()

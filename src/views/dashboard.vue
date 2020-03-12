@@ -515,8 +515,8 @@ export default {
             this.map = new mapboxgl.Map({
                 container: 'map',
                 style: 'http://106.15.47.224:8688/styles/newblue/style.json',
-                center: [118.908456,32.131299],
-                zoom: 11.0,
+                center: [118.908456,32.131199],
+                zoom: 12.0,
                 pitch:60,
                 bearing:-0.03
             })
@@ -999,7 +999,7 @@ export default {
                     "type": "geojson",
                     "data": parkList,
                     "cluster": false,
-                    "clusterRadius": 80,
+                    "clusterRadius": 0,
                     "clusterProperties": { // keep separate counts for each magnitude category in a cluster
                         "mag1": ["+", ["case", mag1, 1, 0]],
                         "mag2": ["+", ["case", mag2, 1, 0]],

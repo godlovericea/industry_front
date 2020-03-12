@@ -20,7 +20,7 @@ import 'vue-material/dist/vue-material.css'
 // })
 Vue.use(VueMaterial)
 
-import 'babel-polyfill'
+// import 'babel-polyfill'
 
 
 

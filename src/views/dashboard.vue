@@ -1326,9 +1326,9 @@ export default {
                     'paint': {
                         'line-dasharray':[3,2],
                         'line-width': 1,
-                        "line-opacity":1,
+                        "line-opacity":0.6,
                         // 'line-color': ['get', 'color']
-                        'line-color': '#1679d5'
+                        'line-color': '#ffffff'
                     }
                 });
             // }

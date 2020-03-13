@@ -1270,7 +1270,7 @@ export default {
                 'paint': {
                     'line-dasharray':[3,2],
                     'line-width': 1,
-                    "line-opacity":0.6,
+                    "line-opacity":0.8,
                     'line-color': '#ffffff'
                 }
             });

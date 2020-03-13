@@ -1269,8 +1269,8 @@ export default {
                 'source':'dottedlines_label',
                 'paint': {
                     'line-dasharray':[3,2],
-                    'line-width': 1,
-                    "line-opacity":0.8,
+                    'line-width': 1.5,
+                    "line-opacity":1,
                     'line-color': '#ffffff'
                 }
             });

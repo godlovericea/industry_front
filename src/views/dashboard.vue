@@ -1000,14 +1000,14 @@ export default {
                     "type": "geojson",
                     "data": parkList,
                     "cluster": false,
-                    "clusterRadius": 0,
-                    "clusterProperties": { // keep separate counts for each magnitude category in a cluster
-                        "mag1": ["+", ["case", mag1, 1, 0]],
-                        "mag2": ["+", ["case", mag2, 1, 0]],
-                        "mag3": ["+", ["case", mag3, 1, 0]],
-                        "mag4": ["+", ["case", mag4, 1, 0]],
-                        "mag5": ["+", ["case", mag5, 1, 0]]
-                    }
+                    // "clusterRadius": 0,
+                    // "clusterProperties": { // keep separate counts for each magnitude category in a cluster
+                    //     "mag1": ["+", ["case", mag1, 1, 0]],
+                    //     "mag2": ["+", ["case", mag2, 1, 0]],
+                    //     "mag3": ["+", ["case", mag3, 1, 0]],
+                    //     "mag4": ["+", ["case", mag4, 1, 0]],
+                    //     "mag5": ["+", ["case", mag5, 1, 0]]
+                    // }
                 });
             }
 
@@ -1033,7 +1033,8 @@ export default {
                     "id": "earthquake_circle",
                     "type": "circle",
                     "source": "earthquakes",
-                    "filter": ["!=", "cluster", true],
+                    // "filter": ["!=", "cluster", true],
+                    cluster:false
                     // "paint": {
                     //     "circle-color": ["case",
                     //     mag1, this.colors[0],
@@ -1210,7 +1211,7 @@ export default {
             '" fill="' + color + '" />'].join(' ');
         },
          handleMarkerClick(e){
-            // this.map.on('click','earthquake_label',this.handleMarkerClick);
+            this.map.on('click','earthquake_label',this.handleMarkerClick);
             this.enterpriseFlag = true
             const map = e.target;
             // console.log(map);
@@ -1224,7 +1225,7 @@ export default {
                 // console.log(enterList)
                 this.enterpriseList = enterList
                 this.getQichachaData(this.enterpriseList[0].enterpriseName)
-                // this.map.off('click','earthquake_label',this.handleMarkerClick);
+                this.map.off('click','earthquake_label',this.handleMarkerClick);
             }
             e.preventDefault()
             setTimeout(()=>{
@@ -1251,16 +1252,8 @@ export default {
                 'type': 'fill',
                 'source':'dottedlines_label',
                 'paint': {
-                    // 'line-dasharray':[3,2],
-                    // 'line-width': 1,
-                    // "line-opacity":0.6,
-                    // 'line-color': '#ffffff'
                     "fill-color":"#ffffff",
                     "fill-opacity":0.05,
-                    // "fill-partten":{
-                    //      "icon-image": "white"
-                    // }
-                    
                 }
             });
             this.map.addLayer({
@@ -1751,8 +1744,7 @@ export default {
             });
         },
         getQichachaData(name){
-            // axios.post('http://120.55.161.93:6011/qichacha/industryDetail?name='+name)
-            axios.post('http://121.199.8.188:6011/qichacha/industryDetail?name='+name)
+            axios.post('http://120.55.161.93:6011/qichacha/industryDetail?name='+name)
             .then(res=>{
                 // console.log(res.data.Result)
                 // if(res.data.result.content){
@@ -1767,7 +1759,7 @@ export default {
                 //     this.legalPerson = myData.Result.OperName
                 //     this.ContactInfo = myData.Result.ContactInfo
                 //     // axios.post("http://120.55.161.93:6011/qichacha/getPatentCount?name="+name)
-                //     axios.post("http://121.199.8.188:6011/qichacha/getPatentCount?name="+name)
+                //     axios.post("http://120.55.161.93:6011/qichacha/getPatentCount?name="+name)
                 //     .then(res=>{
                 //         this.knowledge = res.data.result
                 //     })
@@ -1787,7 +1779,7 @@ export default {
                         adress:myData.Result.Address,
                         phone:myData.Result.Address,
                     }
-                    axios.post("http://121.199.8.188:6011/qichacha/getPatentCount?name="+name)
+                    axios.post("http://120.55.161.93:6011/qichacha/getPatentCount?name="+name)
                     .then(res=>{
                         this.knowledge = res.data.result
                     })

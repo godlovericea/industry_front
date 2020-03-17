@@ -441,7 +441,8 @@ export default {
                     video: "q3vbt7rr5.bkt.clouddn.com/images/tId=15826180570202020xgfyfk2.mp4"
                 }
             ],
-            numTest:1
+            numTest:1,
+            parkList:parkList
         }
     },
     components:{
@@ -532,7 +533,9 @@ export default {
             let total = [102.3,20.8,38.6,85.6,65.1,21.5,98.5,581.95]
             this.totalValue = total[params-1]
             let arr = [algorithm,idCard,model,terminal,system,network,platform,parkList]
-            this.map.getSource('earthquakes').setData(arr[params-1])
+            // this.map.getSource('earthquakes').setData(arr[params-1])
+            this.parkList = arr[params - 1]
+            this.setAllDistribute()
         },
         // 获取雷达图
         getRadarEnterprise(){
@@ -1957,9 +1960,9 @@ export default {
         },
         setAllDistribute(){
            
-            this.map.on("load",()=>{
+            // this.map.on("load",()=>{
                 
-                parkList.features.forEach(marker => {
+                this.parkList.features.forEach(marker => {
                     var el = document.createElement("div");
                     var txt = document.createElement("h1");
                     txt.innerText = marker.properties.mag;
@@ -2018,7 +2021,7 @@ export default {
                         .setLngLat(marker.geometry.coordinates)
                         .addTo(this.map);
                 });
-            })
+            // })
             
 
         }

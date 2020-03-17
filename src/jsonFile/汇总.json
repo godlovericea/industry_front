@@ -6,7 +6,8 @@
             "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
         }
     },
-    "features": [{
+    "features": [
+        {
             "type": "Feature",
             "properties": {
                 "id": "地理信息园",
@@ -14,7 +15,8 @@
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
-                "test": [{
+                "test": [
+                    {
                         "enterpriseId": "DLXXY001",
                         "enterpriseName": "南京泛在地理信息产业研究院有限公司",
                         "legalPerson": "闾国年 ",
@@ -94,7 +96,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [118.9196460753, 32.0805948414]
+                "coordinates": [
+                    118.9196460753,
+                    32.0805948414
+                ]
             }
         },
         {
@@ -105,7 +110,8 @@
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
-                "test": [{
+                "test": [
+                    {
                         "enterpriseId": "HFKJY001",
                         "enterpriseName": "南京摩尔智能机器人研究院有限公司",
                         "legalPerson": "JAMES JUEHUI HONG",
@@ -419,7 +425,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [119.0074381520, 32.1506175173]
+                "coordinates": [
+                    119.0074381520,
+                    32.1506175173
+                ]
             }
         },
         {
@@ -430,7 +439,8 @@
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
-                "test": [{
+                "test": [
+                    {
                         "enterpriseId": "HZKJY001",
                         "enterpriseName": "江苏天人工业互联网研究院有限公司",
                         "legalPerson": " 吴晋",
@@ -788,7 +798,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [118.8972030341, 32.1540342558]
+                "coordinates": [
+                    118.8972030341,
+                    32.1540342558
+                ]
             }
         },
         {
@@ -799,7 +812,8 @@
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
-                "test": [{
+                "test": [
+                    {
                         "enterpriseId": "JGCXY001",
                         "enterpriseName": "南京南邮通信网络产业研究院有限公司",
                         "legalPerson": "徐友云 ",
@@ -1126,7 +1140,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [118.9071760853, 32.1229797257]
+                "coordinates": [
+                    118.9071760853,
+                    32.1229797257
+                ]
             }
         },
         {
@@ -1137,7 +1154,8 @@
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
-                "test": [{
+                "test": [
+                    {
                         "enterpriseId": "DLXXY001",
                         "enterpriseName": "南京泛在地理信息产业研究院有限公司",
                         "legalPerson": "闾国年 ",
@@ -1217,7 +1235,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [118.8868264429, 32.1677016171]
+                "coordinates": [
+                    118.8868264429,
+                    32.1677016171
+                ]
             }
         },
         {
@@ -1228,7 +1249,8 @@
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
-                "test": [{
+                "test": [
+                    {
                         "enterpriseId": "LGKEY001",
                         "enterpriseName": "南京智能制造研究院有限公司",
                         "legalPerson": "吴权",
@@ -1466,7 +1488,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [118.8668622750, 32.1545634113]
+                "coordinates": [
+                    118.8668622750,
+                    32.1545634113
+                ]
             }
         },
         {
@@ -1477,7 +1502,8 @@
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
-                "test": [{
+                "test": [
+                    {
                         "enterpriseId": "MQKJY001",
                         "enterpriseName": "南京才华科技集团有限公司",
                         "legalPerson": " 张君",
@@ -1636,7 +1662,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [118.8959620397, 32.0765321268]
+                "coordinates": [
+                    118.8959620397,
+                    32.0765321268
+                ]
             }
         },
         {
@@ -1647,7 +1676,8 @@
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
-                "test": [{
+                "test": [
+                    {
                         "enterpriseId": "MDQCYY001",
                         "enterpriseName": "南京优助智能科技有限公司",
                         "legalPerson": "叶晨洲",
@@ -1711,7 +1741,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [118.8617908083, 32.1088420528]
+                "coordinates": [
+                    118.8617908083,
+                    32.1088420528
+                ]
             }
         },
         {
@@ -1722,7 +1755,8 @@
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
-                "test": [{
+                "test": [
+                    {
                         "enterpriseId": "NDKXY001",
                         "enterpriseName": "南京和光智能制造研究院有限公司",
                         "legalPerson": "李俊",
@@ -2071,7 +2105,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [118.9647133439, 32.1252232831]
+                "coordinates": [
+                    118.9647133439,
+                    32.1252232831
+                ]
             }
         },
         {
@@ -2082,7 +2119,8 @@
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
-                "test": [{
+                "test": [
+                    {
                         "enterpriseId": "SMKJCXY001",
                         "enterpriseName": "南京南欣医药技术研究院有限公司",
                         "legalPerson": "马晶 ",
@@ -2184,7 +2222,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [118.9118422897,32.1272772467]
+                "coordinates": [
+                    118.9118422897,
+                    32.1272772467
+                ]
             }
         },
         {
@@ -2195,7 +2236,8 @@
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
-                "test": [{
+                "test": [
+                    {
                         "enterpriseId": "XLZG001",
                         "enterpriseName": "图灵人工智能研究院（南京）有限公司",
                         "legalPerson": "姚期智",
@@ -2531,7 +2573,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [118.9656460815, 32.1353513329]
+                "coordinates": [
+                    118.9656460815,
+                    32.1353513329
+                ]
             }
         },
         {
@@ -2542,7 +2587,8 @@
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
-                "test": [{
+                "test": [
+                    {
                         "enterpriseId": "XZKJY001",
                         "enterpriseName": "南京南邮信息产业技术研究院有限公司",
                         "legalPerson": "",
@@ -3516,7 +3562,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [118.872749,32.140334]
+                "coordinates": [
+                    118.872749,
+                    32.140334
+                ]
             }
         },
         {
@@ -3527,7 +3576,8 @@
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
-                "test": [{
+                "test": [
+                    {
                         "enterpriseId": "ZDCYY001",
                         "enterpriseName": "南京源堡科技研究院有限公司",
                         "legalPerson": "韩冰 ",
@@ -4176,7 +4226,10 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [118.9116075953, 32.0790420514]
+                "coordinates": [
+                    118.9116075953,
+                    32.0790420514
+                ]
             }
         }
     ]

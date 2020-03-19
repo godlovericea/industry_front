@@ -1457,8 +1457,8 @@ export default {
             let id = parseInt(params)
             axios.post('http://120.55.161.93:6011/companyInfo/getCompanyScene?companySceneId='+id)
             .then(res=>{
-                console.log(res)
                 this.sceanData = res.data.result
+                // console.log(this.sceanData)
                 res.data.result.companySceneImgDTOList.forEach(l=>{
                     // l.scenarioImg = 'http://'+ l.scenarioImg
                     // l.scenarioImg = 'http://'+ l.scenarioImg

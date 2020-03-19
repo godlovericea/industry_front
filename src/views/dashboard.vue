@@ -42,8 +42,8 @@
                 <div class="btnGroups">
                     <md-tabs @md-changed="getScenList" md-alignment="fixed">
                         <md-tab class="movies" id="0" md-label="疫情防控">
-                            <div class="cardBox" v-for="(item,index) in virusList" :key="index" @click="clusterMapDis">
-                                <div>
+                            <div class="cardBox" v-for="(item,index) in sceanList" :key="index" @click="clusterMapDis">
+                                <div v-if="item.sceneClassification == '4'">
                                     <div class="cardContent">
                                         <p class="cardTitle">{{item.scene}}</p>
                                         <p class="cardDetail">{{item.scenarioDefined}}</p>
@@ -441,8 +441,7 @@ export default {
                     video: "q3vbt7rr5.bkt.clouddn.com/images/tId=15826180570202020xgfyfk2.mp4"
                 }
             ],
-            numTest:1,
-            parkList:parkList
+            parkList:parkList,
         }
     },
     components:{
@@ -454,7 +453,7 @@ export default {
         this.getRadarEnterprise()
         this.getOutputValue()
         this.getEnterpriseMode()
-        this.getScenList(1)
+        this.getScenList(0)
     },
     methods:{
         checkBrowserVersion(){
@@ -1438,7 +1437,14 @@ export default {
             }
         },
         getScenList(params){
-            axios.post('http://120.55.161.93:6011/companyInfo/listAllCompanyScene?type='+params)
+            // console.log(params)
+            let type = 4
+            if(params == 0){
+                type = 4
+            }else{
+                type= params
+            }
+            axios.post('http://120.55.161.93:6011/companyInfo/listAllCompanyScene?type='+type)
             .then(res=>{
                 // console.log(res)
                 this.sceanList = res.data.result

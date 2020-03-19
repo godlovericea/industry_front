@@ -6,7 +6,7 @@
     padding: 0;
     align-content: center;
     text-align: center;
-    background:url('../src/svg/icon-01.png');
+    /* background:url('../src/svg/icon-01.png'); */
   }
 .leftBox{
     position: absolute;

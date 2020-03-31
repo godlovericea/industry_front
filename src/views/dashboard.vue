@@ -450,6 +450,7 @@ export default {
     mounted(){
         this.checkBrowserVersion()
         this.initMap()
+        
         this.getRadarEnterprise()
         this.getOutputValue()
         this.getEnterpriseMode()
@@ -522,7 +523,9 @@ export default {
                 bearing:-0.03
             })
             this.map.on("styledata", ()=>{
+                this.setISP()
                 this.setAllDistribute();
+                this.getAllDistribute()
                 this.getQixiaDistribute();
             })
         },
@@ -1046,79 +1049,79 @@ export default {
             //     });
             // }
            
-            this.map.loadImage(pos1, (error, image)=> {
-                if (error) throw error;
-                if (!this.map.hasImage('pos1')) this.map.addImage('pos1', image);
-            });
-            this.map.loadImage(pos2, (error, image)=> {
-                if (error) throw error;
-                if (!this.map.hasImage('pos2')) this.map.addImage('pos2', image);
-            });
-            this.map.loadImage(pos3, (error, image)=> {
-                if (error) throw error;
-                if (!this.map.hasImage('pos3')) this.map.addImage('pos3', image);
-            });
-            this.map.loadImage(pos4, (error, image)=> {
-                if (error) throw error;
-                if (!this.map.hasImage('pos4')) this.map.addImage('pos4', image);
-            });
-            this.map.loadImage(pos5, (error, image)=> {
-                if (error) throw error;
-                if (!this.map.hasImage('pos5')) this.map.addImage('pos5', image);
-            });
-            this.map.loadImage(pos6, (error, image)=> {
-                if (error) throw error;
-                if (!this.map.hasImage('pos6')) this.map.addImage('pos6', image);
-            });
-            if (!this.map.getLayer('earthquake_label')){
-                this.map.addLayer({
-                    "id": "earthquake_label",
-                    "type": "symbol",
-                    "source": "earthquakes",
-                    "cluster": false,
-                    // "filter": ["!=", "cluster", true],
+            // this.map.loadImage(pos1, (error, image)=> {
+            //     if (error) throw error;
+            //     if (!this.map.hasImage('pos1')) this.map.addImage('pos1', image);
+            // });
+            // this.map.loadImage(pos2, (error, image)=> {
+            //     if (error) throw error;
+            //     if (!this.map.hasImage('pos2')) this.map.addImage('pos2', image);
+            // });
+            // this.map.loadImage(pos3, (error, image)=> {
+            //     if (error) throw error;
+            //     if (!this.map.hasImage('pos3')) this.map.addImage('pos3', image);
+            // });
+            // this.map.loadImage(pos4, (error, image)=> {
+            //     if (error) throw error;
+            //     if (!this.map.hasImage('pos4')) this.map.addImage('pos4', image);
+            // });
+            // this.map.loadImage(pos5, (error, image)=> {
+            //     if (error) throw error;
+            //     if (!this.map.hasImage('pos5')) this.map.addImage('pos5', image);
+            // });
+            // this.map.loadImage(pos6, (error, image)=> {
+            //     if (error) throw error;
+            //     if (!this.map.hasImage('pos6')) this.map.addImage('pos6', image);
+            // });
+            // if (!this.map.getLayer('earthquake_label')){
+            //     this.map.addLayer({
+            //         "id": "earthquake_label",
+            //         "type": "symbol",
+            //         "source": "earthquakes",
+            //         "cluster": false,
+            //         // "filter": ["!=", "cluster", true],
                     
-                    "layout": {
-                        "text-field": ["number-format", ["get", "mag"], {"min-fraction-digits": 0, "max-fraction-digits": 1}],
-                        "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-                        "text-size": 18,
-                        // "text-allow-overlap":true,
+            //         "layout": {
+            //             "text-field": ["number-format", ["get", "mag"], {"min-fraction-digits": 0, "max-fraction-digits": 1}],
+            //             "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+            //             "text-size": 18,
+            //             // "text-allow-overlap":true,
                         
-                        // "icon-image": "cat"
-                        "icon-image": ["case", 
-                            mag1, "pos1",
-                            mag2, "pos2",
-                            mag3, "pos3",
-                            mag4, "pos4",
-                            mag5, "pos5",
-                            "pos6"
-                        ],
-                        "icon-allow-overlap":true
-                    },
-                    "paint": {
-                        // "text-color": ["case", ["<", ["get", "mag"], 3], "black", "white"]
-                        "text-color": '#13212E'
-                        //  "text-color": ["case", 
-                        //     mag1, "#333333",
-                        //     mag2, "#333333",
-                        //     mag3, "#dddddd",
-                        //     mag4, "#dddddd",
-                        //     mag5, "#000000",
-                        //     "#000000",
-                        // ]
-                    }
-                });
-            }
+            //             // "icon-image": "cat"
+            //             "icon-image": ["case", 
+            //                 mag1, "pos1",
+            //                 mag2, "pos2",
+            //                 mag3, "pos3",
+            //                 mag4, "pos4",
+            //                 mag5, "pos5",
+            //                 "pos6"
+            //             ],
+            //             "icon-allow-overlap":true
+            //         },
+            //         "paint": {
+            //             // "text-color": ["case", ["<", ["get", "mag"], 3], "black", "white"]
+            //             "text-color": '#13212E'
+            //             //  "text-color": ["case", 
+            //             //     mag1, "#333333",
+            //             //     mag2, "#333333",
+            //             //     mag3, "#dddddd",
+            //             //     mag4, "#dddddd",
+            //             //     mag5, "#000000",
+            //             //     "#000000",
+            //             // ]
+            //         }
+            //     });
+            // }
             
-            this.map.on('styledata', (e)=> {
-                // if (e.sourceId !== 'earthquakes' || !e.isSourceLoaded) {
-                //     return;
-                // }
-                // this.map.on('move', this.updateMarkers);
-                // this.map.on('moveend',this.updateMarkers);
-                this.map.on('click','earthquake_label',this.handleMarkerClick);
-                // this.updateMarkers();
-            });
+            // this.map.on('styledata', (e)=> {
+            //     // if (e.sourceId !== 'earthquakes' || !e.isSourceLoaded) {
+            //     //     return;
+            //     // }
+            //     // this.map.on('move', this.updateMarkers);
+            //     // this.map.on('moveend',this.updateMarkers);
+            //     this.map.on('click','earthquake_label',this.handleMarkerClick);
+            //     // this.updateMarkers();
+            // });
         },
         updateMarkers() {
             var newMarkers = {};
@@ -1258,7 +1261,12 @@ export default {
             });
         },
         setISP(){
-            this.map.addSource('isp',ispdata);
+            if(!this.map.getSource('isp')){
+                this.map.addSource('isp',ispdata);
+            }else{
+                return false
+            }
+            
             this.map.addLayer({
                 'id': 'ispppp',
                 'type': 'fill-extrusion',
@@ -1427,7 +1435,7 @@ export default {
                 center:this.searchReault.features[0].geometry.coordinates,
                 zoom: 15
             })
-            this.map.getSource('earthquakes').setData(this.searchReault)
+            // this.map.getSource('earthquakes').setData(this.searchReault)
         },
         setMapTheme(){
             if(this.switchMap){
@@ -1457,8 +1465,9 @@ export default {
             let id = parseInt(params)
             axios.post('http://120.55.161.93:6011/companyInfo/getCompanyScene?companySceneId='+id)
             .then(res=>{
+                let sceanId = 93
                 this.sceanData = res.data.result
-                // console.log(this.sceanData)
+                console.log(this.sceanData)
                 res.data.result.companySceneImgDTOList.forEach(l=>{
                     // l.scenarioImg = 'http://'+ l.scenarioImg
                     // l.scenarioImg = 'http://'+ l.scenarioImg
@@ -1476,470 +1485,502 @@ export default {
                 
                 // this.videoUrl =  'http://'+ res.data.result.video
                 this.videoUrl =  'http://qiniu.iwooke'+ res.data.result.video.substring(21)
-            })
-            let arrList = [
-                {
-                    "enterpriseId": "XZKJY045",
-                    "enterpriseName": "南京艾弗曼人工智能有限公司",
-                    "legalPerson": "李钢",
-                    "registeredCapital": "1000",
-                    "establishedTime": "2018/1/9",
-                    "AIbusiness": "80%",
-                    "technologyStratification": "3-硬件终端",
-                    "levelOneAI": "智能机器人",
-                    "leveltwoAI": "",
-                    "enterpriseProfile": "一家智能服务机器人研发商，将AI技术应用于运营商、金融、政务、电商、航空、汽车、物流等行业的服务场景，其研发的机器人具有精准人脸识别、自主定位导航、语音识别对话、数据采集分析、导航避障及定时回充功能",
-                    "qualification": "",
-                    "AIBusinessDirection": "智能税务服务",
-                    "content": "南京艾德曼税务机器人",
-                    "Itsarea": "经开区",
-                    "area": "南京经济技术开发区兴智路6号兴智科技园A栋2106室",
-                    "elements": "终端 网络 平台 模块 系统",
-                    "IndustryClassification": "服务机器人"
-                },
-                {
-                    "enterpriseId": "ZDCYY012",
-                    "enterpriseName": "捕视者人脸识别技术（江苏）有限公司",
-                    "legalPerson": "窦一鸣 ",
-                    "registeredCapital": "1000",
-                    "establishedTime": "2018/1/29",
-                    "AIbusiness": "100%",
-                    "technologyStratification": "2-技术层",
-                    "levelOneAI": "图像识别",
-                    "leveltwoAI": "智慧政务",
-                    "enterpriseProfile": "基于人脸识别技术开发智慧政务审批系统、认证识别终端、视频数字化多组态人脸识别系统",
-                    "qualification": "",
-                    "AIBusinessDirection": "\"人脸识别"
-                },
-                {
-                    "enterpriseId": "烟雾识别\"",
-                    "enterpriseName": "捕视者不见面事项审批政务平台软件",
-                    "legalPerson": "栖霞高新区",
-                    "registeredCapital": "南京市栖霞区马群街道紫东路2号B4栋402室",
-                    "establishedTime": "网络 平台 模块 系统",
-                    "AIbusiness": "计算机视觉"
-                },
-                {
-                    "enterpriseId": "ZDCYY030",
-                    "enterpriseName": "南京子谷大数据科技有限公司",
-                    "legalPerson": "朱晶",
-                    "registeredCapital": "1000",
-                    "establishedTime": "2019/4/19",
-                    "AIbusiness": "90%",
-                    "technologyStratification": "4-应用层",
-                    "levelOneAI": "智慧政务",
-                    "leveltwoAI": "",
-                    "enterpriseProfile": "搭建网民用户行为模型，为政府提供重点舆情数据追踪，海量视频流数据监测，实时即时阻断等服务",
-                    "qualification": "",
-                    "AIBusinessDirection": "人工智能+大数据",
-                    "content": "搭建网民用户行为模型，为政府提供重点舆情数据追踪，海量视频流数据监测，实时即时阻断等服务",
-                    "Itsarea": "栖霞高新区",
-                    "area": "南京市栖霞区马群街道紫东路2号紫东国际创意园A7栋102室",
-                    "elements": "网络 平台",
-                    "IndustryClassification": "大数据服务，法律"
-                },
-                {
-                    "enterpriseId": "XZKJY002",
-                    "enterpriseName": "南京人工智能高等研究院有限公司",
-                    "legalPerson": "余凯",
-                    "registeredCapital": "2700",
-                    "establishedTime": "2018/4/24",
-                    "AIbusiness": "",
-                    "technologyStratification": "2-技术层",
-                    "levelOneAI": "图像识别/语音语义",
-                    "leveltwoAI": "",
-                    "enterpriseProfile": "基于机器学习基础理论、计算机视觉技术、语音语言处理技术、高性能计算等前沿技术研究，重点围绕智能制造、智能城市、智能医疗等重要行业领域进行产学研成果转化",
-                    "qualification": "",
-                    "AIBusinessDirection": "深度学习芯片、机器视觉等",
-                    "content": "南京人工智能高等研究院",
-                    "Itsarea": "经开区",
-                    "area": "南京经济技术开发区兴智路6号兴智科技园A栋21层",
-                    "elements": "终端 网络 平台 模块",
-                    "IndustryClassification": "计算机视觉，智能医疗，智能语音"
-                },
-                {
-                    "enterpriseId": "XZKJY005",
-                    "enterpriseName": "芯启源（南京）半导体科技有限公司",
-                    "legalPerson": "SHENG LU ",
-                    "registeredCapital": "10000万美元",
-                    "establishedTime": "2016/11/3",
-                    "AIbusiness": "70%",
-                    "technologyStratification": "1-基础层",
-                    "levelOneAI": "集成电路",
-                    "leveltwoAI": "芯片设计",
-                    "enterpriseProfile": "为国家战略层面的芯片自主知识产权研发和应用不断努力",
-                    "qualification": "",
-                    "AIBusinessDirection": "网络企业级芯片",
-                    "content": "企业级高端网络通讯智能芯片",
-                    "Itsarea": "经开区",
-                    "area": "南京经济技术开发区兴智路兴智科技园A栋7层",
-                    "elements": "算法 芯片 终端",
-                    "IndustryClassification": "AI芯片"
-                },
-                {
-                    "enterpriseId": "XZKJY006",
-                    "enterpriseName": "南京宇都通讯科技有限公司",
-                    "legalPerson": "JUNFENG WANG",
-                    "registeredCapital": "1327.58",
-                    "establishedTime": "2012/4/20",
-                    "AIbusiness": "60%",
-                    "technologyStratification": "1-基础层",
-                    "levelOneAI": "通信网络",
-                    "leveltwoAI": "通信芯片/通信设备",
-                    "enterpriseProfile": "立足于SmartCable（有线千兆）和SmartAir（无线千兆）两项自主创新的宽带通讯核心前沿技术，提供千兆宽带接入和千兆家庭网的系统解决方案、关键设备和核心芯片，打造家庭网信息高速干线，支持三网融合、高清/超高清IPTV等应用，努力成为这个新兴的千亿级市场的一流供应商",
-                    "qualification": "",
-                    "AIBusinessDirection": "智能终端芯片",
-                    "content": "三网融合智能芯片",
-                    "Itsarea": "经开区",
-                    "area": "南京经济技术开发区兴智路6-3号南段4层",
-                    "elements": "算法 芯片  网络",
-                    "IndustryClassification": "AI芯片"
-                },
-                {
-                    "enterpriseId": "XZKJY007",
-                    "enterpriseName": "创新奇智（南京）科技有限公司",
-                    "legalPerson": "徐辉",
-                    "registeredCapital": "1000",
-                    "establishedTime": "2018/6/15",
-                    "AIbusiness": "90%",
-                    "technologyStratification": "4-应用层",
-                    "levelOneAI": "智能商业/智能制造",
-                    "leveltwoAI": "工业视觉",
-                    "enterpriseProfile": "创新工场AI子公司，以“人工智能赋能商业未来”为使命；以“技术产品”+“行业场景”双轮驱动模式，为制造、零售、金融等行业提供人工智能整体解决方案，已获取中冶赛迪、宗申、格力、宝武钢铁等行业客户；智能零售解决方案，实现场、货、人的智能化管理。智能工业解决方案中基于计算机视觉的无损探伤场景。",
-                    "qualification": "省级小巨人企业（创新类）",
-                    "AIBusinessDirection": "AI赋能零售、金融、制造业",
-                    "content": "人工智能整体解决方案",
-                    "Itsarea": "经开区",
-                    "area": "南京经济技术开发区兴智路6号兴智科技园B栋第19层",
-                    "elements": "网络 平台 模块",
-                    "IndustryClassification": "智能制造，智能零售，智能金融，计算机视觉"
-                },
-                {
-                    "enterpriseId": "XZKJY008",
-                    "enterpriseName": "南京旷云科技有限公司",
-                    "legalPerson": "曹志敏",
-                    "registeredCapital": "1000",
-                    "establishedTime": "2017/1/10",
-                    "AIbusiness": "100%",
-                    "technologyStratification": "2-技术层",
-                    "levelOneAI": "图像识别",
-                    "leveltwoAI": "人脸识别",
-                    "enterpriseProfile": "从属于北京旷视，目前为数据中心与研究院相结合的构成",
-                    "qualification": "",
-                    "AIBusinessDirection": "计算机视觉",
-                    "content": "人脸识别人工智能算法、硬件技术、行业解决方案",
-                    "Itsarea": "经开区",
-                    "area": "南京经济技术开发区兴智路兴智科技园A栋15层",
-                    "elements": "算法 网络 平台 模块 系统",
-                    "IndustryClassification": "计算机视觉"
-                },
-                {
-                    "enterpriseId": "XZKJY009",
-                    "enterpriseName": "江苏南大苏富特智能交通科技有限公司",
-                    "legalPerson": "张道林",
-                    "registeredCapital": "1000",
-                    "establishedTime": "2012/1/20",
-                    "AIbusiness": "20%",
-                    "technologyStratification": "4-应用层",
-                    "levelOneAI": "智能交通",
-                    "leveltwoAI": "交通信息化",
-                    "enterpriseProfile": "从事城市交通领域的智能化系统集成解决方案及交通信息平台建设、运营、维护服务；主要产品行业监管系统平台、公交管理APP、视频监控管理平台等。",
-                    "qualification": "高企、新四板",
-                    "AIBusinessDirection": "智慧交通",
-                    "content": "交通大数据信息服务整体解决方案",
-                    "Itsarea": "经开区",
-                    "area": "南京经济技术开发区兴智路6号342室",
-                    "elements": "网络 平台 模块",
-                    "IndustryClassification": "智能交通"
-                },
-                {
-                    "enterpriseId": "XZKJY010",
-                    "enterpriseName": "南京创新工场科技有限公司",
-                    "legalPerson": "王咏刚",
-                    "registeredCapital": "1000",
-                    "establishedTime": "2017/12/12",
-                    "AIbusiness": "20%",
-                    "technologyStratification": "4-应用层",
-                    "levelOneAI": "智能金融",
-                    "leveltwoAI": "智能金融",
-                    "enterpriseProfile": "成立于2017年12月；2018年9月27日，创新工场南京国际人工智能研究院正式落户南京兴智科技园；致力于培养人工智能高端科研与工程人才，研发以机器学习为核心的前沿人工智能技术，并同计算金融领域相结合，为行业场景提供一流的产品和解决方案",
-                    "qualification": "",
-                    "AIBusinessDirection": "AI零售、金融",
-                    "content": "南京创新工场人工智能研究院",
-                    "Itsarea": "经开区",
-                    "area": "南京经济技术开发区兴智路6号兴智科技园B栋1006室",
-                    "elements": "网络 平台 模块",
-                    "IndustryClassification": "智能零售，智能金融"
-                },
-                {
-                    "enterpriseId": "XZKJY011",
-                    "enterpriseName": "南京普斯迪尔电子科技有限公司",
-                    "legalPerson": "李鑫",
-                    "registeredCapital": "3000",
-                    "establishedTime": "2010/7/13",
-                    "AIbusiness": "",
-                    "technologyStratification": "",
-                    "levelOneAI": "",
-                    "leveltwoAI": "",
-                    "enterpriseProfile": "",
-                    "qualification": "",
-                    "AIBusinessDirection": "\"数据采集、"
-                },
-                {
-                    "enterpriseId": "XZKJY013",
-                    "enterpriseName": "南京氪信信息技术有限公司",
-                    "legalPerson": "SUN NAN",
-                    "registeredCapital": "1100",
-                    "establishedTime": "2017/6/22",
-                    "AIbusiness": "70%",
-                    "technologyStratification": "4-应用层",
-                    "levelOneAI": "智能金融",
-                    "leveltwoAI": "",
-                    "enterpriseProfile": "上海氪信信息技术有限公司的子公司，基于人工智能技术为金融机构提供智能风控、智能营销、智能运营等领域的一体化智能金融解决方案，核心产品及服务体系包括非或然智能引擎平台，模型服务和业务策略咨询",
-                    "qualification": "高企",
-                    "AIBusinessDirection": "AI+金融",
-                    "content": "大数据风控解决方案",
-                    "Itsarea": "经开区",
-                    "area": "南京经济技术开发区兴智路6号兴智科技园A栋1103室",
-                    "elements": "网络 平台 模块 系统",
-                    "IndustryClassification": "智能金融"
-                },
-                {
-                    "enterpriseId": "XZKJY014",
-                    "enterpriseName": "英麦尔（南京）科技有限公司",
-                    "legalPerson": " WUXING ",
-                    "registeredCapital": "110",
-                    "establishedTime": "2017/1/23",
-                    "AIbusiness": "20%",
-                    "technologyStratification": "2-技术层",
-                    "levelOneAI": "数据服务",
-                    "leveltwoAI": "",
-                    "enterpriseProfile": "数字供应链共享、协同平台，以共享产能、共享库存、共享数据为基础、实现企业内外部的计划协同、交付协同和异常协同",
-                    "qualification": "",
-                    "AIBusinessDirection": "供应链智能转型",
-                    "content": "公安系统数据分析解决方案",
-                    "Itsarea": "经开区",
-                    "area": "南京经济技术开发区兴智路兴智科技园c栋2001室",
-                    "elements": "算法  网络  ",
-                    "IndustryClassification": "云平台，大数据服务"
-                },
-                {
-                    "enterpriseId": "XZKJY015",
-                    "enterpriseName": "南京仁通信息技术有限公司",
-                    "legalPerson": "秦旭彦 ",
-                    "registeredCapital": "200",
-                    "establishedTime": "2012/9/18",
-                    "AIbusiness": "10%",
-                    "technologyStratification": "4-应用层",
-                    "levelOneAI": "智能交通",
-                    "leveltwoAI": "",
-                    "enterpriseProfile": "从事智能交通领域的软硬件研发和销售工作，业务主要包括交通咨询服务以及智慧停车体系两大领域；南京仁通主攻汽车后服务市场，近两年公司业务范围不断拓展，新开辟了洗车及相关涉车服务，随着南京市内几个新建点位的开业，目前已形成洗车连锁效应",
-                    "qualification": "高企",
-                    "AIBusinessDirection": "智慧城市",
-                    "content": "智能城市道路交通、停车场解决方案",
-                    "Itsarea": "经开区",
-                    "area": "南京经济技术开发区恒泰路8号汇智科技园B2栋1004室",
-                    "elements": "网络 平台 ",
-                    "IndustryClassification": "智能交通"
-                },
-                {
-                    "enterpriseId": "XZKJY016",
-                    "enterpriseName": "南京佑驾科技有限公司",
-                    "legalPerson": "刘国清",
-                    "registeredCapital": "3000",
-                    "establishedTime": "2018/2/24",
-                    "AIbusiness": "100%",
-                    "technologyStratification": "3-硬件终端",
-                    "levelOneAI": "智能网联汽车",
-                    "leveltwoAI": "高级辅助驾驶系统",
-                    "enterpriseProfile": "目前公司主推的产品是高级驾驶辅助系统（ADAS），并逐渐向不同Level的自动驾驶演进",
-                    "qualification": "",
-                    "AIBusinessDirection": "自动驾驶",
-                    "content": "Minieye高级辅助驾驶和无人驾驶系统",
-                    "Itsarea": "经开区",
-                    "area": "南京经济技术开发区兴智路6号兴智科技园A栋18层",
-                    "elements": "终端 网络 平台 模块 系统",
-                    "IndustryClassification": "智能驾驶，OS"
-                },
-                {
-                    "enterpriseId": "XZKJY017",
-                    "enterpriseName": "南京快轮智能科技有限公司",
-                    "legalPerson": "刘峰 ",
-                    "registeredCapital": "83",
-                    "establishedTime": "2014/6/10",
-                    "AIbusiness": "70%",
-                    "technologyStratification": "4-应用层",
-                    "levelOneAI": "智能交通",
-                    "leveltwoAI": "智能代步工具",
-                    "enterpriseProfile": "服务上有车辆运营监控；产品上有智能滑板车",
-                    "qualification": "高企、培育独角兽",
-                    "AIBusinessDirection": "\"智能代步工具"
-                },
-                {
-                    "enterpriseId": "XZKJY035",
-                    "enterpriseName": "南京阿波罗机器人科技有限公司",
-                    "legalPerson": "李学骏",
-                    "registeredCapital": "190",
-                    "establishedTime": "2015/4/30",
-                    "AIbusiness": "10%",
-                    "technologyStratification": "4-应用层",
-                    "levelOneAI": "智慧教育",
-                    "leveltwoAI": "",
-                    "enterpriseProfile": "服务于4~16岁儿童及青少年，启发孩子掌握机器人的内部构造及编程实现，帮助孩子理解和体验各种理论性、技术性、经验性科学知识与技能",
-                    "qualification": "",
-                    "AIBusinessDirection": "AI教育",
-                    "content": "青少年机器人教育（编程、模型）",
-                    "Itsarea": "经开区",
-                    "area": "南京经济技术开发区兴智路6号兴智科技园B栋1002室",
-                    "elements": "网络 平台 系统",
-                    "IndustryClassification": "智能教育"
-                },
-                {
-                    "enterpriseId": "XZKJY036",
-                    "enterpriseName": "南京云孚智能科技有限公司",
-                    "legalPerson": "张文斌",
-                    "registeredCapital": "201",
-                    "establishedTime": "2018/8/14",
-                    "AIbusiness": "90%",
-                    "technologyStratification": "2-技术层",
-                    "levelOneAI": "语音语义",
-                    "leveltwoAI": "",
-                    "enterpriseProfile": "语义技术服务商，核心产品包括NLP工具包、知识图谱、文本挖掘、对话系统、舆情监测等，致力于以顶尖的语义技术助力企业智能升级。合作伙伴包括腾讯、百度、科大讯飞、滴滴、VIVO、神州泰岳、传神语联网、慧科等知名企业",
-                    "qualification": "",
-                    "AIBusinessDirection": "自然语言处理",
-                    "content": "基于知识图谱的工业类语义服务",
-                    "Itsarea": "经开区",
-                    "area": "南京经济技术开发区兴智路6号兴智科技园C栋1808室",
-                    "elements": "网络 平台 系统",
-                    "IndustryClassification": "自然语言处理"
-                },
-                {
-                    "enterpriseId": "XZKJY037",
-                    "enterpriseName": "南京海果智能科技有限公司",
-                    "legalPerson": "屈桢深 ",
-                    "registeredCapital": "250",
-                    "establishedTime": "2015/2/5",
-                    "AIbusiness": "60%",
-                    "technologyStratification": "2-技术层",
-                    "levelOneAI": "数据服务",
-                    "leveltwoAI": "",
-                    "enterpriseProfile": "致力于人工智能技术在互联网金融、机器视觉等方面的行业应用；致力于互联网保险和互联网金融的大数据应用，构建基于Hadoop、Spark、Storm等大数据核心技术的互联网保险和互联网金融商业支撑系统，服务保险/金融机构和投资人",
-                    "qualification": "",
-                    "AIBusinessDirection": "",
-                    "content": "大输液智能灯检机",
-                    "Itsarea": "经开区",
-                    "area": "南京经济技术开发区创智科技园C栋1703室",
-                    "elements": "网络 平台 模块",
-                    "IndustryClassification": "大数据服务"
-                },
-                {
-                    "enterpriseId": "XZKJY038",
-                    "enterpriseName": "南京青虹网络科技有限公司",
-                    "legalPerson": "薛靖",
-                    "registeredCapital": "200",
-                    "establishedTime": "2017/9/14",
-                    "AIbusiness": "30%",
-                    "technologyStratification": "2-技术层",
-                    "levelOneAI": "VR/AR",
-                    "leveltwoAI": "",
-                    "enterpriseProfile": "致力于虚拟现实（VR）相关产业，积极打造“VR+”产业链，主要从事航拍无人机、VR全景拍摄、VR全景监控等相关领域的产品和服务",
-                    "qualification": "",
-                    "AIBusinessDirection": "VR",
-                    "content": "VR全景及网络平台的技术开发、咨询与服务",
-                    "Itsarea": "经开区",
-                    "area": "南京经济技术开发区兴智路6号兴智科技园C栋1004室",
-                    "elements": "终端 网络 平台 模块",
-                    "IndustryClassification": "移动设备，云平台"
-                },
-                {
-                    "enterpriseId": "XZKJY039",
-                    "enterpriseName": "南京京东智汇信息技术有限公司",
-                    "legalPerson": "张雱",
-                    "registeredCapital": "2000",
-                    "establishedTime": "2018/5/14",
-                    "AIbusiness": "70%",
-                    "technologyStratification": "2-技术层",
-                    "levelOneAI": "图像识别/语音语义/机器学习",
-                    "leveltwoAI": "",
-                    "enterpriseProfile": "“京东（南京）人工智能研究院”将聚焦语音语义、计算机视觉、机器学习等技术领域，以京东实际的业务场景需求为驱动，专注于持续性的算法创新，成为京东生态系统大平台里重要的组成部分",
-                    "qualification": "",
-                    "AIBusinessDirection": "语音语义、计算机视觉、机器学习",
-                    "content": "京东（南京）人工智能研究院",
-                    "Itsarea": "经开区",
-                    "area": "南京经济技术开发区红枫科技园D12栋10层",
-                    "elements": "网络 平台 模块",
-                    "IndustryClassification": "计算机视觉，智能语音，机器学习"
-                },
-                {
-                    "enterpriseId": "XZKJY040",
-                    "enterpriseName": "南京轩宁信息技术有限公司",
-                    "legalPerson": "司轩斌 ",
-                    "registeredCapital": "200",
-                    "establishedTime": "2019/5/27",
-                    "AIbusiness": "80%",
-                    "technologyStratification": "2-技术层",
-                    "levelOneAI": "生物识别",
-                    "leveltwoAI": "",
-                    "enterpriseProfile": "无官网，无介绍",
-                    "qualification": "",
-                    "AIBusinessDirection": "屏下指纹识别",
-                    "content": "全屏指纹识别",
-                    "Itsarea": "经开区",
-                    "area": "南京市雨花台区花神庙10号02栋602室",
-                    "elements": "终端 网络 平台 模块",
-                    "IndustryClassification": "生物识别"
-                },
-                {
-                    "enterpriseId": "XZKJY041",
-                    "enterpriseName": "南京众乐互联科技有限公司",
-                    "legalPerson": "程仁庆 ",
-                    "registeredCapital": "100",
-                    "establishedTime": "2018/8/28",
-                    "AIbusiness": "60%",
-                    "technologyStratification": "4-应用层",
-                    "levelOneAI": "智能金融",
-                    "leveltwoAI": "",
-                    "enterpriseProfile": "无官网，无介绍",
-                    "qualification": "",
-                    "AIBusinessDirection": "智慧金融",
-                    "content": "基于人工智能算法的消费行为收集、产能供需匹配的溯源系统",
-                    "Itsarea": "经开区",
-                    "area": "南京经济技术开发区兴智路6号兴智科技园A栋1103室",
-                    "elements": "网络 平台 ",
-                    "IndustryClassification": "智能金融，OS"
-                },
-                {
-                    "enterpriseId": "XZKJY042",
-                    "enterpriseName": "南京鹏特信息科技有限公司",
-                    "legalPerson": "刘波",
-                    "registeredCapital": "1200",
-                    "establishedTime": "2015/1/13",
-                    "AIbusiness": "20%",
-                    "technologyStratification": "4-应用层",
-                    "levelOneAI": "智能安防",
-                    "leveltwoAI": "安防硬件产品",
-                    "enterpriseProfile": "南京鹏特主要产品有4G执法记录仪，4G手持单兵，4G高清车载，4G应急指挥中心（布控球）一体化手提箱",
-                    "qualification": "",
-                    "AIBusinessDirection": "\"无线视屏"
-                },
-                {
-                    "enterpriseId": "智能安全帽\"",
-                    "enterpriseName": "无线通信技术研究及产品开发",
-                    "legalPerson": "经开区",
-                    "registeredCapital": "南京市秦淮区科巷1号1417室",
-                    "establishedTime": "网络 平台 模块",
-                    "AIbusiness": "智能安防"
-                }
-            ]
-            var t;
-            for(var i = 0;i < arrList.length; i++){
-            var rand = parseInt(Math.random()*arrList.length);
-            // console.log(rand)
-                t = arrList[rand];
-                arrList[rand] =arrList[i];
-                arrList[i] = t;
-            }
-            let nanyou = [{
+
+                let arrList = [
+                    
+                    {
+                        "enterpriseId": "HFKJY008",
+                        "enterpriseName": "南京科沃斯机器人技术有限公司",
+                        "legalPerson": "高翔",
+                        "registeredCapital": "2000",
+                        "establishedTime": "2018/6/28",
+                        "AIbusiness": "100%",
+                        "technologyStratification": "4-应用层",
+                        "levelOneAI": "智能家居",
+                        "leveltwoAI": "扫地机器人",
+                        "enterpriseProfile": "科沃斯机器人全资子公司",
+                        "qualification": "",
+                        "AIBusinessDirection": "家用服务机器人、智能家居",
+                        "content": "科沃斯机器人（南京）人工智能研究院",
+                        "Itsarea": "经开区",
+                        "area": "南京经济技术开发区红枫科技园C2栋第5、6层西侧",
+                        "elements": "算法 终端 网络 平台 模块",
+                        "IndustryClassification": "服务机器人，智能家居"
+                    },
+                    {
+                        "enterpriseId": "XLZG001",
+                        "enterpriseName": "图灵人工智能研究院（南京）有限公司",
+                        "legalPerson": "姚期智",
+                        "registeredCapital": "1714.6",
+                        "establishedTime": "2018/3/28",
+                        "AIbusiness": "100%",
+                        "technologyStratification": "2-技术层",
+                        "levelOneAI": "机器学习",
+                        "leveltwoAI": "",
+                        "enterpriseProfile": "一个人工智能研究机构。南京京图灵人工智能研究院未来将融入世界人工智能创新网络，促进南京人工智能产业高端发展，建立AI技术为传统产业赋能平台。同时，研究院还计划每年在南京市举办一场全球人工智能领域的顶尖论坛。",
+                        "qualification": "",
+                        "AIBusinessDirection": "AI交叉领域研究",
+                        "content": "图灵人工智能研究院",
+                        "Itsarea": "栖霞高新区",
+                        "area": "南京市栖霞区仙林街道齐民路6号5栋601室",
+                        "elements": "算法 网络 平台 模块",
+                        "IndustryClassification": "机器学习，知识图谱"
+                    },
+                    {
+                        "enterpriseId": "ZDCYY012",
+                        "enterpriseName": "捕视者人脸识别技术（江苏）有限公司",
+                        "legalPerson": "窦一鸣 ",
+                        "registeredCapital": "1000",
+                        "establishedTime": "2018/1/29",
+                        "AIbusiness": "100%",
+                        "technologyStratification": "2-技术层",
+                        "levelOneAI": "图像识别",
+                        "leveltwoAI": "智慧政务",
+                        "enterpriseProfile": "基于人脸识别技术开发智慧政务审批系统、认证识别终端、视频数字化多组态人脸识别系统",
+                        "qualification": "",
+                        "AIBusinessDirection": "\"人脸识别"
+                    },
+                    {
+                        "enterpriseId": "XZKJY045",
+                        "enterpriseName": "南京艾弗曼人工智能有限公司",
+                        "legalPerson": "李钢",
+                        "registeredCapital": "1000",
+                        "establishedTime": "2018/1/9",
+                        "AIbusiness": "80%",
+                        "technologyStratification": "3-硬件终端",
+                        "levelOneAI": "智能机器人",
+                        "leveltwoAI": "",
+                        "enterpriseProfile": "一家智能服务机器人研发商，将AI技术应用于运营商、金融、政务、电商、航空、汽车、物流等行业的服务场景，其研发的机器人具有精准人脸识别、自主定位导航、语音识别对话、数据采集分析、导航避障及定时回充功能",
+                        "qualification": "",
+                        "AIBusinessDirection": "智能税务服务",
+                        "content": "南京艾德曼税务机器人",
+                        "Itsarea": "经开区",
+                        "area": "南京经济技术开发区兴智路6号兴智科技园A栋2106室",
+                        "elements": "终端 网络 平台 模块 系统",
+                        "IndustryClassification": "服务机器人"
+                    },
+                    {
+                        "enterpriseId": "烟雾识别\"",
+                        "enterpriseName": "捕视者不见面事项审批政务平台软件",
+                        "legalPerson": "栖霞高新区",
+                        "registeredCapital": "南京市栖霞区马群街道紫东路2号B4栋402室",
+                        "establishedTime": "网络 平台 模块 系统",
+                        "AIbusiness": "计算机视觉"
+                    },
+                    {
+                        "enterpriseId": "ZDCYY030",
+                        "enterpriseName": "南京子谷大数据科技有限公司",
+                        "legalPerson": "朱晶",
+                        "registeredCapital": "1000",
+                        "establishedTime": "2019/4/19",
+                        "AIbusiness": "90%",
+                        "technologyStratification": "4-应用层",
+                        "levelOneAI": "智慧政务",
+                        "leveltwoAI": "",
+                        "enterpriseProfile": "搭建网民用户行为模型，为政府提供重点舆情数据追踪，海量视频流数据监测，实时即时阻断等服务",
+                        "qualification": "",
+                        "AIBusinessDirection": "人工智能+大数据",
+                        "content": "搭建网民用户行为模型，为政府提供重点舆情数据追踪，海量视频流数据监测，实时即时阻断等服务",
+                        "Itsarea": "栖霞高新区",
+                        "area": "南京市栖霞区马群街道紫东路2号紫东国际创意园A7栋102室",
+                        "elements": "网络 平台",
+                        "IndustryClassification": "大数据服务，法律"
+                    },
+                    {
+                        "enterpriseId": "XZKJY002",
+                        "enterpriseName": "南京人工智能高等研究院有限公司",
+                        "legalPerson": "余凯",
+                        "registeredCapital": "2700",
+                        "establishedTime": "2018/4/24",
+                        "AIbusiness": "",
+                        "technologyStratification": "2-技术层",
+                        "levelOneAI": "图像识别/语音语义",
+                        "leveltwoAI": "",
+                        "enterpriseProfile": "基于机器学习基础理论、计算机视觉技术、语音语言处理技术、高性能计算等前沿技术研究，重点围绕智能制造、智能城市、智能医疗等重要行业领域进行产学研成果转化",
+                        "qualification": "",
+                        "AIBusinessDirection": "深度学习芯片、机器视觉等",
+                        "content": "南京人工智能高等研究院",
+                        "Itsarea": "经开区",
+                        "area": "南京经济技术开发区兴智路6号兴智科技园A栋21层",
+                        "elements": "终端 网络 平台 模块",
+                        "IndustryClassification": "计算机视觉，智能医疗，智能语音"
+                    },
+                    {
+                        "enterpriseId": "XZKJY005",
+                        "enterpriseName": "芯启源（南京）半导体科技有限公司",
+                        "legalPerson": "SHENG LU ",
+                        "registeredCapital": "10000万美元",
+                        "establishedTime": "2016/11/3",
+                        "AIbusiness": "70%",
+                        "technologyStratification": "1-基础层",
+                        "levelOneAI": "集成电路",
+                        "leveltwoAI": "芯片设计",
+                        "enterpriseProfile": "为国家战略层面的芯片自主知识产权研发和应用不断努力",
+                        "qualification": "",
+                        "AIBusinessDirection": "网络企业级芯片",
+                        "content": "企业级高端网络通讯智能芯片",
+                        "Itsarea": "经开区",
+                        "area": "南京经济技术开发区兴智路兴智科技园A栋7层",
+                        "elements": "算法 芯片 终端",
+                        "IndustryClassification": "AI芯片"
+                    },
+                    {
+                        "enterpriseId": "XZKJY006",
+                        "enterpriseName": "南京宇都通讯科技有限公司",
+                        "legalPerson": "JUNFENG WANG",
+                        "registeredCapital": "1327.58",
+                        "establishedTime": "2012/4/20",
+                        "AIbusiness": "60%",
+                        "technologyStratification": "1-基础层",
+                        "levelOneAI": "通信网络",
+                        "leveltwoAI": "通信芯片/通信设备",
+                        "enterpriseProfile": "立足于SmartCable（有线千兆）和SmartAir（无线千兆）两项自主创新的宽带通讯核心前沿技术，提供千兆宽带接入和千兆家庭网的系统解决方案、关键设备和核心芯片，打造家庭网信息高速干线，支持三网融合、高清/超高清IPTV等应用，努力成为这个新兴的千亿级市场的一流供应商",
+                        "qualification": "",
+                        "AIBusinessDirection": "智能终端芯片",
+                        "content": "三网融合智能芯片",
+                        "Itsarea": "经开区",
+                        "area": "南京经济技术开发区兴智路6-3号南段4层",
+                        "elements": "算法 芯片  网络",
+                        "IndustryClassification": "AI芯片"
+                    },
+                    {
+                        "enterpriseId": "XZKJY007",
+                        "enterpriseName": "创新奇智（南京）科技有限公司",
+                        "legalPerson": "徐辉",
+                        "registeredCapital": "1000",
+                        "establishedTime": "2018/6/15",
+                        "AIbusiness": "90%",
+                        "technologyStratification": "4-应用层",
+                        "levelOneAI": "智能商业/智能制造",
+                        "leveltwoAI": "工业视觉",
+                        "enterpriseProfile": "创新工场AI子公司，以“人工智能赋能商业未来”为使命；以“技术产品”+“行业场景”双轮驱动模式，为制造、零售、金融等行业提供人工智能整体解决方案，已获取中冶赛迪、宗申、格力、宝武钢铁等行业客户；智能零售解决方案，实现场、货、人的智能化管理。智能工业解决方案中基于计算机视觉的无损探伤场景。",
+                        "qualification": "省级小巨人企业（创新类）",
+                        "AIBusinessDirection": "AI赋能零售、金融、制造业",
+                        "content": "人工智能整体解决方案",
+                        "Itsarea": "经开区",
+                        "area": "南京经济技术开发区兴智路6号兴智科技园B栋第19层",
+                        "elements": "网络 平台 模块",
+                        "IndustryClassification": "智能制造，智能零售，智能金融，计算机视觉"
+                    },
+                    {
+                        "enterpriseId": "XZKJY008",
+                        "enterpriseName": "南京旷云科技有限公司",
+                        "legalPerson": "曹志敏",
+                        "registeredCapital": "1000",
+                        "establishedTime": "2017/1/10",
+                        "AIbusiness": "100%",
+                        "technologyStratification": "2-技术层",
+                        "levelOneAI": "图像识别",
+                        "leveltwoAI": "人脸识别",
+                        "enterpriseProfile": "从属于北京旷视，目前为数据中心与研究院相结合的构成",
+                        "qualification": "",
+                        "AIBusinessDirection": "计算机视觉",
+                        "content": "人脸识别人工智能算法、硬件技术、行业解决方案",
+                        "Itsarea": "经开区",
+                        "area": "南京经济技术开发区兴智路兴智科技园A栋15层",
+                        "elements": "算法 网络 平台 模块 系统",
+                        "IndustryClassification": "计算机视觉"
+                    },
+                    {
+                        "enterpriseId": "XZKJY009",
+                        "enterpriseName": "江苏南大苏富特智能交通科技有限公司",
+                        "legalPerson": "张道林",
+                        "registeredCapital": "1000",
+                        "establishedTime": "2012/1/20",
+                        "AIbusiness": "20%",
+                        "technologyStratification": "4-应用层",
+                        "levelOneAI": "智能交通",
+                        "leveltwoAI": "交通信息化",
+                        "enterpriseProfile": "从事城市交通领域的智能化系统集成解决方案及交通信息平台建设、运营、维护服务；主要产品行业监管系统平台、公交管理APP、视频监控管理平台等。",
+                        "qualification": "高企、新四板",
+                        "AIBusinessDirection": "智慧交通",
+                        "content": "交通大数据信息服务整体解决方案",
+                        "Itsarea": "经开区",
+                        "area": "南京经济技术开发区兴智路6号342室",
+                        "elements": "网络 平台 模块",
+                        "IndustryClassification": "智能交通"
+                    },
+                    {
+                        "enterpriseId": "XZKJY010",
+                        "enterpriseName": "南京创新工场科技有限公司",
+                        "legalPerson": "王咏刚",
+                        "registeredCapital": "1000",
+                        "establishedTime": "2017/12/12",
+                        "AIbusiness": "20%",
+                        "technologyStratification": "4-应用层",
+                        "levelOneAI": "智能金融",
+                        "leveltwoAI": "智能金融",
+                        "enterpriseProfile": "成立于2017年12月；2018年9月27日，创新工场南京国际人工智能研究院正式落户南京兴智科技园；致力于培养人工智能高端科研与工程人才，研发以机器学习为核心的前沿人工智能技术，并同计算金融领域相结合，为行业场景提供一流的产品和解决方案",
+                        "qualification": "",
+                        "AIBusinessDirection": "AI零售、金融",
+                        "content": "南京创新工场人工智能研究院",
+                        "Itsarea": "经开区",
+                        "area": "南京经济技术开发区兴智路6号兴智科技园B栋1006室",
+                        "elements": "网络 平台 模块",
+                        "IndustryClassification": "智能零售，智能金融"
+                    },
+                    {
+                        "enterpriseId": "XZKJY011",
+                        "enterpriseName": "南京普斯迪尔电子科技有限公司",
+                        "legalPerson": "李鑫",
+                        "registeredCapital": "3000",
+                        "establishedTime": "2010/7/13",
+                        "AIbusiness": "",
+                        "technologyStratification": "",
+                        "levelOneAI": "",
+                        "leveltwoAI": "",
+                        "enterpriseProfile": "",
+                        "qualification": "",
+                        "AIBusinessDirection": "\"数据采集、"
+                    },
+                    {
+                        "enterpriseId": "XZKJY013",
+                        "enterpriseName": "南京氪信信息技术有限公司",
+                        "legalPerson": "SUN NAN",
+                        "registeredCapital": "1100",
+                        "establishedTime": "2017/6/22",
+                        "AIbusiness": "70%",
+                        "technologyStratification": "4-应用层",
+                        "levelOneAI": "智能金融",
+                        "leveltwoAI": "",
+                        "enterpriseProfile": "上海氪信信息技术有限公司的子公司，基于人工智能技术为金融机构提供智能风控、智能营销、智能运营等领域的一体化智能金融解决方案，核心产品及服务体系包括非或然智能引擎平台，模型服务和业务策略咨询",
+                        "qualification": "高企",
+                        "AIBusinessDirection": "AI+金融",
+                        "content": "大数据风控解决方案",
+                        "Itsarea": "经开区",
+                        "area": "南京经济技术开发区兴智路6号兴智科技园A栋1103室",
+                        "elements": "网络 平台 模块 系统",
+                        "IndustryClassification": "智能金融"
+                    },
+                    {
+                        "enterpriseId": "XZKJY014",
+                        "enterpriseName": "英麦尔（南京）科技有限公司",
+                        "legalPerson": " WUXING ",
+                        "registeredCapital": "110",
+                        "establishedTime": "2017/1/23",
+                        "AIbusiness": "20%",
+                        "technologyStratification": "2-技术层",
+                        "levelOneAI": "数据服务",
+                        "leveltwoAI": "",
+                        "enterpriseProfile": "数字供应链共享、协同平台，以共享产能、共享库存、共享数据为基础、实现企业内外部的计划协同、交付协同和异常协同",
+                        "qualification": "",
+                        "AIBusinessDirection": "供应链智能转型",
+                        "content": "公安系统数据分析解决方案",
+                        "Itsarea": "经开区",
+                        "area": "南京经济技术开发区兴智路兴智科技园c栋2001室",
+                        "elements": "算法  网络  ",
+                        "IndustryClassification": "云平台，大数据服务"
+                    },
+                    {
+                        "enterpriseId": "XZKJY015",
+                        "enterpriseName": "南京仁通信息技术有限公司",
+                        "legalPerson": "秦旭彦 ",
+                        "registeredCapital": "200",
+                        "establishedTime": "2012/9/18",
+                        "AIbusiness": "10%",
+                        "technologyStratification": "4-应用层",
+                        "levelOneAI": "智能交通",
+                        "leveltwoAI": "",
+                        "enterpriseProfile": "从事智能交通领域的软硬件研发和销售工作，业务主要包括交通咨询服务以及智慧停车体系两大领域；南京仁通主攻汽车后服务市场，近两年公司业务范围不断拓展，新开辟了洗车及相关涉车服务，随着南京市内几个新建点位的开业，目前已形成洗车连锁效应",
+                        "qualification": "高企",
+                        "AIBusinessDirection": "智慧城市",
+                        "content": "智能城市道路交通、停车场解决方案",
+                        "Itsarea": "经开区",
+                        "area": "南京经济技术开发区恒泰路8号汇智科技园B2栋1004室",
+                        "elements": "网络 平台 ",
+                        "IndustryClassification": "智能交通"
+                    },
+                    {
+                        "enterpriseId": "XZKJY016",
+                        "enterpriseName": "南京佑驾科技有限公司",
+                        "legalPerson": "刘国清",
+                        "registeredCapital": "3000",
+                        "establishedTime": "2018/2/24",
+                        "AIbusiness": "100%",
+                        "technologyStratification": "3-硬件终端",
+                        "levelOneAI": "智能网联汽车",
+                        "leveltwoAI": "高级辅助驾驶系统",
+                        "enterpriseProfile": "目前公司主推的产品是高级驾驶辅助系统（ADAS），并逐渐向不同Level的自动驾驶演进",
+                        "qualification": "",
+                        "AIBusinessDirection": "自动驾驶",
+                        "content": "Minieye高级辅助驾驶和无人驾驶系统",
+                        "Itsarea": "经开区",
+                        "area": "南京经济技术开发区兴智路6号兴智科技园A栋18层",
+                        "elements": "终端 网络 平台 模块 系统",
+                        "IndustryClassification": "智能驾驶，OS"
+                    },
+                    {
+                        "enterpriseId": "XZKJY017",
+                        "enterpriseName": "南京快轮智能科技有限公司",
+                        "legalPerson": "刘峰 ",
+                        "registeredCapital": "83",
+                        "establishedTime": "2014/6/10",
+                        "AIbusiness": "70%",
+                        "technologyStratification": "4-应用层",
+                        "levelOneAI": "智能交通",
+                        "leveltwoAI": "智能代步工具",
+                        "enterpriseProfile": "服务上有车辆运营监控；产品上有智能滑板车",
+                        "qualification": "高企、培育独角兽",
+                        "AIBusinessDirection": "\"智能代步工具"
+                    },
+                    {
+                        "enterpriseId": "XZKJY035",
+                        "enterpriseName": "南京阿波罗机器人科技有限公司",
+                        "legalPerson": "李学骏",
+                        "registeredCapital": "190",
+                        "establishedTime": "2015/4/30",
+                        "AIbusiness": "10%",
+                        "technologyStratification": "4-应用层",
+                        "levelOneAI": "智慧教育",
+                        "leveltwoAI": "",
+                        "enterpriseProfile": "服务于4~16岁儿童及青少年，启发孩子掌握机器人的内部构造及编程实现，帮助孩子理解和体验各种理论性、技术性、经验性科学知识与技能",
+                        "qualification": "",
+                        "AIBusinessDirection": "AI教育",
+                        "content": "青少年机器人教育（编程、模型）",
+                        "Itsarea": "经开区",
+                        "area": "南京经济技术开发区兴智路6号兴智科技园B栋1002室",
+                        "elements": "网络 平台 系统",
+                        "IndustryClassification": "智能教育"
+                    },
+                    {
+                        "enterpriseId": "XZKJY036",
+                        "enterpriseName": "南京云孚智能科技有限公司",
+                        "legalPerson": "张文斌",
+                        "registeredCapital": "201",
+                        "establishedTime": "2018/8/14",
+                        "AIbusiness": "90%",
+                        "technologyStratification": "2-技术层",
+                        "levelOneAI": "语音语义",
+                        "leveltwoAI": "",
+                        "enterpriseProfile": "语义技术服务商，核心产品包括NLP工具包、知识图谱、文本挖掘、对话系统、舆情监测等，致力于以顶尖的语义技术助力企业智能升级。合作伙伴包括腾讯、百度、科大讯飞、滴滴、VIVO、神州泰岳、传神语联网、慧科等知名企业",
+                        "qualification": "",
+                        "AIBusinessDirection": "自然语言处理",
+                        "content": "基于知识图谱的工业类语义服务",
+                        "Itsarea": "经开区",
+                        "area": "南京经济技术开发区兴智路6号兴智科技园C栋1808室",
+                        "elements": "网络 平台 系统",
+                        "IndustryClassification": "自然语言处理"
+                    },
+                    {
+                        "enterpriseId": "XZKJY037",
+                        "enterpriseName": "南京海果智能科技有限公司",
+                        "legalPerson": "屈桢深 ",
+                        "registeredCapital": "250",
+                        "establishedTime": "2015/2/5",
+                        "AIbusiness": "60%",
+                        "technologyStratification": "2-技术层",
+                        "levelOneAI": "数据服务",
+                        "leveltwoAI": "",
+                        "enterpriseProfile": "致力于人工智能技术在互联网金融、机器视觉等方面的行业应用；致力于互联网保险和互联网金融的大数据应用，构建基于Hadoop、Spark、Storm等大数据核心技术的互联网保险和互联网金融商业支撑系统，服务保险/金融机构和投资人",
+                        "qualification": "",
+                        "AIBusinessDirection": "",
+                        "content": "大输液智能灯检机",
+                        "Itsarea": "经开区",
+                        "area": "南京经济技术开发区创智科技园C栋1703室",
+                        "elements": "网络 平台 模块",
+                        "IndustryClassification": "大数据服务"
+                    },
+                    {
+                        "enterpriseId": "XZKJY038",
+                        "enterpriseName": "南京青虹网络科技有限公司",
+                        "legalPerson": "薛靖",
+                        "registeredCapital": "200",
+                        "establishedTime": "2017/9/14",
+                        "AIbusiness": "30%",
+                        "technologyStratification": "2-技术层",
+                        "levelOneAI": "VR/AR",
+                        "leveltwoAI": "",
+                        "enterpriseProfile": "致力于虚拟现实（VR）相关产业，积极打造“VR+”产业链，主要从事航拍无人机、VR全景拍摄、VR全景监控等相关领域的产品和服务",
+                        "qualification": "",
+                        "AIBusinessDirection": "VR",
+                        "content": "VR全景及网络平台的技术开发、咨询与服务",
+                        "Itsarea": "经开区",
+                        "area": "南京经济技术开发区兴智路6号兴智科技园C栋1004室",
+                        "elements": "终端 网络 平台 模块",
+                        "IndustryClassification": "移动设备，云平台"
+                    },
+                    {
+                        "enterpriseId": "XZKJY039",
+                        "enterpriseName": "南京京东智汇信息技术有限公司",
+                        "legalPerson": "张雱",
+                        "registeredCapital": "2000",
+                        "establishedTime": "2018/5/14",
+                        "AIbusiness": "70%",
+                        "technologyStratification": "2-技术层",
+                        "levelOneAI": "图像识别/语音语义/机器学习",
+                        "leveltwoAI": "",
+                        "enterpriseProfile": "“京东（南京）人工智能研究院”将聚焦语音语义、计算机视觉、机器学习等技术领域，以京东实际的业务场景需求为驱动，专注于持续性的算法创新，成为京东生态系统大平台里重要的组成部分",
+                        "qualification": "",
+                        "AIBusinessDirection": "语音语义、计算机视觉、机器学习",
+                        "content": "京东（南京）人工智能研究院",
+                        "Itsarea": "经开区",
+                        "area": "南京经济技术开发区红枫科技园D12栋10层",
+                        "elements": "网络 平台 模块",
+                        "IndustryClassification": "计算机视觉，智能语音，机器学习"
+                    },
+                    {
+                        "enterpriseId": "XZKJY040",
+                        "enterpriseName": "南京轩宁信息技术有限公司",
+                        "legalPerson": "司轩斌 ",
+                        "registeredCapital": "200",
+                        "establishedTime": "2019/5/27",
+                        "AIbusiness": "80%",
+                        "technologyStratification": "2-技术层",
+                        "levelOneAI": "生物识别",
+                        "leveltwoAI": "",
+                        "enterpriseProfile": "无官网，无介绍",
+                        "qualification": "",
+                        "AIBusinessDirection": "屏下指纹识别",
+                        "content": "全屏指纹识别",
+                        "Itsarea": "经开区",
+                        "area": "南京市雨花台区花神庙10号02栋602室",
+                        "elements": "终端 网络 平台 模块",
+                        "IndustryClassification": "生物识别"
+                    },
+                    {
+                        "enterpriseId": "XZKJY041",
+                        "enterpriseName": "南京众乐互联科技有限公司",
+                        "legalPerson": "程仁庆 ",
+                        "registeredCapital": "100",
+                        "establishedTime": "2018/8/28",
+                        "AIbusiness": "60%",
+                        "technologyStratification": "4-应用层",
+                        "levelOneAI": "智能金融",
+                        "leveltwoAI": "",
+                        "enterpriseProfile": "无官网，无介绍",
+                        "qualification": "",
+                        "AIBusinessDirection": "智慧金融",
+                        "content": "基于人工智能算法的消费行为收集、产能供需匹配的溯源系统",
+                        "Itsarea": "经开区",
+                        "area": "南京经济技术开发区兴智路6号兴智科技园A栋1103室",
+                        "elements": "网络 平台 ",
+                        "IndustryClassification": "智能金融，OS"
+                    },
+                    {
+                        "enterpriseId": "XZKJY042",
+                        "enterpriseName": "南京鹏特信息科技有限公司",
+                        "legalPerson": "刘波",
+                        "registeredCapital": "1200",
+                        "establishedTime": "2015/1/13",
+                        "AIbusiness": "20%",
+                        "technologyStratification": "4-应用层",
+                        "levelOneAI": "智能安防",
+                        "leveltwoAI": "安防硬件产品",
+                        "enterpriseProfile": "南京鹏特主要产品有4G执法记录仪，4G手持单兵，4G高清车载，4G应急指挥中心（布控球）一体化手提箱",
+                        "qualification": "",
+                        "AIBusinessDirection": "\"无线视屏"
+                    },
+                    {
+                        "enterpriseId": "智能安全帽\"",
+                        "enterpriseName": "无线通信技术研究及产品开发",
+                        "legalPerson": "经开区",
+                        "registeredCapital": "南京市秦淮区科巷1号1417室",
+                        "establishedTime": "网络 平台 模块",
+                        "AIbusiness": "智能安防"
+                    }
+                ]
+                
+                let nanyou = [{
                     "enterpriseId": "XZKJY001",
                     "enterpriseName": "南京南邮信息产业技术研究院有限公司",
                     "legalPerson": "孙海安",
@@ -1958,7 +1999,23 @@ export default {
                     "elements": "算法 终端 网络 平台 模块 系统",
                     "IndustryClassification": "智能语音，自然语言处理，云平台，大数据服务，计算机视觉，智能安防，智能家居，服务机器人"
                 }]
-            this.officeList =nanyou.concat(arrList.slice(0,3))
+                if(id === 93){
+                    this.officeList =nanyou.concat(arrList.slice(0,2))
+                }else{
+                    var t;
+                    for(var i = 0;i < arrList.length; i++){
+                    var rand = parseInt(Math.random()*arrList.length);
+                    // console.log(rand)
+                        t = arrList[rand];
+                        arrList[rand] =arrList[i];
+                        arrList[i] = t;
+                    }
+                    this.officeList =nanyou.concat(arrList.slice(0,3))
+                }
+                
+
+            })
+            
         },
         showImgBox(){
             // this.imgTitle = 

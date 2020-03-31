@@ -280,7 +280,7 @@
 .sceanEnterBox{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     flex-wrap: wrap;
 }
 .sceanEnterItems{
@@ -289,7 +289,7 @@
     background-color: #1F598F;
     color:#ffffff;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin: 4px;
     cursor: pointer;
 }
 .enterName{

@@ -448,6 +448,7 @@ export default {
         singleEcharts
     },
     mounted(){
+        this.checkLogin()
         this.checkBrowserVersion()
         this.initMap()
         
@@ -457,6 +458,13 @@ export default {
         this.getScenList(0)
     },
     methods:{
+        checkLogin(){
+            if(!sessionStorage.getItem("user")){
+                this.$router.push({
+                    path:'/'
+                })
+            }
+        },
         checkBrowserVersion(){
             var browser=navigator.appName
             var b_version=navigator.appVersion

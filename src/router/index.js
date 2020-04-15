@@ -4,14 +4,21 @@ import Router from 'vue-router'
 import dashboard from '../views/dashboard'
 import jurong from '../views/jurong'
 import fiveg from '../views/fiveg'
+import login from '../views/login/index'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/dashboard'
+      redirect: '/login'
     },
+    {
+      path: '/login',
+      name: 'login',
+      component: login
+    },
+    
     {
       path: '/dashboard',
       name: 'dashboard',

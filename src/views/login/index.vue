@@ -56,7 +56,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import {login} from '@/api/home'
 export default {
   name: 'Login',
   data() {
@@ -97,10 +97,11 @@ export default {
         loginName:this.loginForm.loginName,
         pwd:this.loginForm.pwd
       }
-      axios.post('http://120.55.161.93:6011/user/login',myData)
+      // axios.post('http://120.55.161.93:6011/user/login',myData)
+      login(myData)
       .then(res=>{
         if(res.data.code === 200){
-          sessionStorage.setItem("user", JSON.stringify(res.result))
+          sessionStorage.setItem("user", JSON.stringify(res.data.result))
           // sessionStorage.setItem("userid",res.result.id)
           this.$router.push({
             path:'/dashboard',

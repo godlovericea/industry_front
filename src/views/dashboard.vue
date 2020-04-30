@@ -36,58 +36,56 @@
             </el-input>
             <div style="height:20px"></div>
             <div class="leftheaderBox">
-                <p class="headerTitle">中国(南京)智谷AI应用场景</p>
+                <p class="headerTitle" v-if="companyType === 1">人工智能应用场景</p>
+                <p class="headerTitle" v-if="companyType === 2">光电技术应用场景</p>
+                <p class="headerTitle" v-if="companyType === 3">生物医药应用场景</p>
+                <p class="headerTitle" v-if="companyType === 4">应用场景</p>
             </div>
             <div class="content">
-                <div class="btnGroups">
+                <div class="btnGroups" v-if="companyType === 1">
                     <md-tabs @md-changed="getScenList" md-alignment="fixed">
-                        <md-tab class="movies" id="0" md-label="疫情防控">
+                        <md-tab class="movies" id="1" md-label="智慧城市">
                             <div class="cardBox" v-for="(item,index) in sceanList" :key="index" @click="clusterMapDis">
-                                <div v-if="item.sceneClassification == '4'">
-                                    <div class="cardContent">
-                                        <p class="cardTitle">{{item.scene}}</p>
-                                        <p class="cardDetail">{{item.scenarioDefined}}</p>
-                                        <el-button type="text" style="color:'#ffffff'" @click="showDetail(item.sceneId)">查看更多>></el-button>
-                                    </div>
+                                <div class="cardContent">
+                                    <p class="cardTitle">{{item.scene}}</p>
+                                    <p class="cardDetail">{{item.scenarioDefined}}</p>
+                                    <el-button type="text" style="color:'#ffffff'" @click="showDetail(item.sceneId)">查看更多>></el-button>
                                 </div>
                             </div>
                         </md-tab>
-                        <md-tab class="movies" id="1" md-label="智慧政务">
+                        <md-tab class="movies" id="2" md-label="智能制造">
                             <div class="cardBox" v-for="(item,index) in sceanList" :key="index" @click="clusterMapDis">
-                                <div v-if="item.sceneClassification == '1'">
+                                <!-- <div v-if="item.sceneClassification == '2'"> -->
                                     <div class="cardContent">
                                         <p class="cardTitle">{{item.scene}}</p>
                                         <p class="cardDetail">{{item.scenarioDefined}}</p>
                                         <el-button type="text" style="color:'#ffffff'" @click="showDetail(item.sceneId)">查看更多>></el-button>
-                                    </div>
-                                </div>
-                            </div>
-                        </md-tab>
-
-                        <md-tab id="2" class="movies" md-label="智慧民生">
-                            <div class="cardBox" v-for="(item,index) in sceanList" :key="index" @click="clusterMapDis">
-                                <div v-if="item.sceneClassification == '2'">
-                                    <div class="cardContent">
-                                        <p class="cardTitle">{{item.scene}}</p>
-                                        <p class="cardDetail">{{item.scenarioDefined}}</p>
-                                        <el-button type="text" style="color:'#ffffff'" @click="showDetail(item.sceneId)">查看更多>></el-button>
-                                    </div>
+                                    <!-- </div> -->
                                 </div>
                             </div>
                         </md-tab>
 
-                        <md-tab id="3" class="movies" md-label="智慧产业">
+                        <md-tab id="3" class="movies" md-label="公共安全">
                             <div class="cardBox" v-for="(item,index) in sceanList" :key="index" @click="clusterMapDis">
-                                <div v-if="item.sceneClassification == '3'">
+                                <!-- <div v-if="item.sceneClassification == '3'"> -->
                                     <div class="cardContent">
                                         <p class="cardTitle">{{item.scene}}</p>
                                         <p class="cardDetail">{{item.scenarioDefined}}</p>
                                         <el-button type="text" style="color:'#ffffff'" @click="showDetail(item.sceneId)">查看更多>></el-button>
                                     </div>
-                                </div>
+                                <!-- </div> -->
                             </div>
                         </md-tab>
                     </md-tabs>
+                </div>
+                <div class="movies" v-if="companyType !== 1">
+                    <div class="cardBox" v-for="(item,index) in sceanList" :key="index" @click="clusterMapDis">
+                        <div class="cardContent">
+                            <p class="cardTitle">{{item.scene}}</p>
+                            <p class="cardDetail">{{item.scenarioDefined}}</p>
+                            <el-button type="text" style="color:'#ffffff'" @click="showDetail(item.sceneId)">查看更多>></el-button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -287,6 +285,7 @@ import pos3 from '../svg/icon-03.png'
 import pos4 from '../svg/icon-04.png'
 import pos5 from '../svg/icon-05.png'
 import pos6 from '../svg/icon-06.png'
+import {listAllCompanyScene,getCompanyScene,industryDetail,getPatentCount} from '@/api/home'
 export default {
     data(){
         return{
@@ -442,6 +441,7 @@ export default {
                 }
             ],
             parkList:parkList,
+            companyType:1
         }
     },
     components:{
@@ -451,11 +451,10 @@ export default {
         this.checkLogin()
         this.checkBrowserVersion()
         this.initMap()
-        
         this.getRadarEnterprise()
         this.getOutputValue()
         this.getEnterpriseMode()
-        this.getScenList(0)
+        this.getScenList()
     },
     methods:{
         checkLogin(){
@@ -463,6 +462,8 @@ export default {
                 this.$router.push({
                     path:'/'
                 })
+            }else{
+                this.companyType = JSON.parse(sessionStorage.getItem('user')).sceneMainClass[0]
             }
         },
         checkBrowserVersion(){
@@ -1381,7 +1382,10 @@ export default {
             });
         },
         getQichachaData(name){
-            axios.post('http://120.55.161.93:6011/qichacha/industryDetail?name='+name)
+            let myData={
+                name:name
+            }
+            industryDetail(myData)
             .then(res=>{
                 // console.log(res.data.Result)
                 // if(res.data.result.content){
@@ -1416,7 +1420,11 @@ export default {
                         adress:myData.Result.Address,
                         phone:myData.Result.Address,
                     }
-                    axios.post("http://120.55.161.93:6011/qichacha/getPatentCount?name="+name)
+                    // axios.post("http://120.55.161.93:6011/qichacha/getPatentCount?name="+name)
+                    let myData1 = {
+                        name:name
+                    }
+                    getPatentCount(myData1)
                     .then(res=>{
                         this.knowledge = res.data.result
                     })
@@ -1453,17 +1461,20 @@ export default {
             }
         },
         getScenList(params){
-            // console.log(params)
-            let type = 4
-            if(params == 0){
-                type = 4
-            }else{
-                type= params
+            this.sceanList = []
+            let myData={
+                sonSceneId:params,
+                type:this.companyType
             }
-            axios.post('http://120.55.161.93:6011/companyInfo/listAllCompanyScene?type='+type)
+            listAllCompanyScene(myData)
             .then(res=>{
                 // console.log(res)
-                this.sceanList = res.data.result
+                // this.sceanList = res.data.result
+                res.data.result.forEach(l=>{
+                    if(l.state === 'N'){
+                        this.sceanList.push(l)
+                    }
+                })
             })
         },
         showDetail(params){
@@ -1471,7 +1482,10 @@ export default {
             // console.log(params)
             this.sceanFlag = true
             let id = parseInt(params)
-            axios.post('http://120.55.161.93:6011/companyInfo/getCompanyScene?companySceneId='+id)
+            let myData={
+                companySceneId:id
+            }
+            getCompanyScene(myData)
             .then(res=>{
                 let sceanId = 93
                 this.sceanData = res.data.result

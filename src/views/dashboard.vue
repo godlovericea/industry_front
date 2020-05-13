@@ -46,34 +46,36 @@
                     <md-tabs @md-changed="getScenList" md-alignment="fixed">
                         <md-tab class="movies" id="1" md-label="智慧城市">
                             <div class="cardBox" v-for="(item,index) in sceanList" :key="index" @click="clusterMapDis">
-                                <div class="cardContent">
-                                    <p class="cardTitle">{{item.scene}}</p>
-                                    <p class="cardDetail">{{item.scenarioDefined}}</p>
-                                    <el-button type="text" style="color:'#ffffff'" @click="showDetail(item.sceneId)">查看更多>></el-button>
+                                <div v-if="item.sonSceanClass === 1 && item.state === 'N'">
+                                    <div class="cardContent">
+                                        <p class="cardTitle">{{item.scene}}</p>
+                                        <p class="cardDetail">{{item.scenarioDefined}}</p>
+                                        <el-button type="text" style="color:'#ffffff'" @click="showDetail(item.sceneId)">查看更多>></el-button>
+                                    </div>
                                 </div>
                             </div>
                         </md-tab>
                         <md-tab class="movies" id="2" md-label="智能制造">
                             <div class="cardBox" v-for="(item,index) in sceanList" :key="index" @click="clusterMapDis">
-                                <!-- <div v-if="item.sceneClassification == '2'"> -->
+                                <div v-if="item.sonSceanClass == 2 && item.state === 'N'">
                                     <div class="cardContent">
                                         <p class="cardTitle">{{item.scene}}</p>
                                         <p class="cardDetail">{{item.scenarioDefined}}</p>
                                         <el-button type="text" style="color:'#ffffff'" @click="showDetail(item.sceneId)">查看更多>></el-button>
-                                    <!-- </div> -->
+                                    </div>
                                 </div>
                             </div>
                         </md-tab>
 
                         <md-tab id="3" class="movies" md-label="公共安全">
                             <div class="cardBox" v-for="(item,index) in sceanList" :key="index" @click="clusterMapDis">
-                                <!-- <div v-if="item.sceneClassification == '3'"> -->
+                                <div v-if="item.sonSceanClass == 3 && item.state === 'N'">
                                     <div class="cardContent">
                                         <p class="cardTitle">{{item.scene}}</p>
                                         <p class="cardDetail">{{item.scenarioDefined}}</p>
                                         <el-button type="text" style="color:'#ffffff'" @click="showDetail(item.sceneId)">查看更多>></el-button>
                                     </div>
-                                <!-- </div> -->
+                                </div>
                             </div>
                         </md-tab>
                     </md-tabs>
@@ -454,7 +456,7 @@ export default {
         this.getRadarEnterprise()
         this.getOutputValue()
         this.getEnterpriseMode()
-        this.getScenList()
+        // this.getScenList(1)
     },
     methods:{
         checkLogin(){
@@ -1471,13 +1473,23 @@ export default {
             listAllCompanyScene(myData)
             .then(res=>{
                 // console.log(res)
-                // this.sceanList = res.data.result
-                res.data.result.forEach(l=>{
-                    if(l.state === 'N'){
-                        this.sceanList.push(l)
-                    }
-                })
+                this.sceanList = res.data.result
+                // res.data.result.forEach(l=>{
+                //     if(l.state === 'N'){
+                //         this.sceanList.push(l)
+                //     }
+                // })
+                // this.sceanList = this.unique1(this.sceanList)
             })
+        },
+        unique1(arr){
+            var hash=[];
+            for (var i = 0; i < arr.length; i++) {
+                if(hash.indexOf(arr[i])==-1){
+                hash.push(arr[i]);
+                }
+            }
+            return hash;
         },
         showDetail(params){
             this.enterpriseFlag = false

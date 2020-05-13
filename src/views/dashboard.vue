@@ -125,11 +125,11 @@
                 <p class="stepsTitle">③ 关联企业:</p>
                 <div class="stepsContent">
                     <div class="sceanEnterBox">
-                        <div class="sceanEnterItems" v-for="item in officeList" :key="item.enterpriseId" @click="showInMapbox(item.enterpriseId)">
-                            <p class="enterName">{{item.enterpriseName}}</p>
-                            <p class="enterP">法人:{{item.legalPerson}}</p>
-                            <p class="enterP">注册资金:{{item.registeredCapital}}万元</p>
-                            <p class="enterP">地址:{{item.area}}</p>
+                        <div class="sceanEnterItems" v-for="item in officeList" :key="item.companyId" @click="showInMapbox(item.comName)">
+                            <p class="enterName">{{item.comName}}</p>
+                            <p class="enterP">法人:{{item.operName}}</p>
+                            <p class="enterP">注册资金:{{item.registCapi}}万元</p>
+                            <p class="enterP">地址:{{item.address}}</p>
                         </div>
                     </div>
                 </div>
@@ -1433,11 +1433,12 @@ export default {
             })
         },
         showInMapbox(params){
+            console.log(params)
             this.sceanFlag = false
             let sceanEnterPrise = []
             parkList.features.forEach(l=>{
                 l.properties.test.forEach(el=>{
-                    if(params === el.enterpriseId){
+                    if(params === el.enterpriseName){
                         // console.log(el)
                         sceanEnterPrise.push(el)
                         this.searchReault.features[0].properties.test = sceanEnterPrise
@@ -1448,7 +1449,8 @@ export default {
             })
             // console.log(this.searchReault)
             this.map.flyTo({
-                center:this.searchReault.features[0].geometry.coordinates,
+                // center:this.searchReault.features[0].geometry.coordinates,
+                center:[118.873729,32.139718],
                 zoom: 15
             })
             // this.map.getSource('earthquakes').setData(this.searchReault)
@@ -2021,19 +2023,21 @@ export default {
                     "elements": "算法 终端 网络 平台 模块 系统",
                     "IndustryClassification": "智能语音，自然语言处理，云平台，大数据服务，计算机视觉，智能安防，智能家居，服务机器人"
                 }]
-                if(id === 93){
-                    this.officeList =nanyou.concat(arrList.slice(0,2))
-                }else{
-                    var t;
-                    for(var i = 0;i < arrList.length; i++){
-                    var rand = parseInt(Math.random()*arrList.length);
-                    // console.log(rand)
-                        t = arrList[rand];
-                        arrList[rand] =arrList[i];
-                        arrList[i] = t;
-                    }
-                    this.officeList =nanyou.concat(arrList.slice(0,3))
-                }
+                // if(id === 93){
+                //     this.officeList =nanyou.concat(arrList.slice(0,2))
+                // }else{
+                //     var t;
+                //     for(var i = 0;i < arrList.length; i++){
+                //     var rand = parseInt(Math.random()*arrList.length);
+                //     // console.log(rand)
+                //         t = arrList[rand];
+                //         arrList[rand] =arrList[i];
+                //         arrList[i] = t;
+                //     }
+                //     this.officeList =nanyou.concat(arrList.slice(0,3))
+                // }
+
+                this.officeList = res.data.result.companyUserDTOList
                 
 
             })

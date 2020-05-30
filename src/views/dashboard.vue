@@ -18,7 +18,7 @@
                 <div class="leftheaderBox">
                     <p class="headerTitle">行业从业人数</p>
                 </div>
-                <div class="etitle">从业人数:28766人</div>
+                <div class="etitle">从业人数: 36200人</div>
                 <div id="enterprise"></div>
             </div>
             <div class="leftItemsBox">
@@ -554,13 +554,13 @@ export default {
                         }
                     },
                     indicator: [
-                        { name: '算法', max: 6500},
-                        { name: '芯片', max: 16000},
-                        { name: '模块', max: 30000},
-                        { name: '终端', max: 38000},
-                        { name: '系统', max: 52000},
-                        { name: '网络', max: 25000},
-                        { name: '平台', max: 25000}
+                        { name: '算法', max: 8000},
+                        { name: '芯片', max: 8000},
+                        { name: '模块', max: 8000},
+                        { name: '终端', max: 8000},
+                        { name: '系统', max: 8000},
+                        { name: '网络', max: 8000},
+                        { name: '平台', max: 8000}
                     ],
                     splitArea: {
                         areaStyle: {
@@ -594,7 +594,7 @@ export default {
                     }},
                     data : [
                         {
-                            value : [4300, 10000, 28000, 35000, 50000, 19000, 5200],
+                            value : [4800, 3200, 4300, 5400, 6500, 4500, 7500],
                             name : '从业人数',
                             itemStyle:{
                                 normal:{
@@ -634,7 +634,7 @@ export default {
                         }
                     },
                     axisLabel: {
-                        margin: 10,
+                        margin: 20,
                         color: '#e2e9ff',
                         textStyle: {
                             fontSize: 14
@@ -664,7 +664,7 @@ export default {
                 ],
                 series: [{
                     type: 'bar',
-                    barWidth: '10px',
+                    barWidth: '16px',
                     data: [{
                         name:'算法',
                         value:202,
@@ -686,12 +686,12 @@ export default {
                             normal: {
                                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                     offset: 0,
-                                    color: 'rgba(0,219,177,1)' // 0% 处的颜色
+                                    color: '#11b09b' // 0% 处的颜色
                                 }, {
                                     offset: 1,
-                                    color: 'rgba(0,219,177,0.2)' // 100% 处的颜色
+                                    color: '#1f6ccc' // 100% 处的颜色
                                 }], false),
-                                barBorderRadius: [30, 30, 30, 30],
+                                barBorderRadius: [2, 2, 2, 2],
                                 shadowColor: 'rgba(0,219,177,1)',
                                 shadowBlur: 4,
                             }
@@ -718,12 +718,12 @@ export default {
                             normal: {
                                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                     offset: 0,
-                                    color: 'rgba(0,219,177,1)' // 0% 处的颜色
+                                    color: '#11b09b' // 0% 处的颜色
                                 }, {
                                     offset: 1,
-                                    color: 'rgba(0,219,177,0.2)' // 100% 处的颜色
+                                    color: '#1f6ccc' // 100% 处的颜色
                                 }], false),
-                                barBorderRadius: [30, 30, 30, 30],
+                                barBorderRadius: [2, 2, 2, 2],
                                 shadowColor: 'rgba(0,219,177,1)',
                                 shadowBlur: 4,
                             }
@@ -736,12 +736,12 @@ export default {
                             normal: {
                                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                     offset: 0,
-                                    color: 'rgba(0,219,177,1)' // 0% 处的颜色
+                                    color: '#11b09b' // 0% 处的颜色
                                 }, {
                                     offset: 1,
-                                    color: 'rgba(0,219,177,0.2)' // 100% 处的颜色
+                                    color: '#1f6ccc' // 100% 处的颜色
                                 }], false),
-                                barBorderRadius: [30, 30, 30, 30],
+                                barBorderRadius: [2, 2, 2, 2],
                                 shadowColor: 'rgba(0,219,177,1)',
                                 shadowBlur: 4,
                             }
@@ -768,12 +768,12 @@ export default {
                             normal: {
                                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                     offset: 0,
-                                    color: 'rgba(0,219,177,1)' // 0% 处的颜色
+                                    color: '#11b09b' // 0% 处的颜色
                                 }, {
                                     offset: 1,
-                                    color: 'rgba(0,219,177,0.2)' // 100% 处的颜色
+                                    color: '#1f6ccc' // 100% 处的颜色
                                 }], false),
-                                barBorderRadius: [30, 30, 30, 30],
+                                barBorderRadius: [2, 2, 2, 2],
                                 shadowColor: 'rgba(0,219,177,1)',
                                 shadowBlur: 4,
                             }
@@ -800,12 +800,12 @@ export default {
                             normal: {
                                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                     offset: 0,
-                                    color: 'rgba(0,219,177,1)' // 0% 处的颜色
+                                    color: '#11b09b' // 0% 处的颜色
                                 }, {
                                     offset: 1,
-                                    color: 'rgba(0,219,177,0.2)' // 100% 处的颜色
+                                    color: '#1f6ccc' // 100% 处的颜色
                                 }], false),
-                                barBorderRadius: [30, 30, 30, 30],
+                                barBorderRadius: [2, 2, 2, 2],
                                 shadowColor: 'rgba(0,219,177,1)',
                                 shadowBlur: 4,
                             }
@@ -832,12 +832,12 @@ export default {
                             normal: {
                                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                     offset: 0,
-                                    color: 'rgba(0,219,177,1)' // 0% 处的颜色
+                                    color: '#11b09b' // 0% 处的颜色
                                 }, {
                                     offset: 1,
-                                    color: 'rgba(0,219,177,0.2)' // 100% 处的颜色
+                                    color: '#1f6ccc' // 100% 处的颜色
                                 }], false),
-                                barBorderRadius: [30, 30, 30, 30],
+                                barBorderRadius: [2, 2, 2, 2],
                                 shadowColor: 'rgba(0,219,177,1)',
                                 shadowBlur: 4,
                             }
@@ -864,12 +864,12 @@ export default {
                             normal: {
                                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                     offset: 0,
-                                    color: 'rgba(0,219,177,1)' // 0% 处的颜色
+                                    color: '#11b09b' // 0% 处的颜色
                                 }, {
                                     offset: 1,
-                                    color: 'rgba(0,219,177,0.2)' // 100% 处的颜色
+                                    color: '#1f6ccc' // 100% 处的颜色
                                 }], false),
-                                barBorderRadius: [30, 30, 30, 30],
+                                barBorderRadius: [2, 2, 2, 2],
                                 shadowColor: 'rgba(0,219,177,1)',
                                 shadowBlur: 4,
                             }

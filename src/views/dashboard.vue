@@ -524,7 +524,7 @@ export default {
             this.isClick = params
             console.log(params)
             let total = [102.3,20.8,38.6,85.6,65.1,21.5,98.5,581.95]
-            let entertotal = [202,100,38.6,85.6,65.1,21.5,98.5,581.95]
+            let entertotal = [202,100,198,156,187,21.5,190,212]
             this.totalValue = total[params-1]
             this.enterTotal = entertotal[params-1]
             let arr = [algorithm,idCard,model,terminal,system,network,platform,parkList]

@@ -26,7 +26,7 @@
                     <p class="headerTitle">企业数量及产业规模</p>
                 </div>
                 <div class="etitle">总数:{{enterTotal}}家，总产值：{{totalValue}}亿元</div>
-                <!-- <div id="outputValue"></div> -->
+                <div id="outputValue"></div>
                 <div id="modelll"></div>
             </div>
         </div>
@@ -127,8 +127,7 @@
                 <p class="stepsTitle">③ 关联企业:</p>
                 <div class="stepsContent">
                     <div class="sceanEnterBox">
-                        <!-- <div class="sceanEnterItems" v-for="item in officeList" :key="item.companyId" @click="showInMapbox(item.comName)"> -->
-                        <div class="sceanEnterItems" v-for="item in officeList" :key="item.companyId">
+                        <div class="sceanEnterItems" v-for="item in officeList" :key="item.companyId" @click="showInMapbox(item.comName)">
                             <p class="enterName">{{item.comName}}</p>
                             <p class="enterP">法人:{{item.operName}}</p>
                             <p class="enterP">注册资金:{{item.registCapi}}万元</p>
@@ -281,7 +280,6 @@ import echarts from 'echarts'
 import singleEcharts from '../components/singleEcharts'
 import axios from 'axios'
 import dottedLine from './qixia.json'
-// import dottedLine from './栖霞区.json'
 import ispdata from './ispData.json'
 import pos1 from '../svg/icon-01.png'
 import pos2 from '../svg/icon-02.png'
@@ -414,10 +412,39 @@ export default {
             imgDialogVisible:false,
             url:'',
             srcList:[],
-            virusList:[],
+            virusList:[
+                {
+                    companyId: 1,
+                    companySceneImgDTOList: [],
+                    scenarioDefined: "疫情联防信息电子登记系统采用全网络信息共享管理模式。通过与运营商联合部署电子围栏，设置安防监控点。利用H5连接或者小程序填写登记用户详细信息生成临时健康卡。全面打通疫情防控期间安全出门的检查环节。全网络信息共享使得基层防疫人员数据采集更方便，数据采集分析更及时；主管领导能够全面掌握辖区内，人员健康状况以及人员流动，从而进行快速管理决策。",
+                    scenarioKeyword: "",
+                    scene: "疫情联防信息电子登记系统",
+                    sceneClassification: "0",
+                    sceneId: 41,
+                    video: "q3vbt7rr5.bkt.clouddn.com/images/tId=15826143001020c00a90493352be9660a0b577b9ccdd5.mp4"
+                },{
+                    companyId: 1,
+                    companySceneImgDTOList: [],
+                    scenarioDefined: "通过大数据分析和GIS技术打造以社区、乡镇为核心的网格化管理平台。结合生态图内所有企业的各项情况，对政府提供疫情感知、远程指挥、人工智能监控、自动监管、疫情趋势分析等功能，方便政府机构随时掌握疫情总体态势和重点地区疫情和事件信息全貌，并提供针对重点问题和疫情的快速指挥和应急处理；对企业提供企业复工申报、企业员工健康自查等功能，有序推动企业复工复产，为企业疫情防控提供有力支撑。对公众提供便民信息发布、人员自动登记、健康自查上报、疫情线索上报等功能，帮助百姓足不出户掌握疫情动态、官方通报、健康知识等信息。",
+                    scenarioKeyword: "疫情",
+                    scene: "疫情地理智能政务综合服务平台",
+                    sceneClassification: "1",
+                    sceneId: 40,
+                    video: ""
+                },
+                {
+                    companyId: 1,
+                    companySceneImgDTOList: [],
+                    scenarioDefined: "在疫情防控期间，实现让居民和企业少跑腿、办好事、不添堵的目标。鲸智守卫解决方案不仅助推“互联网+电子服务”的“健康打卡、闭关打卡、社区通报”的个功能，还构建起企业动态监管、联合惩戒的应用体系。依托大数据技术，实现统一信息资源目录构建维护体系，在此基础上进一步实现数据治理、数据资产管理、数据挖掘分析等全生命周期的管理和应用。现阶段，大数据技术将助力于构建浸入式、情景式的智慧政务新型惠民服务体系，助力于构建以精准监管、信用监管为特征的全方位市场监管体系。",
+                    scenarioKeyword: "",
+                    scene: "鲸智守卫",
+                    sceneClassification: "2",
+                    sceneId: 45,
+                    video: "q3vbt7rr5.bkt.clouddn.com/images/tId=15826180570202020xgfyfk2.mp4"
+                }
+            ],
             parkList:parkList,
-            companyType:1,
-            popup: ''
+            companyType:1
         }
     },
     components:{
@@ -428,9 +455,8 @@ export default {
         this.checkBrowserVersion()
         this.initMap()
         this.getRadarEnterprise()
-        // this.getOutputValue()
+        this.getOutputValue()
         this.getEnterpriseMode()
-        this.popup = new mapboxgl.Popup();
         // this.getScenList(1)
     },
     methods:{
@@ -512,13 +538,9 @@ export default {
             this.map.on("styledata", ()=>{
                 this.setISP()
                 this.setAllDistribute();
-                // this.getAllDistribute()
+                this.getAllDistribute()
                 this.getQixiaDistribute();
             })
-            // this.map.on('mousemove', (e)=>{
-            //     const features = this.map.queryRenderedFeatures(e.point);
-            //     console.log(features)
-            // })
         },
         getItemData(params){
             this.isClick = params
@@ -667,71 +689,43 @@ export default {
                     barWidth: '10px',
                     data: [{
                         name:'算法',
-                        value:202,
-                        // itemStyle: {
-                        //     normal: {
-                        //         color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                        //             offset: 0,
-                        //             color: 'rgba(242,241,110,1)' // 0% 处的颜色
-                        //         }, {
-                        //             offset: 1,
-                        //             color: 'rgba(242,241,110,0.2)' // 100% 处的颜色
-                        //         }], false),
-                        //         barBorderRadius: [30, 30, 30, 30],
-                        //         shadowColor: 'rgba(242,241,110,1)',
-                        //         shadowBlur: 4,
-                        //     }
-                        // }
+                        value:500,
                         itemStyle: {
                             normal: {
                                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                     offset: 0,
-                                    color: 'rgba(0,219,177,1)' // 0% 处的颜色
+                                    color: 'rgba(242,241,110,1)' // 0% 处的颜色
                                 }, {
                                     offset: 1,
-                                    color: 'rgba(0,219,177,0.2)' // 100% 处的颜色
+                                    color: 'rgba(242,241,110,0.2)' // 100% 处的颜色
                                 }], false),
                                 barBorderRadius: [30, 30, 30, 30],
-                                shadowColor: 'rgba(0,219,177,1)',
+                                shadowColor: 'rgba(242,241,110,1)',
                                 shadowBlur: 4,
                             }
                         }
                     },
                     {
                         name:'芯片',
-                        value:106,
-                        // itemStyle: {
-                        //     normal: {
-                        //         color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                        //             offset: 0,
-                        //             color: 'rgba(242,183,101,1)' // 0% 处的颜色
-                        //         }, {
-                        //             offset: 1,
-                        //             color: 'rgba(242,183,101,0.2)' // 100% 处的颜色
-                        //         }], false),
-                        //         barBorderRadius: [30, 30, 30, 30],
-                        //         shadowColor: 'rgba(242,183,101,1)',
-                        //         shadowBlur: 4,
-                        //     }
-                        // }
+                        value:100,
                         itemStyle: {
                             normal: {
                                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                     offset: 0,
-                                    color: 'rgba(0,219,177,1)' // 0% 处的颜色
+                                    color: 'rgba(242,183,101,1)' // 0% 处的颜色
                                 }, {
                                     offset: 1,
-                                    color: 'rgba(0,219,177,0.2)' // 100% 处的颜色
+                                    color: 'rgba(242,183,101,0.2)' // 100% 处的颜色
                                 }], false),
                                 barBorderRadius: [30, 30, 30, 30],
-                                shadowColor: 'rgba(0,219,177,1)',
+                                shadowColor: 'rgba(242,183,101,1)',
                                 shadowBlur: 4,
                             }
                         }
                     },
                     {
                         name:'模块',
-                        value:198,
+                        value:160,
                         itemStyle: {
                             normal: {
                                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
@@ -749,128 +743,72 @@ export default {
                     },
                     {
                         name:'终端',
-                        value:156,
-                        // itemStyle: {
-                        //     normal: {
-                        //         color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                        //             offset: 0,
-                        //             color: 'rgba(204,73,109,1)' // 0% 处的颜色
-                        //         }, {
-                        //             offset: 1,
-                        //             color: 'rgba(204,73,109,0.2)' // 100% 处的颜色
-                        //         }], false),
-                        //         barBorderRadius: [30, 30, 30, 30],
-                        //         shadowColor: 'rgba(204,73,109,1)',
-                        //         shadowBlur: 4,
-                        //     }
-                        // }
+                        value:200,
                         itemStyle: {
                             normal: {
                                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                     offset: 0,
-                                    color: 'rgba(0,219,177,1)' // 0% 处的颜色
+                                    color: 'rgba(204,73,109,1)' // 0% 处的颜色
                                 }, {
                                     offset: 1,
-                                    color: 'rgba(0,219,177,0.2)' // 100% 处的颜色
+                                    color: 'rgba(204,73,109,0.2)' // 100% 处的颜色
                                 }], false),
                                 barBorderRadius: [30, 30, 30, 30],
-                                shadowColor: 'rgba(0,219,177,1)',
+                                shadowColor: 'rgba(204,73,109,1)',
                                 shadowBlur: 4,
                             }
                         }
                     },
                     {
                         name:'系统',
-                        value:187,
-                        // itemStyle: {
-                        //     normal: {
-                        //         color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                        //             offset: 0,
-                        //             color: 'rgba(188,128,139,1)' // 0% 处的颜色
-                        //         }, {
-                        //             offset: 1,
-                        //             color: 'rgba(188,128,139,0.2)' // 100% 处的颜色
-                        //         }], false),
-                        //         barBorderRadius: [30, 30, 30, 30],
-                        //         shadowColor: 'rgba(188,128,139,1)',
-                        //         shadowBlur: 4,
-                        //     }
-                        // }
+                        value:400,
                         itemStyle: {
                             normal: {
                                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                     offset: 0,
-                                    color: 'rgba(0,219,177,1)' // 0% 处的颜色
+                                    color: 'rgba(188,128,139,1)' // 0% 处的颜色
                                 }, {
                                     offset: 1,
-                                    color: 'rgba(0,219,177,0.2)' // 100% 处的颜色
+                                    color: 'rgba(188,128,139,0.2)' // 100% 处的颜色
                                 }], false),
                                 barBorderRadius: [30, 30, 30, 30],
-                                shadowColor: 'rgba(0,219,177,1)',
+                                shadowColor: 'rgba(188,128,139,1)',
                                 shadowBlur: 4,
                             }
                         }
                     },
                     {
                         name:'网络',
-                        value:190,
-                        // itemStyle: {
-                        //     normal: {
-                        //         color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                        //             offset: 0,
-                        //             color: 'rgba(22,121,212,1)' // 0% 处的颜色
-                        //         }, {
-                        //             offset: 1,
-                        //             color: 'rgba(22,121,212,0.2)' // 100% 处的颜色
-                        //         }], false),
-                        //         barBorderRadius: [30, 30, 30, 30],
-                        //         shadowColor: 'rgba(22,121,212,1)',
-                        //         shadowBlur: 4,
-                        //     }
-                        // }
+                        value:300,
                         itemStyle: {
                             normal: {
                                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                     offset: 0,
-                                    color: 'rgba(0,219,177,1)' // 0% 处的颜色
+                                    color: 'rgba(22,121,212,1)' // 0% 处的颜色
                                 }, {
                                     offset: 1,
-                                    color: 'rgba(0,219,177,0.2)' // 100% 处的颜色
+                                    color: 'rgba(22,121,212,0.2)' // 100% 处的颜色
                                 }], false),
                                 barBorderRadius: [30, 30, 30, 30],
-                                shadowColor: 'rgba(0,219,177,1)',
+                                shadowColor: 'rgba(22,121,212,1)',
                                 shadowBlur: 4,
                             }
                         }
                     },
                     {
                         name:'平台',
-                        value:212,
-                        // itemStyle: {
-                        //     normal: {
-                        //         color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                        //             offset: 0,
-                        //             color: 'rgba(134,224,126,1)' // 0% 处的颜色
-                        //         }, {
-                        //             offset: 1,
-                        //             color: 'rgba(134,224,126,0.2)' // 100% 处的颜色
-                        //         }], false),
-                        //         barBorderRadius: [30, 30, 30, 30],
-                        //         shadowColor: 'rgba(134,224,126,1)',
-                        //         shadowBlur: 4,
-                        //     }
-                        // }
+                        value:450,
                         itemStyle: {
                             normal: {
                                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                     offset: 0,
-                                    color: 'rgba(0,219,177,1)' // 0% 处的颜色
+                                    color: 'rgba(134,224,126,1)' // 0% 处的颜色
                                 }, {
                                     offset: 1,
-                                    color: 'rgba(0,219,177,0.2)' // 100% 处的颜色
+                                    color: 'rgba(134,224,126,0.2)' // 100% 处的颜色
                                 }], false),
                                 barBorderRadius: [30, 30, 30, 30],
-                                shadowColor: 'rgba(0,219,177,1)',
+                                shadowColor: 'rgba(134,224,126,1)',
                                 shadowBlur: 4,
                             }
                         }
@@ -976,7 +914,7 @@ export default {
         // 点击场景设置图层数据
         clusterMapDis(){
             
-            // this.map.getSource('earthquakes').setData(smartGov)
+            this.map.getSource('earthquakes').setData(smartGov)
             
             // this.handleAnimateCircle()
         },
@@ -1079,44 +1017,41 @@ export default {
                     "type": "geojson",
                     "data": parkList,
                     "cluster": false,
-                    "clusterRadius": 0,
-                    "clusterProperties": { // keep separate counts for each magnitude category in a cluster
-                        "mag1": ["+", ["case", mag1, 1, 0]],
-                        "mag2": ["+", ["case", mag2, 1, 0]],
-                        "mag3": ["+", ["case", mag3, 1, 0]],
-                        "mag4": ["+", ["case", mag4, 1, 0]],
-                        "mag5": ["+", ["case", mag5, 1, 0]]
-                    }
+                    // "clusterRadius": 0,
+                    // "clusterProperties": { // keep separate counts for each magnitude category in a cluster
+                    //     "mag1": ["+", ["case", mag1, 1, 0]],
+                    //     "mag2": ["+", ["case", mag2, 1, 0]],
+                    //     "mag3": ["+", ["case", mag3, 1, 0]],
+                    //     "mag4": ["+", ["case", mag4, 1, 0]],
+                    //     "mag5": ["+", ["case", mag5, 1, 0]]
+                    // }
                 });
             }
 
-            if (!this.map.getLayer('earthquake_circle')){
-                this.map.addLayer({
-                    "id": "earthquake_circle",
-                    "type": "circle",
-                    "source": "earthquakes",
-                    // "filter": ["!=", "cluster", true],
-                    "paint": {
-                        // "circle-color": ["case",
-                        // mag1, this.colors[0],
-                        // mag2, this.colors[1],
-                        // mag3, this.colors[2],
-                        // mag4, this.colors[3], this.colors[4]],
-                        "circle-opacity": 0.6,
-                        "circle-radius": 20
-                    }
-                });
-            }
+            // if (!this.map.getLayer('earthquake_circle')){
+            //     this.map.addLayer({
+            //         "id": "earthquake_circle",
+            //         "type": "circle",
+            //         "source": "earthquakes",
+            //         "filter": ["!=", "cluster", true],
+            //         "paint": {
+            //             "circle-color": ["case",
+            //             mag1, this.colors[0],
+            //             mag2, this.colors[1],
+            //             mag3, this.colors[2],
+            //             mag4, this.colors[3], this.colors[4]],
+            //             "circle-opacity": 0.6,
+            //             "circle-radius": 20
+            //         }
+            //     });
+            // }
             //  if (!this.map.getLayer('earthquake_circle')){
             //     this.map.addLayer({
             //         "id": "earthquake_circle",
             //         "type": "circle",
             //         "source": "earthquakes",
             //         // "filter": ["!=", "cluster", true],
-            //         // cluster:false,
-            //         // layout:{
-            //         //     "icon-allow-overlap": true
-            //         // }
+            //         cluster:false
             //         // "paint": {
             //         //     "circle-color": ["case",
             //         //     mag1, this.colors[0],
@@ -1129,81 +1064,79 @@ export default {
             //     });
             // }
            
-            this.map.loadImage(pos1, (error, image)=> {
-                if (error) throw error;
-                if (!this.map.hasImage('pos1')) this.map.addImage('pos1', image);
-            });
-            this.map.loadImage(pos2, (error, image)=> {
-                if (error) throw error;
-                if (!this.map.hasImage('pos2')) this.map.addImage('pos2', image);
-            });
-            this.map.loadImage(pos3, (error, image)=> {
-                if (error) throw error;
-                if (!this.map.hasImage('pos3')) this.map.addImage('pos3', image);
-            });
-            this.map.loadImage(pos4, (error, image)=> {
-                if (error) throw error;
-                if (!this.map.hasImage('pos4')) this.map.addImage('pos4', image);
-            });
-            this.map.loadImage(pos5, (error, image)=> {
-                if (error) throw error;
-                if (!this.map.hasImage('pos5')) this.map.addImage('pos5', image);
-            });
-            this.map.loadImage(pos6, (error, image)=> {
-                if (error) throw error;
-                if (!this.map.hasImage('pos6')) this.map.addImage('pos6', image);
-            });
-            if (!this.map.getLayer('earthquake_label')){
-                this.map.addLayer({
-                    "id": "earthquake_label",
-                    "type": "symbol",
-                    "source": "earthquakes",
-                    "cluster": false,
-                    "clusterMaxZoom": 1,
-                    "clusterRadius": 1,
-                    // "filter": ["!=", "cluster", true],
+            // this.map.loadImage(pos1, (error, image)=> {
+            //     if (error) throw error;
+            //     if (!this.map.hasImage('pos1')) this.map.addImage('pos1', image);
+            // });
+            // this.map.loadImage(pos2, (error, image)=> {
+            //     if (error) throw error;
+            //     if (!this.map.hasImage('pos2')) this.map.addImage('pos2', image);
+            // });
+            // this.map.loadImage(pos3, (error, image)=> {
+            //     if (error) throw error;
+            //     if (!this.map.hasImage('pos3')) this.map.addImage('pos3', image);
+            // });
+            // this.map.loadImage(pos4, (error, image)=> {
+            //     if (error) throw error;
+            //     if (!this.map.hasImage('pos4')) this.map.addImage('pos4', image);
+            // });
+            // this.map.loadImage(pos5, (error, image)=> {
+            //     if (error) throw error;
+            //     if (!this.map.hasImage('pos5')) this.map.addImage('pos5', image);
+            // });
+            // this.map.loadImage(pos6, (error, image)=> {
+            //     if (error) throw error;
+            //     if (!this.map.hasImage('pos6')) this.map.addImage('pos6', image);
+            // });
+            // if (!this.map.getLayer('earthquake_label')){
+            //     this.map.addLayer({
+            //         "id": "earthquake_label",
+            //         "type": "symbol",
+            //         "source": "earthquakes",
+            //         "cluster": false,
+            //         // "filter": ["!=", "cluster", true],
                     
-                    "layout": {
-                        "text-field": ["number-format", ["get", "mag"], {"min-fraction-digits": 0, "max-fraction-digits": 1}],
-                        "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-                        "text-size": 18,
-                        // "text-allow-overlap":true,
-                        // "icon-image": "cat"
-                        "icon-image": ["case", 
-                            mag1, "pos1",
-                            mag2, "pos2",
-                            mag3, "pos3",
-                            mag4, "pos4",
-                            mag5, "pos5",
-                            "pos6"
-                        ],
-                        "icon-allow-overlap":true
-                    },
-                    "paint": {
-                        // "text-color": ["case", ["<", ["get", "mag"], 3], "black", "white"]
-                        "text-color": '#13212E'
-                        //  "text-color": ["case", 
-                        //     mag1, "#333333",
-                        //     mag2, "#333333",
-                        //     mag3, "#dddddd",
-                        //     mag4, "#dddddd",
-                        //     mag5, "#000000",
-                        //     "#000000",
-                        // ]
-                    }
-                });
-                this.map.on('click','earthquake_label',this.handleMarkerClick);
-            }
+            //         "layout": {
+            //             "text-field": ["number-format", ["get", "mag"], {"min-fraction-digits": 0, "max-fraction-digits": 1}],
+            //             "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+            //             "text-size": 18,
+            //             // "text-allow-overlap":true,
+                        
+            //             // "icon-image": "cat"
+            //             "icon-image": ["case", 
+            //                 mag1, "pos1",
+            //                 mag2, "pos2",
+            //                 mag3, "pos3",
+            //                 mag4, "pos4",
+            //                 mag5, "pos5",
+            //                 "pos6"
+            //             ],
+            //             "icon-allow-overlap":true
+            //         },
+            //         "paint": {
+            //             // "text-color": ["case", ["<", ["get", "mag"], 3], "black", "white"]
+            //             "text-color": '#13212E'
+            //             //  "text-color": ["case", 
+            //             //     mag1, "#333333",
+            //             //     mag2, "#333333",
+            //             //     mag3, "#dddddd",
+            //             //     mag4, "#dddddd",
+            //             //     mag5, "#000000",
+            //             //     "#000000",
+            //             // ]
+            //         }
+            //     });
+            // }
             
-            this.map.on('styledata', (e)=> {
-                // if (e.sourceId !== 'earthquakes' || !e.isSourceLoaded) {
-                //     return;
-                // }
-                // this.map.on('move', this.updateMarkers);
-                // this.map.on('moveend',this.updateMarkers);
-                // this.map.on('click','earthquake_label',this.handleMarkerClick);
-                // this.updateMarkers();
-            });
+            // this.map.on('styledata', (e)=> {
+            //     // if (e.sourceId !== 'earthquakes' || !e.isSourceLoaded) {
+            //     //     return;
+            //     // }
+            //     // this.map.on('move', this.updateMarkers);
+            //     // this.map.on('moveend',this.updateMarkers);
+            //     this.map.on('click','earthquake_label',this.handleMarkerClick);
+            //     // this.updateMarkers();
+            // });
         },
         updateMarkers() {
             var newMarkers = {};

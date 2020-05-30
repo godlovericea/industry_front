@@ -395,16 +395,7 @@
                         "leveltwoAI": "",
                         "enterpriseProfile": "\"2019年7月注册成立，无官网无介绍；"
                     },
-                    {
-                        "enterpriseId": "南京君仕智能物联网装备研究院\"",
-                        "enterpriseName": "",
-                        "legalPerson": "智能信息系统",
-                        "registeredCapital": "南京君仕智能物联网装备研究院",
-                        "establishedTime": "经开区",
-                        "AIbusiness": "南京经济技术开发区恒泰路8号汇智科技园B3栋13层",
-                        "technologyStratification": "网络 平台 模块",
-                        "levelOneAI": "智能制造"
-                    },
+                    
                     {
                         "enterpriseId": "HZKJY005",
                         "enterpriseName": "南京智慧光信息科技研究院有限公司",
@@ -419,7 +410,7 @@
                     },
                     {
                         "enterpriseId": "南京智慧计算研究院是由南京经济技术开发区、华侨城创投平台“康佳之星”与华南师范大学合作共建的以人工智能为主题的新型研发机构。机器学习、机器人、大数据\"",
-                        "enterpriseName": "",
+                        "enterpriseName": "南京智慧计算研究院",
                         "legalPerson": "机器学习、机器人、大数据",
                         "registeredCapital": "南京智慧计算研究院",
                         "establishedTime": "经开区",
@@ -593,14 +584,7 @@
                         "qualification": "",
                         "AIBusinessDirection": "\"智慧医疗"
                     },
-                    {
-                        "enterpriseId": "智慧交通\"",
-                        "enterpriseName": "无",
-                        "legalPerson": "经开区",
-                        "registeredCapital": "南京经济技术开发区恒泰路8号汇智科技园A1栋第5层",
-                        "establishedTime": "终端 网络 模块",
-                        "AIbusiness": "智能医疗，智能交通"
-                    },
+                    
                     {
                         "enterpriseId": "HZKJY015",
                         "enterpriseName": "南京惠诚信息科技有限公司",
@@ -627,21 +611,7 @@
                         "registeredCapital": "1000",
                         "establishedTime": "\"2017-11-07"
                     },
-                    {
-                        "enterpriseId": "\"",
-                        "enterpriseName": "20%",
-                        "legalPerson": "1-基础层",
-                        "registeredCapital": "数据资源",
-                        "establishedTime": "",
-                        "AIbusiness": "无官网无介绍，天眼查分类是软件和信息技术服务业",
-                        "technologyStratification": "",
-                        "levelOneAI": "大数据采集",
-                        "leveltwoAI": "无",
-                        "enterpriseProfile": "经开区",
-                        "qualification": "南京经济技术开发区恒泰路8号汇智科技园B2栋第11层",
-                        "AIBusinessDirection": "网络 平台 系统",
-                        "content": "大数据服务"
-                    },
+                    
                     {
                         "enterpriseId": "HZKJY017",
                         "enterpriseName": "云鲁数据科技（南京）有限公司",
@@ -1437,16 +1407,7 @@
                         "leveltwoAI": "",
                         "enterpriseProfile": "\"科技领域"
                     },
-                    {
-                        "enterpriseId": "公司依靠在互联网金融领域的技术优势，本着客户利益至上的宗旨为投资者提供资产管理和顾问服务。专业的投研团队，严谨的风控管理，为每一个与公司合作的投资者创造绝对收益。专业的培训，优秀的导师，公平的晋升机制，为每一为员工实现人生价值添砖加瓦。\"",
-                        "enterpriseName": "高企",
-                        "legalPerson": "智能消防",
-                        "registeredCapital": "消防灭火无人机系统",
-                        "establishedTime": "栖霞高新区",
-                        "AIbusiness": "南京市栖霞区迈皋桥创业园科技研发基地寅春路18号-W431",
-                        "technologyStratification": "网络 平台 系统",
-                        "levelOneAI": "安防，金融"
-                    },
+                    
                     {
                         "enterpriseId": "MDQCYY003",
                         "enterpriseName": "南京科谷智能科技有限公司",
@@ -1519,13 +1480,7 @@
                         "elements": "终端 网络 平台 模块 系统",
                         "IndustryClassification": "智能制造，大数据服务，移动设备"
                     },
-                    {
-                        "enterpriseId": "系统\"",
-                        "enterpriseName": "栖霞高新区",
-                        "legalPerson": "南京市栖霞区仙林街道仙林大学城元化路8号51幢研发楼12层1201室",
-                        "registeredCapital": "网络 平台 模块",
-                        "establishedTime": "安防，云平台"
-                    },
+                    
                     {
                         "enterpriseId": "NDKXY007",
                         "enterpriseName": " 南京翕源科技有限公司",
@@ -1764,14 +1719,7 @@
                         "qualification": "",
                         "AIBusinessDirection": "\"智能交通"
                     },
-                    {
-                        "enterpriseId": "毫米波雷达\"",
-                        "enterpriseName": "基于物联网大数据的智能交通管理系统",
-                        "legalPerson": "经开区",
-                        "registeredCapital": "南京经济技术开发区栖霞街道广月路26号S12栋3层",
-                        "establishedTime": "终端 网络 平台 模块",
-                        "AIbusiness": "智能驾驶"
-                    },
+                    
                     {
                         "enterpriseId": "QXJD004",
                         "enterpriseName": " 南京智华博智能科技有限公司",
@@ -1877,14 +1825,7 @@
                         "qualification": "",
                         "AIBusinessDirection": "\"智能交通"
                     },
-                    {
-                        "enterpriseId": "车路协同\"",
-                        "enterpriseName": "V2X车路协同智能网联交通项目",
-                        "legalPerson": "栖霞高新区",
-                        "registeredCapital": "南京市栖霞区仙林街道齐民路6号5栋603室",
-                        "establishedTime": "网络 平台 模块 系统",
-                        "AIbusiness": "智能交通，大数据服务"
-                    },
+                    
                     {
                         "enterpriseId": "XLZG007",
                         "enterpriseName": "深度交叉（南京）智能科技有限公司",
@@ -1899,14 +1840,7 @@
                         "qualification": "",
                         "AIBusinessDirection": "\"智能预测推荐"
                     },
-                    {
-                        "enterpriseId": "智能金融\"",
-                        "enterpriseName": "基于机器学习的预测和推荐平台",
-                        "legalPerson": "栖霞高新区",
-                        "registeredCapital": "南京市栖霞区仙林街道齐民路6号5栋814室",
-                        "establishedTime": "网络 平台 模块 系统",
-                        "AIbusiness": "金融，大数据服务"
-                    },
+                    
                     {
                         "enterpriseId": "XLZG008",
                         "enterpriseName": "亿兆图灵智能科技（南京）有限公司",
@@ -1921,14 +1855,7 @@
                         "qualification": "",
                         "AIBusinessDirection": "\"智能医疗"
                     },
-                    {
-                        "enterpriseId": "眼科专科诊疗\"",
-                        "enterpriseName": "亿兆图灵智能眼科诊研平台",
-                        "legalPerson": "栖霞高新区",
-                        "registeredCapital": "南京市栖霞区仙林街道齐民路6号5栋811室",
-                        "establishedTime": "网络 平台 模块 系统",
-                        "AIbusiness": "医疗，大数据服务，云平台"
-                    },
+                    
                     {
                         "enterpriseId": "XLZG009",
                         "enterpriseName": "南京优锘图灵科技有限公司",
@@ -2153,18 +2080,7 @@
                         "elements": "终端 网络 平台 模块",
                         "IndustryClassification": "计算机视觉，智能医疗，智能语音"
                     },
-                    {
-                        "enterpriseId": "智能网联汽车\"",
-                        "enterpriseName": "",
-                        "legalPerson": "",
-                        "registeredCapital": "",
-                        "establishedTime": "算法研究",
-                        "AIbusiness": "南京总部以及人工智能研发中心",
-                        "technologyStratification": "经开区",
-                        "levelOneAI": "南京经济技术开发区兴智路6号兴智科技园A栋20层",
-                        "leveltwoAI": "算法 芯片 终端 网络 平台 模块 系统",
-                        "enterpriseProfile": "机器学习，计算机视觉，AI芯片"
-                    },
+                    
                     {
                         "enterpriseId": "XZKJY007",
                         "enterpriseName": "创新奇智（南京）科技有限公司",
@@ -2255,22 +2171,8 @@
                         "qualification": "",
                         "AIBusinessDirection": "\"数据采集、"
                     },
-                    {
-                        "enterpriseId": "智能充电应用\"",
-                        "enterpriseName": "智能充电设备",
-                        "legalPerson": "经开区",
-                        "registeredCapital": "南京经济技术开发区兴智路兴智科技园A栋6层",
-                        "establishedTime": "网络 平台 模块",
-                        "AIbusiness": "大数据服务"
-                    },
-                    {
-                        "enterpriseId": "机器视觉\"",
-                        "enterpriseName": "智能二手车检测服务平台",
-                        "legalPerson": "经开区",
-                        "registeredCapital": "南京经济技术开发区兴智路6号兴智科技园C栋第19层1904室",
-                        "establishedTime": "网络 平台 模块",
-                        "AIbusiness": "计算机视觉，智能零售"
-                    },
+                    
+                    
                     {
                         "enterpriseId": "XZKJY013",
                         "enterpriseName": "南京氪信信息技术有限公司",
@@ -2309,14 +2211,7 @@
                         "elements": "终端 网络 平台 模块 系统",
                         "IndustryClassification": "智能驾驶，OS"
                     },
-                    {
-                        "enterpriseId": "行业AI应用软件\"",
-                        "enterpriseName": "交通、电力领域数据融合、分析平台",
-                        "legalPerson": "经开区",
-                        "registeredCapital": "南京经济技术开发区兴智路兴智科技园C栋第16层南侧",
-                        "establishedTime": "算法 终端 网络 平台 模块",
-                        "AIbusiness": "智能交通，云平台，大数据服务"
-                    },
+                    
                     {
                         "enterpriseId": "XZKJY020",
                         "enterpriseName": "南京七奇智能科技有限公司",
@@ -2383,14 +2278,7 @@
                         "qualification": "",
                         "AIBusinessDirection": "\"机器人"
                     },
-                    {
-                        "enterpriseId": "智能家居\"",
-                        "enterpriseName": "服务型机器人、机械臂、智能音箱及其他AI智能产品",
-                        "legalPerson": "经开区",
-                        "registeredCapital": "南京经济技术开发区兴智路兴智科技园B栋1001室",
-                        "establishedTime": "网络 平台 系统",
-                        "AIbusiness": "智能家居，服务机器人"
-                    },
+                    
                     {
                         "enterpriseId": "XZKJY024",
                         "enterpriseName": "南京凌鸥创芯电子有限公司",
@@ -2598,11 +2486,7 @@
                         "Itsarea": "经开区",
                         "area": "\"地址：南京经济技术开发区兴智科技园A栋21层2110室"
                     },
-                    {
-                        "enterpriseId": "\"",
-                        "enterpriseName": "网络 平台 系统",
-                        "legalPerson": "智能教育"
-                    },
+                    
                     {
                         "enterpriseId": "XZKJY035",
                         "enterpriseName": "南京阿波罗机器人科技有限公司",
@@ -2750,14 +2634,7 @@
                         "qualification": "",
                         "AIBusinessDirection": "\"无线视屏"
                     },
-                    {
-                        "enterpriseId": "智能安全帽\"",
-                        "enterpriseName": "无线通信技术研究及产品开发",
-                        "legalPerson": "经开区",
-                        "registeredCapital": "南京市秦淮区科巷1号1417室",
-                        "establishedTime": "网络 平台 模块",
-                        "AIbusiness": "智能安防"
-                    },
+                    
                     {
                         "enterpriseId": "XZKJY043",
                         "enterpriseName": "南京磨洁自动化科技有限公司",
@@ -2772,14 +2649,7 @@
                         "qualification": "",
                         "AIBusinessDirection": "\"智能制造系统平台"
                     },
-                    {
-                        "enterpriseId": "工业机器人\"",
-                        "enterpriseName": "力位柔顺补偿器及力控研磨套件",
-                        "legalPerson": "经开区",
-                        "registeredCapital": "南京经济技术开发区栖霞街道润华路12-176号",
-                        "establishedTime": "芯片 网络 平台",
-                        "AIbusiness": "智能制造"
-                    },
+                    
                     {
                         "enterpriseId": "XZKJY044",
                         "enterpriseName": "南京星程智能科技有限公司",
@@ -2797,11 +2667,7 @@
                         "Itsarea": "经开区",
                         "area": "\"南京经济技术开发区兴智路6号兴智科技园A栋21层2102室"
                     },
-                    {
-                        "enterpriseId": "\"",
-                        "enterpriseName": "网络 平台 ",
-                        "legalPerson": "智能医疗，云平台"
-                    },
+                    
                     {
                         "enterpriseId": "XZKJY045",
                         "enterpriseName": "南京艾弗曼人工智能有限公司",
@@ -2913,16 +2779,7 @@
                 "felt": null,
                 "tsunami": 0,
                 "test": [
-                    {
-                        "enterpriseId": "智慧品控管理平台，基于物联网、云计算、无线传感等技术构建公路工程师施工质量管控平台。\"",
-                        "enterpriseName": "高企",
-                        "legalPerson": "智慧工地",
-                        "registeredCapital": "智慧工地智能管控云平台",
-                        "establishedTime": "栖霞高新区",
-                        "AIbusiness": "南京市栖霞区马群街道紫东路2号2幢",
-                        "technologyStratification": "网络 平台 模块 系统",
-                        "levelOneAI": "建筑"
-                    },
+                    
                     {
                         "enterpriseId": "ZDCYY003",
                         "enterpriseName": "江苏通行宝智慧交通科技有限公司",
@@ -3051,14 +2908,7 @@
                         "qualification": "",
                         "AIBusinessDirection": "\"人脸识别"
                     },
-                    {
-                        "enterpriseId": "烟雾识别\"",
-                        "enterpriseName": "捕视者不见面事项审批政务平台软件",
-                        "legalPerson": "栖霞高新区",
-                        "registeredCapital": "南京市栖霞区马群街道紫东路2号B4栋402室",
-                        "establishedTime": "网络 平台 模块 系统",
-                        "AIbusiness": "计算机视觉"
-                    },
+                    
                     {
                         "enterpriseId": "ZDCYY013",
                         "enterpriseName": "南京滴普科技有限公司",
@@ -3090,14 +2940,7 @@
                         "leveltwoAI": "机器视觉",
                         "enterpriseProfile": "\"江苏子雨集团的人工智能板块。 企业理念基于万物互联、万物识别；公司定位于人工智能领域机器视觉 方面的研发型公司，企业核心是视觉识别方面算法研发、AI芯片适配及 机器视觉软硬件集成和开发。"
                     },
-                    {
-                        "enterpriseId": "智能仓储\"",
-                        "enterpriseName": "人工智能视觉识别研发中心及应用项目",
-                        "legalPerson": "栖霞高新区",
-                        "registeredCapital": "南京市栖霞区马群街道紫东路2号B7栋201室",
-                        "establishedTime": "网络 平台 模块 系统",
-                        "AIbusiness": "计算机视觉，AI芯片"
-                    },
+                    
                     {
                         "enterpriseId": "ZDCYY016",
                         "enterpriseName": "南京四维音符科技有限公司",
@@ -3131,14 +2974,7 @@
                         "qualification": "",
                         "AIBusinessDirection": "\"智能安防"
                     },
-                    {
-                        "enterpriseId": "互联网应用\"",
-                        "enterpriseName": "泛安防——人脸布控系统",
-                        "legalPerson": "栖霞高新区",
-                        "registeredCapital": "南京市栖霞区马群街道紫东路2号C4幢",
-                        "establishedTime": "网络 平台 ",
-                        "AIbusiness": "安防"
-                    },
+                    
                     {
                         "enterpriseId": "ZDCYY018",
                         "enterpriseName": "南京访客乐网络科技有限公司",

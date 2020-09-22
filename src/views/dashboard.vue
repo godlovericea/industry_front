@@ -2,7 +2,7 @@
     <div id="map">
         <div class="headerBox">
             <img src="../../src/assets/images/logo.png" alt="" />
-            <p class="title">中国(南京)智谷产业生态分布图</p>
+            <p class="title">中国南京智谷AI生态云图</p>
         </div>
         <div class="switchBox">
             <span class="switchTitle">卫星影像</span

@@ -106,7 +106,7 @@
             "type": "Feature",
             "properties": {
                 "id": "红枫科技园",
-                "mag": 18,
+                "mag": 16,
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
@@ -421,7 +421,7 @@
             "type": "Feature",
             "properties": {
                 "id": "汇智科技园",
-                "mag": 22,
+                "mag": 19,
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
@@ -1106,7 +1106,7 @@
             "type": "Feature",
             "properties": {
                 "id": "经开区大型企业",
-                "mag": 13,
+                "mag": 4,
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
@@ -1201,7 +1201,7 @@
             "type": "Feature",
             "properties": {
                 "id": "龙港科技园",
-                "mag": 14,
+                "mag": 12,
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
@@ -1439,7 +1439,7 @@
             "type": "Feature",
             "properties": {
                 "id": "马群科技园",
-                "mag": 9,
+                "mag": 8,
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
@@ -1606,7 +1606,7 @@
             "type": "Feature",
             "properties": {
                 "id": "迈皋桥创业园",
-                "mag": 4,
+                "mag": 3,
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
@@ -1676,7 +1676,7 @@
             "type": "Feature",
             "properties": {
                 "id": "南大科学园",
-                "mag": 19,
+                "mag": 18,
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
@@ -2034,7 +2034,7 @@
             "type": "Feature",
             "properties": {
                 "id": "十月公社科技创业园",
-                "mag": 6,
+                "mag": 5,
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
@@ -2144,7 +2144,7 @@
             "type": "Feature",
             "properties": {
                 "id": "仙林智谷",
-                "mag": 20,
+                "mag": 17,
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
@@ -2474,7 +2474,7 @@
             "type": "Feature",
             "properties": {
                 "id": "兴智科技园",
-                "mag": 63,
+                "mag": 49,
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,
@@ -3375,7 +3375,7 @@
             "type": "Feature",
             "properties": {
                 "id": "紫东创意园",
-                "mag": 39,
+                "mag": 33,
                 "time": 1507425650893,
                 "felt": null,
                 "tsunami": 0,

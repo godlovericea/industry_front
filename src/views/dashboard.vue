@@ -36,9 +36,7 @@
                 <div class="leftheaderBox">
                     <p class="headerTitle">企业数量及产业规模</p>
                 </div>
-                <div class="etitle">
-                    总数:{{ enterTotal }}家，总产值：{{ totalValue }}亿元
-                </div>
+                <div class="etitle">总数:{{ enterTotal }}家，总产值：{{ totalValue }}亿元</div>
                 <!-- <div id="outputValue"></div> -->
                 <div id="modelll"></div>
             </div>
@@ -49,11 +47,7 @@
                 placeholder="请输入企业名称或企业类型"
                 @input="getSearchResult"
             >
-                <el-button
-                    slot="append"
-                    icon="el-icon-search"
-                    @click="getSearchResult"
-                ></el-button>
+                <el-button slot="append" icon="el-icon-search" @click="getSearchResult"></el-button>
             </el-input>
             <div style="height:20px"></div>
             <div class="leftheaderBox">
@@ -78,12 +72,7 @@
                                 :key="index"
                                 @click="clusterMapDis"
                             >
-                                <div
-                                    v-if="
-                                        item.sonSceanClass === 1 &&
-                                            item.state === 'N'
-                                    "
-                                >
+                                <div v-if="item.sonSceanClass === 1 && item.state === 'N'">
                                     <div class="cardContent">
                                         <p class="cardTitle">
                                             {{ item.scene }}
@@ -108,12 +97,7 @@
                                 :key="index"
                                 @click="clusterMapDis"
                             >
-                                <div
-                                    v-if="
-                                        item.sonSceanClass == 2 &&
-                                            item.state === 'N'
-                                    "
-                                >
+                                <div v-if="item.sonSceanClass == 2 && item.state === 'N'">
                                     <div class="cardContent">
                                         <p class="cardTitle">
                                             {{ item.scene }}
@@ -139,12 +123,7 @@
                                 :key="index"
                                 @click="clusterMapDis"
                             >
-                                <div
-                                    v-if="
-                                        item.sonSceanClass == 3 &&
-                                            item.state === 'N'
-                                    "
-                                >
+                                <div v-if="item.sonSceanClass == 3 && item.state === 'N'">
                                     <div class="cardContent">
                                         <p class="cardTitle">
                                             {{ item.scene }}
@@ -232,9 +211,7 @@
                         >
                             <p class="enterName">{{ item.comName }}</p>
                             <p class="enterP">法人:{{ item.operName }}</p>
-                            <p class="enterP">
-                                注册资金:{{ item.registCapi }}万元
-                            </p>
+                            <p class="enterP">注册资金:{{ item.registCapi }}万元</p>
                             <p class="enterP">地址:{{ item.address }}</p>
                         </div>
                     </div>
@@ -261,14 +238,10 @@
                         :label="item.enterpriseName"
                     >
                         <div class="enterpriseDetail">
-                            <singleEcharts
-                                :id="item.enterpriseName"
-                            ></singleEcharts>
+                            <singleEcharts :id="item.enterpriseName"></singleEcharts>
                             <div class="detailBox">
                                 <p>法人：{{ legalPerson }}</p>
-                                <p>
-                                    注册资金：{{ item.registeredCapital }}万元
-                                </p>
+                                <p>注册资金：{{ item.registeredCapital }}万元</p>
                                 <p>AI方向：{{ item.AIbusiness }}</p>
                                 <p>主营业务：{{ item.content }}</p>
                                 <p>所属区：{{ item.Itsarea }}</p>
@@ -288,9 +261,7 @@
                                 >
                                     <p>
                                         <span>{{ item.Name }}</span>
-                                        <span class="secondSpan">{{
-                                            item.Job
-                                        }}</span>
+                                        <span class="secondSpan">{{ item.Job }}</span>
                                     </p>
                                 </div>
                                 <p class="tagTitle">产品信息：</p>
@@ -300,9 +271,7 @@
                                     class="tagCintent"
                                 >
                                     <p>
-                                        所属领域:<span class="secondSpan">{{
-                                            item.Domain
-                                        }}</span>
+                                        所属领域:<span class="secondSpan">{{ item.Domain }}</span>
                                     </p>
                                     <p>
                                         商标图片:<a
@@ -313,9 +282,7 @@
                                         >
                                     </p>
                                     <p>
-                                        商标名称:<span class="secondSpan">{{
-                                            item.Name
-                                        }}</span>
+                                        商标名称:<span class="secondSpan">{{ item.Name }}</span>
                                     </p>
                                     <p>
                                         官网地址:<a
@@ -326,9 +293,7 @@
                                         >
                                     </p>
                                     <p>
-                                        产品标签:<span class="secondSpan">{{
-                                            item.Tags
-                                        }}</span>
+                                        产品标签:<span class="secondSpan">{{ item.Tags }}</span>
                                     </p>
                                 </div>
                                 <p class="tagTitle">知识产权：</p>
@@ -340,15 +305,9 @@
                                     <p>产业范围：{{ Industry.Industry }}</p>
                                 </div>
                                 <p class="tagTitle">股东信息：</p>
-                                <div
-                                    v-for="item in Partners"
-                                    :key="item.KeyNo"
-                                    class="tagCintent"
-                                >
+                                <div v-for="item in Partners" :key="item.KeyNo" class="tagCintent">
                                     <span>{{ item.StockName }}</span>
-                                    <span class="secondSpan">{{
-                                        item.StockPercent
-                                    }}</span>
+                                    <span class="secondSpan">{{ item.StockPercent }}</span>
                                 </div>
                                 <p class="tagTitle">主营业务：</p>
                                 <div class="tagCintent">
@@ -386,11 +345,7 @@
                             <singleEcharts :id="enterpriseName"></singleEcharts>
                             <div class="detailBox">
                                 <p>法人：{{ enterprise.legalPerson }}</p>
-                                <p>
-                                    注册资金：{{
-                                        enterprise.registeredCapital
-                                    }}万元
-                                </p>
+                                <p>注册资金：{{ enterprise.registeredCapital }}万元</p>
                                 <p>AI方向：{{ enterprise.AIbusiness }}</p>
                                 <p>主营业务：{{ enterprise.content }}</p>
                                 <p>所属区：{{ enterprise.Itsarea }}</p>
@@ -411,45 +366,22 @@
                 </el-tabs>
             </div>
         </div>
-        <el-dialog
-            title="提示"
-            :visible.sync="centerDialogVisible"
-            width="30%"
-            center
-        >
+        <el-dialog title="提示" :visible.sync="centerDialogVisible" width="30%" center>
             <div>
-                为优化体验效果，请点击下载<a
-                    target="_blank"
-                    href="https://www.google.cn/chrome/"
+                为优化体验效果，请点击下载<a target="_blank" href="https://www.google.cn/chrome/"
                     >chrome浏览器</a
                 >
             </div>
             <span slot="footer" class="dialog-footer">
-                <el-button @click="centerDialogVisible = false"
-                    >取 消</el-button
-                >
-                <el-button type="primary" @click="centerDialogVisible = false"
-                    >确 定</el-button
-                >
+                <el-button @click="centerDialogVisible = false">取 消</el-button>
+                <el-button type="primary" @click="centerDialogVisible = false">确 定</el-button>
             </span>
         </el-dialog>
-        <el-dialog
-            title="查看图片"
-            :visible.sync="imgDialogVisible"
-            width="50%"
-            center
-        >
-            <el-image
-                style="width: 100px; height: 100px"
-                :src="url"
-                :preview-src-list="srcList"
-            >
+        <el-dialog title="查看图片" :visible.sync="imgDialogVisible" width="50%" center>
+            <el-image style="width: 100px; height: 100px" :src="url" :preview-src-list="srcList">
             </el-image>
             <el-carousel :interval="4000">
-                <el-carousel-item
-                    v-for="(item, index) in companySceneImgDTOList"
-                    :key="index"
-                >
+                <el-carousel-item v-for="(item, index) in companySceneImgDTOList" :key="index">
                     <img class="realImg" :src="item.scenarioImg" alt="" />
                 </el-carousel-item>
             </el-carousel>
@@ -481,12 +413,7 @@ import pos3 from "../svg/icon-03.png"
 import pos4 from "../svg/icon-04.png"
 import pos5 from "../svg/icon-05.png"
 import pos6 from "../svg/icon-06.png"
-import {
-    listAllCompanyScene,
-    getCompanyScene,
-    industryDetail,
-    getPatentCount,
-} from "@/api/home"
+import { listAllCompanyScene, getCompanyScene, industryDetail, getPatentCount } from "@/api/home"
 export default {
     data() {
         return {
@@ -636,9 +563,7 @@ export default {
                     path: "/",
                 })
             } else {
-                this.companyType = JSON.parse(
-                    sessionStorage.getItem("user")
-                ).sceneMainClass[0]
+                this.companyType = JSON.parse(sessionStorage.getItem("user")).sceneMainClass[0]
             }
         },
         checkBrowserVersion() {
@@ -702,7 +627,7 @@ export default {
             this.map = new mapboxgl.Map({
                 container: "map",
                 // style: 'http://106.15.47.224:8688/styles/newblue/style.json',
-                style: "mapbox://styles/zplinze/ck2wvh2pa05ip1cr8supcaivg",
+                style: "http://47.101.52.252:8080/styles/newblue/style.json",
                 center: [118.908456, 32.131199],
                 zoom: 11.0,
                 pitch: 60,
@@ -735,16 +660,7 @@ export default {
             let entertotal = [202, 100, 198, 156, 187, 21.5, 190, 212]
             this.totalValue = total[params - 1]
             this.enterTotal = entertotal[params - 1]
-            let arr = [
-                algorithm,
-                idCard,
-                model,
-                terminal,
-                system,
-                network,
-                platform,
-                parkList,
-            ]
+            let arr = [algorithm, idCard, model, terminal, system, network, platform, parkList]
             // this.map.getSource('earthquakes').setData(arr[params-1])
             this.parkList = arr[params - 1]
             // this.setAllDistribute()
@@ -814,15 +730,7 @@ export default {
                         },
                         data: [
                             {
-                                value: [
-                                    4800,
-                                    3200,
-                                    4300,
-                                    5400,
-                                    6500,
-                                    4500,
-                                    7500,
-                                ],
+                                value: [4800, 3200, 4300, 5400, 6500, 4500, 7500],
                                 name: "从业人数",
                                 itemStyle: {
                                     normal: {
@@ -858,15 +766,7 @@ export default {
                 xAxis: [
                     {
                         type: "category",
-                        data: [
-                            "算法",
-                            "芯片",
-                            "模块",
-                            "终端",
-                            "系统",
-                            "网络",
-                            "平台",
-                        ],
+                        data: ["算法", "芯片", "模块", "终端", "系统", "网络", "平台"],
                         axisLine: {
                             lineStyle: {
                                 color: "rgba(255,255,255,0.12)",
@@ -1211,15 +1111,7 @@ export default {
                     // x: 'right',
                     right: 30,
                     top: 10,
-                    data: [
-                        "算法",
-                        "芯片",
-                        "模块",
-                        "终端",
-                        "系统",
-                        "网络",
-                        "平台",
-                    ],
+                    data: ["算法", "芯片", "模块", "终端", "系统", "网络", "平台"],
                     textStyle: {
                         color: "#ffffff",
                     },
@@ -1317,8 +1209,7 @@ export default {
                 el.properties.test.forEach((l) => {
                     if (l.enterpriseName.indexOf(this.search)) {
                         this.searchReault.features[0].properties.test.push(l)
-                        this.searchReault.features[0].geometry.coordinates =
-                            el.geometry.coordinates
+                        this.searchReault.features[0].geometry.coordinates = el.geometry.coordinates
                     }
                 })
             })
@@ -1406,15 +1297,7 @@ export default {
                         },
                         data: [
                             {
-                                value: [
-                                    4300,
-                                    10000,
-                                    28000,
-                                    35000,
-                                    50000,
-                                    19000,
-                                    5200,
-                                ],
+                                value: [4300, 10000, 28000, 35000, 50000, 19000, 5200],
                                 name: "预算分配（Allocated Budget）",
                                 itemStyle: {
                                     normal: {
@@ -1433,21 +1316,9 @@ export default {
         },
         getAllDistribute() {
             var mag1 = ["<", ["get", "mag"], 5]
-            var mag2 = [
-                "all",
-                [">=", ["get", "mag"], 10],
-                ["<", ["get", "mag"], 20],
-            ]
-            var mag3 = [
-                "all",
-                [">=", ["get", "mag"], 20],
-                ["<", ["get", "mag"], 30],
-            ]
-            var mag4 = [
-                "all",
-                [">=", ["get", "mag"], 30],
-                ["<", ["get", "mag"], 40],
-            ]
+            var mag2 = ["all", [">=", ["get", "mag"], 10], ["<", ["get", "mag"], 20]]
+            var mag3 = ["all", [">=", ["get", "mag"], 20], ["<", ["get", "mag"], 30]]
+            var mag4 = ["all", [">=", ["get", "mag"], 30], ["<", ["get", "mag"], 40]]
             var mag5 = [">=", ["get", "mag"], 40]
 
             if (!this.map.getSource("earthquakes")) {
@@ -1551,10 +1422,7 @@ export default {
                                 "max-fraction-digits": 1,
                             },
                         ],
-                        "text-font": [
-                            "Open Sans Semibold",
-                            "Arial Unicode MS Bold",
-                        ],
+                        "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
                         "text-size": 18,
                         "text-allow-overlap": true,
                         // "icon-image": "cat"
@@ -1633,22 +1501,14 @@ export default {
         },
         createDonutChart(props) {
             var offsets = []
-            var counts = [
-                props.mag1,
-                props.mag2,
-                props.mag3,
-                props.mag4,
-                props.mag5,
-            ]
+            var counts = [props.mag1, props.mag2, props.mag3, props.mag4, props.mag5]
             var total = 0
             for (var i = 0; i < counts.length; i++) {
                 offsets.push(total)
                 total += counts[i]
             }
-            var fontSize =
-                total >= 1000 ? 22 : total >= 100 ? 20 : total >= 10 ? 18 : 16
-            var r =
-                total >= 1000 ? 50 : total >= 100 ? 32 : total >= 10 ? 24 : 18
+            var fontSize = total >= 1000 ? 22 : total >= 100 ? 20 : total >= 10 ? 18 : 16
+            var r = total >= 1000 ? 50 : total >= 100 ? 32 : total >= 10 ? 24 : 18
             var r0 = Math.round(r * 0.6)
             var w = r * 2
 
@@ -1858,25 +1718,13 @@ export default {
                     // draw outer circle
                     context.clearRect(0, 0, this.width, this.height)
                     context.beginPath()
-                    context.arc(
-                        this.width / 2,
-                        this.height / 2,
-                        outerRadius,
-                        0,
-                        Math.PI * 2
-                    )
+                    context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2)
                     context.fillStyle = "rgba(255, 200, 200," + (1 - t) + ")"
                     context.fill()
 
                     // draw inner circle
                     context.beginPath()
-                    context.arc(
-                        this.width / 2,
-                        this.height / 2,
-                        radius,
-                        0,
-                        Math.PI * 2
-                    )
+                    context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2)
                     context.fillStyle = "rgba(255, 100, 100, 1)"
                     context.strokeStyle = "white"
                     context.lineWidth = 2 + 4 * (1 - t)
@@ -1884,12 +1732,7 @@ export default {
                     context.stroke()
 
                     // update this image's data with data from the canvas
-                    this.data = context.getImageData(
-                        0,
-                        0,
-                        this.width,
-                        this.height
-                    ).data
+                    this.data = context.getImageData(0, 0, this.width, this.height).data
 
                     // keep the map repainting
                     this.map.triggerRepaint()
@@ -1913,10 +1756,7 @@ export default {
                                 type: "Feature",
                                 geometry: {
                                     type: "Point",
-                                    coordinates: [
-                                        118.8972030341,
-                                        32.1540342558,
-                                    ],
+                                    coordinates: [118.8972030341, 32.1540342558],
                                 },
                             },
                         ],
@@ -1985,10 +1825,8 @@ export default {
                         // console.log(el)
                         sceanEnterPrise.push(el)
                         this.searchReault.features[0].properties.test = sceanEnterPrise
-                        this.searchReault.features[0].properties.id =
-                            l.properties.id
-                        this.searchReault.features[0].geometry.coordinates =
-                            l.geometry.coordinates
+                        this.searchReault.features[0].properties.id = l.properties.id
+                        this.searchReault.features[0].geometry.coordinates = l.geometry.coordinates
                     }
                 })
             })
@@ -2002,13 +1840,9 @@ export default {
         },
         setMapTheme() {
             if (this.switchMap) {
-                this.map.setStyle(
-                    "mapbox://styles/mapbox/satellite-streets-v11"
-                )
+                this.map.setStyle("mapbox://styles/mapbox/satellite-streets-v11")
             } else {
-                this.map.setStyle(
-                    "http://106.15.47.224:8688/styles/newblue/style.json"
-                )
+                this.map.setStyle("http://106.15.47.224:8688/styles/newblue/style.json")
             }
         },
         getScenList(params) {
@@ -2053,11 +1887,9 @@ export default {
                     // l.scenarioImg = 'http://'+ l.scenarioImg
                     // l.scenarioImg = 'http://'+ l.scenarioImg
                     // console.log(l.scenarioImg.substring(21))
-                    l.scenarioImg =
-                        "http://qiniu.iwooke" + l.scenarioImg.substring(21)
+                    l.scenarioImg = "http://qiniu.iwooke" + l.scenarioImg.substring(21)
                 })
-                this.companySceneImgDTOList =
-                    res.data.result.companySceneImgDTOList
+                this.companySceneImgDTOList = res.data.result.companySceneImgDTOList
                 let srcArrList = []
                 this.companySceneImgDTOList.forEach((l) => {
                     srcArrList.push(l.scenarioImg)
@@ -2068,9 +1900,7 @@ export default {
 
                 // this.videoUrl =  'http://'+ res.data.result.video
                 if (this.sceanData.video) {
-                    this.videoUrl =
-                        "http://qiniu.iwooke" +
-                        res.data.result.video.substring(21)
+                    this.videoUrl = "http://qiniu.iwooke" + res.data.result.video.substring(21)
                 } else {
                     this.videoUrl = ""
                 }
@@ -2168,8 +1998,7 @@ export default {
                         content:
                             "搭建网民用户行为模型，为政府提供重点舆情数据追踪，海量视频流数据监测，实时即时阻断等服务",
                         Itsarea: "栖霞高新区",
-                        area:
-                            "南京市栖霞区马群街道紫东路2号紫东国际创意园A7栋102室",
+                        area: "南京市栖霞区马群街道紫东路2号紫东国际创意园A7栋102室",
                         elements: "网络 平台",
                         IndustryClassification: "大数据服务，法律",
                     },
@@ -2191,8 +2020,7 @@ export default {
                         Itsarea: "经开区",
                         area: "南京经济技术开发区兴智路6号兴智科技园A栋21层",
                         elements: "终端 网络 平台 模块",
-                        IndustryClassification:
-                            "计算机视觉，智能医疗，智能语音",
+                        IndustryClassification: "计算机视觉，智能医疗，智能语音",
                     },
                     {
                         enterpriseId: "XZKJY005",
@@ -2204,8 +2032,7 @@ export default {
                         technologyStratification: "1-基础层",
                         levelOneAI: "集成电路",
                         leveltwoAI: "芯片设计",
-                        enterpriseProfile:
-                            "为国家战略层面的芯片自主知识产权研发和应用不断努力",
+                        enterpriseProfile: "为国家战略层面的芯片自主知识产权研发和应用不断努力",
                         qualification: "",
                         AIBusinessDirection: "网络企业级芯片",
                         content: "企业级高端网络通讯智能芯片",
@@ -2252,8 +2079,7 @@ export default {
                         Itsarea: "经开区",
                         area: "南京经济技术开发区兴智路6号兴智科技园B栋第19层",
                         elements: "网络 平台 模块",
-                        IndustryClassification:
-                            "智能制造，智能零售，智能金融，计算机视觉",
+                        IndustryClassification: "智能制造，智能零售，智能金融，计算机视觉",
                     },
                     {
                         enterpriseId: "XZKJY008",
@@ -2265,8 +2091,7 @@ export default {
                         technologyStratification: "2-技术层",
                         levelOneAI: "图像识别",
                         leveltwoAI: "人脸识别",
-                        enterpriseProfile:
-                            "从属于北京旷视，目前为数据中心与研究院相结合的构成",
+                        enterpriseProfile: "从属于北京旷视，目前为数据中心与研究院相结合的构成",
                         qualification: "",
                         AIBusinessDirection: "计算机视觉",
                         content: "人脸识别人工智能算法、硬件技术、行业解决方案",
@@ -2419,8 +2244,7 @@ export default {
                         technologyStratification: "4-应用层",
                         levelOneAI: "智能交通",
                         leveltwoAI: "智能代步工具",
-                        enterpriseProfile:
-                            "服务上有车辆运营监控；产品上有智能滑板车",
+                        enterpriseProfile: "服务上有车辆运营监控；产品上有智能滑板车",
                         qualification: "高企、培育独角兽",
                         AIBusinessDirection: '"智能代步工具',
                     },
@@ -2522,8 +2346,7 @@ export default {
                         Itsarea: "经开区",
                         area: "南京经济技术开发区红枫科技园D12栋10层",
                         elements: "网络 平台 模块",
-                        IndustryClassification:
-                            "计算机视觉，智能语音，机器学习",
+                        IndustryClassification: "计算机视觉，智能语音，机器学习",
                     },
                     {
                         enterpriseId: "XZKJY040",
@@ -2557,8 +2380,7 @@ export default {
                         enterpriseProfile: "无官网，无介绍",
                         qualification: "",
                         AIBusinessDirection: "智慧金融",
-                        content:
-                            "基于人工智能算法的消费行为收集、产能供需匹配的溯源系统",
+                        content: "基于人工智能算法的消费行为收集、产能供需匹配的溯源系统",
                         Itsarea: "经开区",
                         area: "南京经济技术开发区兴智路6号兴智科技园A栋1103室",
                         elements: "网络 平台 ",
@@ -2603,8 +2425,7 @@ export default {
                         enterpriseProfile:
                             "围绕新一代信息技术的发展，特别是在宽带无线通信、大数据、移动互联、智慧城市、信息材料以及信息服务等相关领域，以创新的运作模式推动技术的产业化，着力推动产业链的协同创新，力争建设成为国内知名、国际上有影响力的信息 技术战略性新兴产业创新中心，打造成为国内一流信息产业技术研发创新平台、成果转移孵化平台、项目投资管理平台、产业公共服务平台、创新人才培养平台",
                         qualification: "高企",
-                        AIBusinessDirection:
-                            "语音语义、机器人、智能家居、生物识别",
+                        AIBusinessDirection: "语音语义、机器人、智能家居、生物识别",
                         content: "南京南邮信息产业技术研究院",
                         Itsarea: "经开区",
                         area: "南京经济技术开发区兴智路兴智科技园B栋906室",
@@ -2645,23 +2466,17 @@ export default {
                 let magNum = parseInt(marker.properties.mag)
 
                 if (magNum < 9.5) {
-                    el.style.backgroundImage =
-                        "url(" + require("../svg/icon-01.png") + ")"
+                    el.style.backgroundImage = "url(" + require("../svg/icon-01.png") + ")"
                 } else if (magNum > 9.5 && magNum < 20.5) {
-                    el.style.backgroundImage =
-                        "url(" + require("../svg/icon-02.png") + ")"
+                    el.style.backgroundImage = "url(" + require("../svg/icon-02.png") + ")"
                 } else if (magNum > 20.5 && magNum < 30.5) {
-                    el.style.backgroundImage =
-                        "url(" + require("../svg/icon-03.png") + ")"
+                    el.style.backgroundImage = "url(" + require("../svg/icon-03.png") + ")"
                 } else if (magNum > 30.5 && magNum < 40.5) {
-                    el.style.backgroundImage =
-                        "url(" + require("../svg/icon-04.png") + ")"
+                    el.style.backgroundImage = "url(" + require("../svg/icon-04.png") + ")"
                 } else if (magNum > 50.5 && magNum < 60.5) {
-                    el.style.backgroundImage =
-                        "url(" + require("../svg/icon-05.png") + ")"
+                    el.style.backgroundImage = "url(" + require("../svg/icon-05.png") + ")"
                 } else {
-                    el.style.backgroundImage =
-                        "url(" + require("../svg/icon-06.png") + ")"
+                    el.style.backgroundImage = "url(" + require("../svg/icon-06.png") + ")"
                 }
                 el.className = "marker"
 
@@ -2697,9 +2512,7 @@ export default {
                 })
 
                 // add marker to map
-                new mapboxgl.Marker(el)
-                    .setLngLat(marker.geometry.coordinates)
-                    .addTo(this.map)
+                new mapboxgl.Marker(el).setLngLat(marker.geometry.coordinates).addTo(this.map)
             })
             // })
         },

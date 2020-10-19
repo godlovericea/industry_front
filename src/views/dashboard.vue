@@ -1,7 +1,7 @@
 <template>
     <div id="map">
         <div class="headerBox">
-            <img src="../../src/assets/images/logo.png" alt="" />
+            <img src="../../src/assets/images/logo.png" alt="" class="logopng" />
             <p class="title">中国南京智谷AI生态云图</p>
         </div>
         <div class="switchBox">
@@ -2533,6 +2533,9 @@ export default {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+.logopng {
+    height: 60px;
 }
 .switchBox {
     position: absolute;
